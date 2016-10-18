@@ -22,6 +22,7 @@ namespace projeto_morada_da_paz.DadosAcesso
                 string insertSql = "INSERT INTO usuario (nome_completo, email, login, senha, id_unidade_residencial, id_especializacao_usuario)";
                 insertSql += " values ";
                 insertSql += " (@nome_completo, @email, @login, @senha, @id_unidade_residencial, @id_especializacao_usuario)";
+                String test = new String(new Char[10]);
 
                 SqlCommand comand = new SqlCommand(insertSql, conexao);
                 comand.Parameters.AddWithValue("@nome_completo", u.Nome_completo);
