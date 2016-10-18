@@ -1,0 +1,15 @@
+C:\Users\aluno\Desktop\gerenciamento_de_ocorrencias\projeto_morada_da_paz\bin\Debug\projeto_morada_da_paz.exe.config
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\bin\Debug\projeto_morada_da_paz.exe.config
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\bin\Debug\projeto_morada_da_paz.exe
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\bin\Debug\projeto_morada_da_paz.pdb
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.Properties.Resources.resources
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.csproj.GenerateResource.Cache
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.exe
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.pdb
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.novoUsuario.resources
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.NovaUnidadeResidencial.resources
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.Advertencia.resources
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.Multa.resources
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.TelaPrincipal.resources
+C:\Users\aluno\Documents\Morada da Paz\gerenciamento_de_ocorrencias\projeto_morada_da_paz\obj\Debug\projeto_morada_da_paz.NovaOcorrencia.resources

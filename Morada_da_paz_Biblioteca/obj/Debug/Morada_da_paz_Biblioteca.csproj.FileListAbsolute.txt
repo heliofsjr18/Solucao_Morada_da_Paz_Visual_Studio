@@ -1,0 +1,7 @@
+C:\Users\aluno\Desktop\gerenciamento_de_ocorrencias\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\aluno\Desktop\gerenciamento_de_ocorrencias\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.conexaodb.dadosBanco.resources
+C:\Users\aluno\Desktop\gerenciamento_de_ocorrencias\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.csproj.GenerateResource.Cache
+C:\Users\aluno\Desktop\gerenciamento_de_ocorrencias\Morada_da_paz_Biblioteca\bin\Debug\Morada_da_paz_Biblioteca.dll
+C:\Users\aluno\Desktop\gerenciamento_de_ocorrencias\Morada_da_paz_Biblioteca\bin\Debug\Morada_da_paz_Biblioteca.pdb
+C:\Users\aluno\Desktop\gerenciamento_de_ocorrencias\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.dll
+C:\Users\aluno\Desktop\gerenciamento_de_ocorrencias\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.pdb
