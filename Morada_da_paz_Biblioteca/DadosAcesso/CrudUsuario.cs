@@ -8,7 +8,7 @@ using projeto_morada_da_paz.basicas;
 
 namespace projeto_morada_da_paz.DadosAcesso
 {
-    interface CrudUsuario
+    public interface CrudUsuario
     {
         void inserir(usuario u);
         void atualizar(usuario u);

@@ -53,6 +53,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="DadosAcesso\CrudAdvertencia.cs" />
+    <Compile Include="DadosAcesso\CrudAdvertenciaImplements.cs" />
+    <Compile Include="DadosAcesso\CrudEspecializacaoUsuario.cs" />
+    <Compile Include="DadosAcesso\CrudEspecializacaoUsuarioImplements.cs" />
+    <Compile Include="DadosAcesso\CrudMulta.cs" />
+    <Compile Include="DadosAcesso\CrudMultaImplements.cs" />
+    <Compile Include="DadosAcesso\CrudOcorrencia.cs" />
+    <Compile Include="DadosAcesso\CrudOcorrenciaImplements.cs" />
+    <Compile Include="DadosAcesso\CrudUnidadeResidencial.cs" />
+    <Compile Include="DadosAcesso\CrudUnidadeResidencialImplements.cs" />
     <Compile Include="DadosAcesso\CrudUsuario.cs" />
     <Compile Include="DadosAcesso\CrudUsuarioImplements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
