@@ -20,10 +20,10 @@ namespace projeto_morada_da_paz.basicas
 
         public ocorrencia()
         {
-            Id_usuario = new usuario();
-            Id_unidade_residencial = new unidade_residencial();
-            lista_id_advertencia = new List<advertencia>();
-            lista_id_multa = new List<multa>();
+            this.id_usuario = new usuario();
+            this.Id_unidade_residencial = new unidade_residencial();
+            this.lista_id_advertencia = new List<advertencia>();
+            this.lista_id_multa = new List<multa>();
         }
 
         public int Id

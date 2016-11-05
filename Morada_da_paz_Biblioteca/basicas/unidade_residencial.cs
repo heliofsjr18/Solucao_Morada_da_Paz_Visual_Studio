@@ -15,7 +15,7 @@ namespace projeto_morada_da_paz.basicas
 
         public unidade_residencial()
         {
-            id_ocorrencia = new ocorrencia();
+           // this.id_ocorrencia = new ocorrencia();
         }
 
         public int Id

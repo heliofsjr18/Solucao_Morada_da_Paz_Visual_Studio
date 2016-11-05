@@ -18,8 +18,8 @@ namespace projeto_morada_da_paz.basicas
 
         public usuario()
         {
-            Id_unidade_residencial = new unidade_residencial();
-            Id_especializacao_usuario = new especializacao_usuario();
+            this.id_unidade_residencial = new unidade_residencial();
+            this.id_especializacao_usuario = new especializacao_usuario();
         }
 
         public int Id

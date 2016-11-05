@@ -66,6 +66,7 @@
     <Compile Include="DadosAcesso\CrudUsuario.cs" />
     <Compile Include="DadosAcesso\CrudUsuarioImplements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegraDeNegocio\RNusuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="conexaodb\dadosBanco.resx">
