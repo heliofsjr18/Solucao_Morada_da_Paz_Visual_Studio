@@ -32,10 +32,11 @@ namespace projeto_morada_da_paz
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             usuario u = new usuario();
-            //u.Nome_completo = textBoxNome.Text;
-            //u.Email = textBoxEmail.Text;
-            //u.Login = textBoxUsuario.Text;
-            //u.Senha = textBoxSenha.Text;
+
+            u.Nome_completo = textBoxNome.Text;
+            u.Email = textBoxEmail.Text;
+            u.Login = textBoxUsuario.Text;
+            u.Senha = textBoxSenha.Text;
 
             RNusuario rnu = new RNusuario();
             try
