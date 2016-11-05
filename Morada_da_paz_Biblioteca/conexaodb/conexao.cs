@@ -8,7 +8,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
-namespace projeto_morada_da_paz.conexaodb
+namespace Morada_da_paz_Biblioteca.conexaodb
 {
     interface conexao
     {

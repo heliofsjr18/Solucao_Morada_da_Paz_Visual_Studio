@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace projeto_morada_da_paz.Properties
+namespace Morada_da_paz_Biblioteca.Properties
 {
 
 

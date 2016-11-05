@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace projeto_morada_da_paz
+namespace Morada_da_paz_Biblioteca
 {
     static class Program
     {

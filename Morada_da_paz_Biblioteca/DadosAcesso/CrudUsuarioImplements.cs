@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using projeto_morada_da_paz.conexaodb;
-using projeto_morada_da_paz.basicas;
+using Morada_da_paz_Biblioteca.conexaodb;
+using Morada_da_paz_Biblioteca.basicas;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
 
-namespace projeto_morada_da_paz.DadosAcesso
+namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
     class CrudUsuarioImplements : conexaoImplements, CrudUsuario
     {

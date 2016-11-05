@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Threading.Tasks;
-using projeto_morada_da_paz.basicas;
-using projeto_morada_da_paz.conexaodb;
+using Morada_da_paz_Biblioteca.basicas;
+using Morada_da_paz_Biblioteca.conexaodb;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace projeto_morada_da_paz.conexaodb
+namespace Morada_da_paz_Biblioteca.conexaodb
 {
     public class conexaoImplements : conexao
     {

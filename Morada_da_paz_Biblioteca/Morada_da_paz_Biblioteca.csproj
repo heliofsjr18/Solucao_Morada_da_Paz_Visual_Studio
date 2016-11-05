@@ -55,10 +55,14 @@
     </Compile>
     <Compile Include="DadosAcesso\CrudAdvertencia.cs" />
     <Compile Include="DadosAcesso\CrudAdvertenciaImplements.cs" />
+    <Compile Include="DadosAcesso\CrudAdvertencia_Ocorrencia.cs" />
+    <Compile Include="DadosAcesso\CrudAdvertencia_OcorrenciaImplements.cs" />
     <Compile Include="DadosAcesso\CrudEspecializacaoUsuario.cs" />
     <Compile Include="DadosAcesso\CrudEspecializacaoUsuarioImplements.cs" />
     <Compile Include="DadosAcesso\CrudMulta.cs" />
     <Compile Include="DadosAcesso\CrudMultaImplements.cs" />
+    <Compile Include="DadosAcesso\CrudMulta_Ocorrencia.cs" />
+    <Compile Include="DadosAcesso\CrudMulta_OcorrenciaImplements.cs" />
     <Compile Include="DadosAcesso\CrudOcorrencia.cs" />
     <Compile Include="DadosAcesso\CrudOcorrenciaImplements.cs" />
     <Compile Include="DadosAcesso\CrudUnidadeResidencial.cs" />

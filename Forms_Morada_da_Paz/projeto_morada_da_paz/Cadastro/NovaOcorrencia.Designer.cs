@@ -1,4 +1,4 @@
-﻿namespace projeto_morada_da_paz
+﻿namespace Morada_da_paz_Biblioteca
 {
     partial class NovaOcorrencia
     {

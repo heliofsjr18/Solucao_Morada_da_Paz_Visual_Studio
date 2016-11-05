@@ -7,8 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Morada_da_paz_Biblioteca.basicas;
+using Morada_da_paz_Biblioteca.conexaodb;
+using System.Data.SqlClient;
+using Morada_da_paz_Biblioteca.DadosAcesso;
 
-namespace projeto_morada_da_paz
+namespace Morada_da_paz_Biblioteca
 {
     public partial class TelaPrincipal : Form
     {
@@ -60,6 +64,17 @@ namespace projeto_morada_da_paz
         {
             NovaUnidadeResidencial nUniResidencial = new NovaUnidadeResidencial();
             nUniResidencial.ShowDialog();
+        }
+
+        private void TelaPrincipal_Activated(object sender, EventArgs e)
+        {
+            conexaoImplements conexaoInstance = new conexaoImplements();
+            SqlConnection conexao = conexaoInstance.conectar();
+            CrudOcorrencia ocorrenciaInstance = new CrudOcorrenciaImplements();
+            List<ocorrencia> listGridOco = ocorrenciaInstance.listar();
+            for (int index = 0; index < listGridOco.Count; index++)
+            {                
+            }
         }
     }
 }

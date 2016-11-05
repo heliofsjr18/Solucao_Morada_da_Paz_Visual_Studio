@@ -1,4 +1,4 @@
-﻿namespace projeto_morada_da_paz
+﻿namespace Morada_da_paz_Biblioteca
 {
     partial class TelaPrincipal
     {
@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewOcorrencia = new System.Windows.Forms.ListView();
+            this.Número = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Situação = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Descrição = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -48,13 +51,33 @@
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listView1
+            // listViewOcorrencia
             // 
-            this.listView1.Location = new System.Drawing.Point(12, 100);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(567, 200);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewOcorrencia.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Número,
+            this.Situação,
+            this.Descrição});
+            this.listViewOcorrencia.Location = new System.Drawing.Point(12, 100);
+            this.listViewOcorrencia.Name = "listViewOcorrencia";
+            this.listViewOcorrencia.Size = new System.Drawing.Size(567, 200);
+            this.listViewOcorrencia.TabIndex = 0;
+            this.listViewOcorrencia.UseCompatibleStateImageBehavior = false;
+            this.listViewOcorrencia.View = System.Windows.Forms.View.Details;
+            // 
+            // Número
+            // 
+            this.Número.Text = "Número";
+            this.Número.Width = 58;
+            // 
+            // Situação
+            // 
+            this.Situação.Text = "Situação";
+            this.Situação.Width = 74;
+            // 
+            // Descrição
+            // 
+            this.Descrição.Text = "Descrição";
+            this.Descrição.Width = 429;
             // 
             // label1
             // 
@@ -193,13 +216,14 @@
             this.ClientSize = new System.Drawing.Size(590, 344);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewOcorrencia);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "TelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MDP";
+            this.Activated += new System.EventHandler(this.TelaPrincipal_Activated);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -209,7 +233,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewOcorrencia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -226,5 +250,8 @@
         private System.Windows.Forms.ToolStripMenuItem unidadeResidencialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem3;
+        private System.Windows.Forms.ColumnHeader Número;
+        private System.Windows.Forms.ColumnHeader Situação;
+        private System.Windows.Forms.ColumnHeader Descrição;
     }
 }

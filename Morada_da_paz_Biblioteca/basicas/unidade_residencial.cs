@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace projeto_morada_da_paz.basicas
+namespace Morada_da_paz_Biblioteca.basicas
 {
     public class unidade_residencial
     {
