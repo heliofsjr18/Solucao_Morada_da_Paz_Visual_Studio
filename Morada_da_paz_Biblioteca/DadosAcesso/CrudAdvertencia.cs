@@ -7,7 +7,7 @@ using Morada_da_paz_Biblioteca.basicas;
 
 namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
-    interface CrudAdvertencia
+    public interface CrudAdvertencia
     {
         void inserir(advertencia a);
         void atualizar(advertencia a);

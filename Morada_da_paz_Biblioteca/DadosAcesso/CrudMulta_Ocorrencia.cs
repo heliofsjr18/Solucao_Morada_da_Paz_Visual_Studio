@@ -7,7 +7,7 @@ using Morada_da_paz_Biblioteca.basicas;
 
 namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
-    interface CrudMulta_Ocorrencia
+    public interface CrudMulta_Ocorrencia
     {
         void inserir(multa m, ocorrencia o);
     }

@@ -10,7 +10,7 @@ using System.Data.SqlTypes;
 
 namespace Morada_da_paz_Biblioteca.conexaodb
 {
-    interface conexao
+    public interface conexao
     {
         SqlConnection conectar();
 

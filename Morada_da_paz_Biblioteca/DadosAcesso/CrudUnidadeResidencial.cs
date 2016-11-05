@@ -7,7 +7,7 @@ using Morada_da_paz_Biblioteca.basicas;
 
 namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
-    interface CrudUnidadeResidencial
+    public interface CrudUnidadeResidencial
     {
         void inserir(unidade_residencial ur);
         void atualizar(unidade_residencial ur);

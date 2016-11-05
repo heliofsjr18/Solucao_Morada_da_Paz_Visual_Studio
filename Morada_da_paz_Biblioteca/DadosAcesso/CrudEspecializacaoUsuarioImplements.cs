@@ -11,7 +11,7 @@ using System.Data.SqlTypes;
 
 namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
-    class CrudEspecializacaoUsuarioImplements : conexaoImplements, CrudEspecializacaoUsuario
+    public class CrudEspecializacaoUsuarioImplements : conexaoImplements, CrudEspecializacaoUsuario
     {
         public void inserir(especializacao_usuario eu)
         {

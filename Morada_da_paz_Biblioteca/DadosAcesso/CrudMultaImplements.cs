@@ -11,7 +11,7 @@ using System.Data.SqlTypes;
 
 namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
-    class CrudMultaImplements : conexaoImplements, CrudMulta
+    public class CrudMultaImplements : conexaoImplements, CrudMulta
     {
         public void inserir(multa m)
         {

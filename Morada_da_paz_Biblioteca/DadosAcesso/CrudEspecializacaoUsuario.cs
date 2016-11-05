@@ -7,7 +7,7 @@ using Morada_da_paz_Biblioteca.basicas;
 
 namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
-    interface CrudEspecializacaoUsuario
+    public interface CrudEspecializacaoUsuario
     {
         void inserir(especializacao_usuario eu);
         void atualizar(especializacao_usuario eu);

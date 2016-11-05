@@ -9,7 +9,7 @@ using System;
 
 namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
-    class CrudMulta_OcorrenciaImplements : conexaoImplements, CrudMulta_Ocorrencia
+    public class CrudMulta_OcorrenciaImplements : conexaoImplements, CrudMulta_Ocorrencia
     {
         public void inserir(multa m, ocorrencia o)
         {

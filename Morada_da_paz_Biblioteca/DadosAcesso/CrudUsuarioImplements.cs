@@ -12,7 +12,7 @@ using System.Data.SqlTypes;
 
 namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
-    class CrudUsuarioImplements : conexaoImplements, CrudUsuario
+    public class CrudUsuarioImplements : conexaoImplements, CrudUsuario
     {
         public void inserir(usuario u)
         {

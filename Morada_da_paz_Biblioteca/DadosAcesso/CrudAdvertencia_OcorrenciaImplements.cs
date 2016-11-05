@@ -11,7 +11,7 @@ using System.Data.SqlTypes;
 
 namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
-    class CrudAdvertencia_OcorrenciaImplements : conexaoImplements, CrudAdvertencia_Ocorrencia
+    public class CrudAdvertencia_OcorrenciaImplements : conexaoImplements, CrudAdvertencia_Ocorrencia
     {
         public void inserir(advertencia a, ocorrencia o)
         {

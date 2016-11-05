@@ -11,7 +11,7 @@ using System.Data.SqlTypes;
 
 namespace Morada_da_paz_Biblioteca.DadosAcesso
 {
-    class CrudUnidadeResidencialImplements : conexaoImplements, CrudUnidadeResidencial
+    public class CrudUnidadeResidencialImplements : conexaoImplements, CrudUnidadeResidencial
     {
         public void inserir(unidade_residencial ur)
         {
