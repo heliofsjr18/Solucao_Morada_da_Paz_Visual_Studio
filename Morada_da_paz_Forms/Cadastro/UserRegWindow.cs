@@ -16,5 +16,11 @@ namespace Morada_da_paz_Forms.Cadastro
         {
             InitializeComponent();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox getSender = (CheckBox)sender;
+            textBox4.UseSystemPasswordChar = !getSender.Checked;
+        }
     }
 }

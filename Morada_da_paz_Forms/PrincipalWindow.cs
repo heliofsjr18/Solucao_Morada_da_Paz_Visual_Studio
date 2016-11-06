@@ -9,13 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Morada_da_paz_Forms.Cadastro;
+using Morada_da_paz_Forms.Arquivo;
 
 namespace Morada_da_paz_Forms
 {
     public partial class PrincipalWindow : Form
     {
-        public PrincipalWindow()
+        LoginWindow login;
+        public PrincipalWindow(LoginWindow loginWindow)
         {
+            this.login = loginWindow;
             InitializeComponent();
         }
 
@@ -36,11 +39,7 @@ namespace Morada_da_paz_Forms
 
         private void PrincipalWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult closeApp = MessageBox.Show(this, "Tem certeza que deseja sair da Aplicação?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (closeApp == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
+                Application.Exit();            
         }
 
         private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +51,47 @@ namespace Morada_da_paz_Forms
         {
             UnidadeResidRegWindow window = new UnidadeResidRegWindow();
             window.ShowDialog();
+        }
+
+        private void advertênciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdvertenciaRegWindow window = new AdvertenciaRegWindow();
+            window.ShowDialog();
+        }
+
+        private void multaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MultaRegWindow window = new MultaRegWindow();
+            window.ShowDialog();
+        }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserRegWindow window = new UserRegWindow();
+            window.ShowDialog();
+        }
+
+        private void gerarNovaOcorrênciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NovaOcorrenciaWindow window = new NovaOcorrenciaWindow();
+            window.ShowDialog();
+        }
+
+        private void muralDeOcorrenciasPublicasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MuralWindow window = new MuralWindow();
+            window.ShowDialog();
+        }
+
+        private void mudarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult getResult = MessageBox.Show(this, "Deseja Trocar de Usuário?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (getResult == DialogResult.Yes)
+            {
+                this.login.Show();
+                this.Hide();
+            }
         }
     }
 }

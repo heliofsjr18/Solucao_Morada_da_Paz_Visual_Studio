@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Morada_da_paz_Forms.Cadastro
+namespace Morada_da_paz_Forms.Arquivo
 {
-    public partial class OcorrenciaRegWindow : Form
+    public partial class NovaOcorrenciaWindow : Form
     {
-        public OcorrenciaRegWindow()
+        public NovaOcorrenciaWindow()
         {
             InitializeComponent();
         }

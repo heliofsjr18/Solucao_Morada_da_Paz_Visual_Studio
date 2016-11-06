@@ -63,9 +63,39 @@ namespace Morada_da_paz_Forms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Apps_preferences_system_login_icon {
+            get {
+                object obj = ResourceManager.GetObject("Apps-preferences-system-login-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Custom_Icon_Design_Flatastic_10_Email_send {
+            get {
+                object obj = ResourceManager.GetObject("Custom-Icon-Design-Flatastic-10-Email-send", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_2_Man {
             get {
                 object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-2-Man", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gakuseisean_Ivista_2_Alarm_Tick {
+            get {
+                object obj = ResourceManager.GetObject("Gakuseisean-Ivista-2-Alarm-Tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,6 +133,16 @@ namespace Morada_da_paz_Forms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hopstarter_Button_Button_Close {
+            get {
+                object obj = ResourceManager.GetObject("Hopstarter-Button-Button-Close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hopstarter_Sleek_Xp_Basic_Document {
             get {
                 object obj = ResourceManager.GetObject("Hopstarter-Sleek-Xp-Basic-Document", resourceCulture);
@@ -123,6 +163,16 @@ namespace Morada_da_paz_Forms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hopstarter_Soft_Scraps_Network_Firewall {
+            get {
+                object obj = ResourceManager.GetObject("Hopstarter-Soft-Scraps-Network-Firewall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Actions_contact_new {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Actions-contact-new", resourceCulture);
@@ -136,6 +186,26 @@ namespace Morada_da_paz_Forms.Properties {
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Actions_help_about {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Actions-help-about", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Apps_preferences_system_login {
+            get {
+                object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Apps-preferences-system-login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Apps_system_software_update {
+            get {
+                object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Apps-system-software-update", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

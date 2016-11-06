@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arquivo\MuralWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arquivo\MuralWindow.Designer.cs">
+      <DependentUpon>MuralWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Arquivo\NovaOcorrenciaWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arquivo\NovaOcorrenciaWindow.Designer.cs">
+      <DependentUpon>NovaOcorrenciaWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastro\AdvertenciaRegWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,12 +69,6 @@
     </Compile>
     <Compile Include="Cadastro\MultaRegWindow.Designer.cs">
       <DependentUpon>MultaRegWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro\OcorrenciaRegWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastro\OcorrenciaRegWindow.Designer.cs">
-      <DependentUpon>OcorrenciaRegWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Cadastro\UnidadeResidRegWindow.cs">
       <SubType>Form</SubType>
@@ -90,8 +96,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Arquivo\MuralWindow.resx">
+      <DependentUpon>MuralWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arquivo\NovaOcorrenciaWindow.resx">
+      <DependentUpon>NovaOcorrenciaWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\AdvertenciaRegWindow.resx">
+      <DependentUpon>AdvertenciaRegWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\MultaRegWindow.resx">
+      <DependentUpon>MultaRegWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cadastro\UnidadeResidRegWindow.resx">
       <DependentUpon>UnidadeResidRegWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\UserRegWindow.resx">
+      <DependentUpon>UserRegWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalWindow.resx">
       <DependentUpon>PrincipalWindow.cs</DependentUpon>
@@ -133,6 +157,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Paomedia-Small-N-Flat-Sign-sync.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-Network-Firewall.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Flatastic-10-Email-send.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Button-Button-Close.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gakuseisean-Ivista-2-Alarm-Tick.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Apps-system-software-update.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Apps-preferences-system-login.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-preferences-system-login-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
