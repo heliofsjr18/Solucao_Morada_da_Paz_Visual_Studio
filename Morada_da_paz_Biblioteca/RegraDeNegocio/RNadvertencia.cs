@@ -11,7 +11,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
     public class RNadvertencia
     {
 
-        public void verificaPreenchimento(advertencia a) {
+        private void verificaPreenchimento(advertencia a) {
             if (a == null)
             {
                 throw new Exception("Objeto Vasio!");

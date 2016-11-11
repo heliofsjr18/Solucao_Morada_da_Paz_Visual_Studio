@@ -11,7 +11,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
 {
     public class RNusuario
     {
-        public void verificaPreenchimento(usuario u)
+        private void verificaPreenchimento(usuario u)
         {
             if (u == null)
             {
@@ -39,7 +39,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
             }            
         }
 
-        public void validaPrenchimento(usuario u)
+        private void validaPrenchimento(usuario u)
         {
             if (u.Login.Length < 5)
             {
