@@ -61,22 +61,30 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         public void chamarInserir(usuario u)
         {
             CrudUsuario cU = new CrudUsuarioImplements();
+            this.verificaPreenchimento(u);
+            this.verificaPreenchimento(u);
             cU.inserir(u);
         }
 
         public void chamarAtualizar(usuario u)
         {
             CrudUsuario cU = new CrudUsuarioImplements();
+            this.verificaPreenchimento(u);
+            this.verificaPreenchimento(u);
             cU.atualizar(u);
         }
         public void chamarDeletar(usuario u)
         {
             CrudUsuario cU = new CrudUsuarioImplements();
+            this.verificaPreenchimento(u);
+            this.verificaPreenchimento(u);
             cU.deletar(u);
         }
         public usuario chamarConsulta(usuario u)
         {
             CrudUsuario cU = new CrudUsuarioImplements();
+            this.verificaPreenchimento(u);
+            this.verificaPreenchimento(u);
             return cU.consultar(u);
         }
         public List<usuario> chamarListar(usuario u)
