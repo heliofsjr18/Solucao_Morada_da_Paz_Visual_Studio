@@ -53,7 +53,13 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
 
             return cur.consultar(ur);
         }
-        public List<unidade_residencial> chamarListar(unidade_residencial ur)
+        /*public List<unidade_residencial> chamarListar(unidade_residencial ur)
+        {
+            CrudUnidadeResidencial cur = new CrudUnidadeResidencialImplements();
+            return cur.listar();
+        }*/
+
+        public List<unidade_residencial> chamarListar()
         {
             CrudUnidadeResidencial cur = new CrudUnidadeResidencialImplements();
             return cur.listar();
