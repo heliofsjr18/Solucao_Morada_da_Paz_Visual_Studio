@@ -19,7 +19,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
                 throw new Exception("Descrição Vasia");
             }
 
-            if(m.Preco == null){
+            if(m.Preco == 0){
                 throw new Exception("Preço vasio!");
             }
         }
