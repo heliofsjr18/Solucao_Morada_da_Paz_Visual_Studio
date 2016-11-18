@@ -39,7 +39,7 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("projeto_morada_da_paz.conexaodb.dadosBanco", typeof(dadosBanco).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Morada_da_paz_Biblioteca.conexaodb.dadosBanco", typeof(dadosBanco).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to aluno.
+        ///   Looks up a localized string similar to morada_da_pazdb.
         /// </summary>
         internal static string banco {
             get {
@@ -70,7 +70,16 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to aluno.
+        ///   Looks up a localized string similar to T.
+        /// </summary>
+        internal static string SegIntegrada {
+            get {
+                return ResourceManager.GetString("SegIntegrada", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string senha {
             get {
@@ -79,7 +88,7 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PC-032.
+        ///   Looks up a localized string similar to DESKTOP-70UN7UO.
         /// </summary>
         internal static string url {
             get {
@@ -88,7 +97,7 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to aluno.
+        ///   Looks up a localized string similar to helio.
         /// </summary>
         internal static string usuario {
             get {

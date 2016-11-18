@@ -14,6 +14,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
         void atualizar(usuario u);
         void deletar(usuario u);
         usuario consultar(usuario u);
+        usuario consultarLogin(usuario u);
         List<usuario> listar();
     }
 }

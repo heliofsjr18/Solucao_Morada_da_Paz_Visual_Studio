@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceMoradaDaPaz" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:28254/ServiceMoradaDaPaz.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:28254/ServiceMoradaDaPaz.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:28254/ServiceMoradaDaPaz.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_WebService" />
+      <xsd:import schemaLocation="http://localhost:28254/ServiceMoradaDaPaz.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceMoradaDaPaz_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inseirUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:inseirUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inseirUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inseirUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:editarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inseirUnidadeResidencial_InputMessage">
+    <wsdl:part name="parameters" element="tns:inseirUnidadeResidencial" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inseirUnidadeResidencial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inseirUnidadeResidencialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editaUnidadeResisencial_InputMessage">
+    <wsdl:part name="parameters" element="tns:editaUnidadeResisencial" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editaUnidadeResisencial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editaUnidadeResisencialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarUnidades_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarUnidades" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarUnidades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarUnidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaUnidade_InputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaUnidade" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaUnidade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaUnidadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inserirAdvertencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:inserirAdvertencia" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inserirAdvertencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inserirAdvertenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editarAdvertencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:editarAdvertencia" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editarAdvertencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editarAdvertenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarAdvertencias_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarAdvertencias" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarAdvertencias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarAdvertenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaAdvertencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaAdvertencia" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaAdvertencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaAdvertenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inserirEspecializacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:inserirEspecializacao" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inserirEspecializacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inserirEspecializacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editarEspecializacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:editarEspecializacao" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editarEspecializacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editarEspecializacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarEspecializacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarEspecializacao" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarEspecializacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarEspecializacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaEspecializacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaEspecializacao" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaEspecializacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaEspecializacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inserirMulta_InputMessage">
+    <wsdl:part name="parameters" element="tns:inserirMulta" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inserirMulta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inserirMultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editarMulta_InputMessage">
+    <wsdl:part name="parameters" element="tns:editarMulta" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editarMulta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editarMultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarMulta_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarMulta" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarMulta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarMultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaMulta_InputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaMulta" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaMulta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaMultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inserirOcorrencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:inserirOcorrencia" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_inserirOcorrencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inserirOcorrenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editarOcorrencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:editarOcorrencia" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_editarOcorrencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editarOcorrenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarOcorrencias_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarOcorrencias" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_listarOcorrencias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarOcorrenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaOcorrencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaOcorrencia" />
+  </wsdl:message>
+  <wsdl:message name="IServiceMoradaDaPaz_pesquisaOcorrencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pesquisaOcorrenciaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceMoradaDaPaz">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/GetData" message="tns:IServiceMoradaDaPaz_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/GetDataResponse" message="tns:IServiceMoradaDaPaz_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/GetDataUsingDataContract" message="tns:IServiceMoradaDaPaz_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/GetDataUsingDataContractResponse" message="tns:IServiceMoradaDaPaz_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inseirUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inseirUsuario" message="tns:IServiceMoradaDaPaz_inseirUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inseirUsuarioResponse" message="tns:IServiceMoradaDaPaz_inseirUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editarUsuario" message="tns:IServiceMoradaDaPaz_editarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editarUsuarioResponse" message="tns:IServiceMoradaDaPaz_editarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarUsuarios" message="tns:IServiceMoradaDaPaz_listarUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarUsuariosResponse" message="tns:IServiceMoradaDaPaz_listarUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaUsuario" message="tns:IServiceMoradaDaPaz_pesquisaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaUsuarioResponse" message="tns:IServiceMoradaDaPaz_pesquisaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inseirUnidadeResidencial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inseirUnidadeResidencial" message="tns:IServiceMoradaDaPaz_inseirUnidadeResidencial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inseirUnidadeResidencialResponse" message="tns:IServiceMoradaDaPaz_inseirUnidadeResidencial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editaUnidadeResisencial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editaUnidadeResisencial" message="tns:IServiceMoradaDaPaz_editaUnidadeResisencial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editaUnidadeResisencialResponse" message="tns:IServiceMoradaDaPaz_editaUnidadeResisencial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarUnidades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarUnidades" message="tns:IServiceMoradaDaPaz_listarUnidades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarUnidadesResponse" message="tns:IServiceMoradaDaPaz_listarUnidades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaUnidade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaUnidade" message="tns:IServiceMoradaDaPaz_pesquisaUnidade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaUnidadeResponse" message="tns:IServiceMoradaDaPaz_pesquisaUnidade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirAdvertencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inserirAdvertencia" message="tns:IServiceMoradaDaPaz_inserirAdvertencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inserirAdvertenciaResponse" message="tns:IServiceMoradaDaPaz_inserirAdvertencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editarAdvertencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editarAdvertencia" message="tns:IServiceMoradaDaPaz_editarAdvertencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editarAdvertenciaResponse" message="tns:IServiceMoradaDaPaz_editarAdvertencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarAdvertencias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarAdvertencias" message="tns:IServiceMoradaDaPaz_listarAdvertencias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarAdvertenciasResponse" message="tns:IServiceMoradaDaPaz_listarAdvertencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaAdvertencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaAdvertencia" message="tns:IServiceMoradaDaPaz_pesquisaAdvertencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaAdvertenciaResponse" message="tns:IServiceMoradaDaPaz_pesquisaAdvertencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirEspecializacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inserirEspecializacao" message="tns:IServiceMoradaDaPaz_inserirEspecializacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inserirEspecializacaoResponse" message="tns:IServiceMoradaDaPaz_inserirEspecializacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editarEspecializacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editarEspecializacao" message="tns:IServiceMoradaDaPaz_editarEspecializacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editarEspecializacaoResponse" message="tns:IServiceMoradaDaPaz_editarEspecializacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarEspecializacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarEspecializacao" message="tns:IServiceMoradaDaPaz_listarEspecializacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarEspecializacaoResponse" message="tns:IServiceMoradaDaPaz_listarEspecializacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaEspecializacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaEspecializacao" message="tns:IServiceMoradaDaPaz_pesquisaEspecializacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaEspecializacaoResponse" message="tns:IServiceMoradaDaPaz_pesquisaEspecializacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirMulta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inserirMulta" message="tns:IServiceMoradaDaPaz_inserirMulta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inserirMultaResponse" message="tns:IServiceMoradaDaPaz_inserirMulta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editarMulta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editarMulta" message="tns:IServiceMoradaDaPaz_editarMulta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editarMultaResponse" message="tns:IServiceMoradaDaPaz_editarMulta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarMulta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarMulta" message="tns:IServiceMoradaDaPaz_listarMulta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarMultaResponse" message="tns:IServiceMoradaDaPaz_listarMulta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaMulta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaMulta" message="tns:IServiceMoradaDaPaz_pesquisaMulta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaMultaResponse" message="tns:IServiceMoradaDaPaz_pesquisaMulta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inserirOcorrencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inserirOcorrencia" message="tns:IServiceMoradaDaPaz_inserirOcorrencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/inserirOcorrenciaResponse" message="tns:IServiceMoradaDaPaz_inserirOcorrencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editarOcorrencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editarOcorrencia" message="tns:IServiceMoradaDaPaz_editarOcorrencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/editarOcorrenciaResponse" message="tns:IServiceMoradaDaPaz_editarOcorrencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarOcorrencias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarOcorrencias" message="tns:IServiceMoradaDaPaz_listarOcorrencias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/listarOcorrenciasResponse" message="tns:IServiceMoradaDaPaz_listarOcorrencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaOcorrencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaOcorrencia" message="tns:IServiceMoradaDaPaz_pesquisaOcorrencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceMoradaDaPaz/pesquisaOcorrenciaResponse" message="tns:IServiceMoradaDaPaz_pesquisaOcorrencia_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceMoradaDaPaz" type="tns:IServiceMoradaDaPaz">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inseirUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/inseirUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/editarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/listarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/pesquisaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inseirUnidadeResidencial">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/inseirUnidadeResidencial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editaUnidadeResisencial">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/editaUnidadeResisencial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarUnidades">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/listarUnidades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaUnidade">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/pesquisaUnidade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirAdvertencia">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/inserirAdvertencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editarAdvertencia">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/editarAdvertencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarAdvertencias">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/listarAdvertencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaAdvertencia">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/pesquisaAdvertencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirEspecializacao">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/inserirEspecializacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editarEspecializacao">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/editarEspecializacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarEspecializacao">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/listarEspecializacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaEspecializacao">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/pesquisaEspecializacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirMulta">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/inserirMulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editarMulta">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/editarMulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarMulta">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/listarMulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaMulta">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/pesquisaMulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirOcorrencia">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/inserirOcorrencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editarOcorrencia">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/editarOcorrencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarOcorrencias">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/listarOcorrencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pesquisaOcorrencia">
+      <soap:operation soapAction="http://tempuri.org/IServiceMoradaDaPaz/pesquisaOcorrencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceMoradaDaPaz">
+    <wsdl:port name="BasicHttpBinding_IServiceMoradaDaPaz" binding="tns:BasicHttpBinding_IServiceMoradaDaPaz">
+      <soap:address location="http://localhost:28254/ServiceMoradaDaPaz.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

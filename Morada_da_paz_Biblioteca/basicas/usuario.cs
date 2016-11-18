@@ -87,7 +87,7 @@ namespace Morada_da_paz_Biblioteca.basicas
             }
         }
 
-        internal unidade_residencial Id_unidade_residencial
+        public unidade_residencial Id_unidade_residencial
         {
             get
             {
@@ -100,7 +100,7 @@ namespace Morada_da_paz_Biblioteca.basicas
             }
         }
 
-        internal especializacao_usuario Id_especializacao_usuario
+        public especializacao_usuario Id_especializacao_usuario
         {
             get
             {

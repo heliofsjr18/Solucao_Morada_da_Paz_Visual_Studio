@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nome_completo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Senha" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="usuario" nillable="true" type="tns:usuario" />
+  <xs:complexType name="ArrayOfusuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="usuario" nillable="true" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfusuario" nillable="true" type="tns:ArrayOfusuario" />
+  <xs:complexType name="unidade_residencial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Numero_residencia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="unidade_residencial" nillable="true" type="tns:unidade_residencial" />
+  <xs:complexType name="ArrayOfunidade_residencial">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="unidade_residencial" nillable="true" type="tns:unidade_residencial" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfunidade_residencial" nillable="true" type="tns:ArrayOfunidade_residencial" />
+  <xs:complexType name="advertencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="advertencia" nillable="true" type="tns:advertencia" />
+  <xs:complexType name="ArrayOfadvertencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="advertencia" nillable="true" type="tns:advertencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfadvertencia" nillable="true" type="tns:ArrayOfadvertencia" />
+  <xs:complexType name="especializacao_usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="especializacao_usuario" nillable="true" type="tns:especializacao_usuario" />
+  <xs:complexType name="ArrayOfespecializacao_usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="especializacao_usuario" nillable="true" type="tns:especializacao_usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfespecializacao_usuario" nillable="true" type="tns:ArrayOfespecializacao_usuario" />
+  <xs:complexType name="multa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Preco" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="multa" nillable="true" type="tns:multa" />
+  <xs:complexType name="ArrayOfmulta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="multa" nillable="true" type="tns:multa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfmulta" nillable="true" type="tns:ArrayOfmulta" />
+  <xs:complexType name="ocorrencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Numero_ocorrencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Situacao" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ocorrencia" nillable="true" type="tns:ocorrencia" />
+  <xs:complexType name="ArrayOfocorrencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ocorrencia" nillable="true" type="tns:ocorrencia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfocorrencia" nillable="true" type="tns:ArrayOfocorrencia" />
+</xs:schema>

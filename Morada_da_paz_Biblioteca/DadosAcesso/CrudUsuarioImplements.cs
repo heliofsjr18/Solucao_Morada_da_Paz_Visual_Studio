@@ -140,5 +140,30 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             }
         }
 
+        public usuario consultarLogin(usuario u)
+        {
+            try
+            {
+                SqlConnection conexao = conectar();
+                string querySql = "SELECT id, login, senha, id_especializacao_usuario FROM usuario WHERE login = @login";
+
+                SqlCommand comand = new SqlCommand(querySql, conexao);
+                comand.Parameters.AddWithValue("@login", u.Login);
+                usuario usuConsulta = new usuario();
+
+                SqlDataReader reader = comand.ExecuteReader();
+
+                usuConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
+                usuConsulta.Login = reader.GetString(reader.GetOrdinal("login"));
+                usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
+                usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao_usuario"));
+
+                return usuConsulta;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Morada_da_paz_Biblioteca.RegraDeNegocio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -7,11 +6,15 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
+using Morada_da_paz_Biblioteca.basicas;
+using Morada_da_paz_Biblioteca.DadosAcesso;
+using Morada_da_paz_Biblioteca.RegraDeNegocio;
+
 namespace Morada_da_paz_WebService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    public class Service1 : IService1
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "ServiceMoradaDaPaz" in code, svc and config file together.
+    // NOTE: In order to launch WCF Test Client for testing this service, please select ServiceMoradaDaPaz.svc or ServiceMoradaDaPaz.svc.cs at the Solution Explorer and start debugging.
+    public class ServiceMoradaDaPaz : IServiceMoradaDaPaz
     {
         public string GetData(int value)
         {
@@ -32,137 +35,146 @@ namespace Morada_da_paz_WebService
         }
 
         // Service Usuario
-        public void inseirUsuario(Morada_da_paz_Biblioteca.basicas.usuario u)
+        public void inseirUsuario(usuario u)
         {
             RNusuario rnu = new RNusuario();
             rnu.chamarInserir(u);
         }
 
-        public void editarUsuario(Morada_da_paz_Biblioteca.basicas.usuario u)
+        public void editarUsuario(usuario u)
         {
             RNusuario rnu = new RNusuario();
             rnu.chamarAtualizar(u);
         }
 
-        public List<Morada_da_paz_Biblioteca.basicas.usuario> listarUsuarios()
+        public List<usuario> listarUsuarios()
         {
             RNusuario rnu = new RNusuario();
             return rnu.chamarListar();
         }
 
-        public Morada_da_paz_Biblioteca.basicas.usuario pesquisaUsuario(Morada_da_paz_Biblioteca.basicas.usuario u)
+        public usuario pesquisaUsuario(usuario u)
         {
             RNusuario rnu = new RNusuario();
             return rnu.chamarConsulta(u);
         }
-
-        //Service Unidade Residencial
-        public void inseirUnidadeResidencial(Morada_da_paz_Biblioteca.basicas.unidade_residencial ur)
+        public usuario pesquisaUsuarioLogin(usuario u)
         {
-            RNunidadeResidencial rnund = new RNunidadeResidencial();
-            rnund.chamarInserir(ur);
+            RNusuario rnu = new RNusuario();
+            return rnu.chamarConsultaLogin(u);
         }
 
-        public void editaUnidadeResisencial(Morada_da_paz_Biblioteca.basicas.unidade_residencial ur)
+        //Service Unidade Residencial
+        public void inseirUnidadeResidencial(unidade_residencial ur)
+        {
+
+            RNunidadeResidencial rnund = new RNunidadeResidencial();
+            rnund.chamarInserir(ur);
+
+        }
+
+        public void editaUnidadeResisencial(unidade_residencial ur)
         {
             RNunidadeResidencial rnund = new RNunidadeResidencial();
             rnund.chamarAtualizar(ur);
         }
 
-        public List<Morada_da_paz_Biblioteca.basicas.unidade_residencial> listarUnidades()
+        public List<unidade_residencial> listarUnidades()
         {
             RNunidadeResidencial rnund = new RNunidadeResidencial();
             return rnund.chamarListar();
         }
 
-        public Morada_da_paz_Biblioteca.basicas.unidade_residencial pesquisaUnidade(Morada_da_paz_Biblioteca.basicas.unidade_residencial ur)
+        public unidade_residencial pesquisaUnidade(unidade_residencial ur)
         {
             RNunidadeResidencial rnund = new RNunidadeResidencial();
             return rnund.chamarConsulta(ur);
         }
 
         //Service Advertencia
-        public void inserirAdvertencia(Morada_da_paz_Biblioteca.basicas.advertencia a)
+        public void inserirAdvertencia(advertencia a)
         {
             throw new NotImplementedException();
         }
 
-        public void editarAdvertencia(Morada_da_paz_Biblioteca.basicas.advertencia a)
+        public void editarAdvertencia(advertencia a)
         {
             throw new NotImplementedException();
         }
 
-        public List<Morada_da_paz_Biblioteca.basicas.advertencia> listarAdvertencias()
+        public List<advertencia> listarAdvertencias()
         {
             throw new NotImplementedException();
         }
 
-        public Morada_da_paz_Biblioteca.basicas.advertencia pesquisaAdvertencia(Morada_da_paz_Biblioteca.basicas.advertencia a)
+        public advertencia pesquisaAdvertencia(advertencia a)
         {
             throw new NotImplementedException();
         }
 
         //Service Especialização do Usuario
-        public void inserirEspecializacao(Morada_da_paz_Biblioteca.basicas.especializacao_usuario eu)
+        public void inserirEspecializacao(especializacao_usuario eu)
         {
             throw new NotImplementedException();
         }
 
-        public void editarEspecializacao(Morada_da_paz_Biblioteca.basicas.especializacao_usuario eu)
+        public void editarEspecializacao(especializacao_usuario eu)
         {
             throw new NotImplementedException();
         }
 
-        public List<Morada_da_paz_Biblioteca.basicas.especializacao_usuario> listarEspecializacao()
+        public List<especializacao_usuario> listarEspecializacao()
         {
-            throw new NotImplementedException();
+            RNespecializacaoUsuario rneu = new RNespecializacaoUsuario();
+            return rneu.chamarListar();
         }
 
-        public Morada_da_paz_Biblioteca.basicas.especializacao_usuario pesquisaEspecializacao(Morada_da_paz_Biblioteca.basicas.especializacao_usuario eu)
+        public especializacao_usuario pesquisaEspecializacao(especializacao_usuario eu)
         {
             throw new NotImplementedException();
         }
 
         //Service Multa
-        public void inserirMulta(Morada_da_paz_Biblioteca.basicas.multa m)
+        public void inserirMulta(multa m)
         {
             throw new NotImplementedException();
         }
 
-        public void editarMulta(Morada_da_paz_Biblioteca.basicas.multa m)
+        public void editarMulta(multa m)
         {
             throw new NotImplementedException();
         }
 
-        public List<Morada_da_paz_Biblioteca.basicas.multa> listarMulta()
+        public List<multa> listarMulta()
         {
             throw new NotImplementedException();
         }
 
-        public Morada_da_paz_Biblioteca.basicas.multa pesquisaMulta(Morada_da_paz_Biblioteca.basicas.multa m)
+        public multa pesquisaMulta(multa m)
         {
             throw new NotImplementedException();
         }
 
         //Service Ocorrencia
-        public void inserirOcorrencia(Morada_da_paz_Biblioteca.basicas.ocorrencia o)
+        public void inserirOcorrencia(ocorrencia o)
         {
             throw new NotImplementedException();
         }
 
-        public void editarOcorrencia(Morada_da_paz_Biblioteca.basicas.ocorrencia o)
+        public void editarOcorrencia(ocorrencia o)
         {
             throw new NotImplementedException();
         }
 
-        public List<Morada_da_paz_Biblioteca.basicas.ocorrencia> listarOcorrencias()
+        public List<ocorrencia> listarOcorrencias()
         {
             throw new NotImplementedException();
         }
 
-        public Morada_da_paz_Biblioteca.basicas.ocorrencia pesquisaOcorrencia(Morada_da_paz_Biblioteca.basicas.ocorrencia o)
+        public ocorrencia pesquisaOcorrencia(ocorrencia o)
         {
             throw new NotImplementedException();
         }
+
     }
 }

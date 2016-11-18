@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Morada_da_paz_WebService;
+using Morada_da_paz_Biblioteca.basicas;
+
 namespace Morada_da_paz_Forms
 {
     public partial class LoginWindow : Form
@@ -30,12 +33,24 @@ namespace Morada_da_paz_Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PrincipalWindow window = new PrincipalWindow(this);
-            window.Show();
-            textBox1.Text = null;
-            textBox2.Text = null;
-            checkBox1.Checked = false;
-            this.Hide();
+            usuario u = new usuario() { Login = textBox1.Text, Senha = textBox2.Text };
+            IServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
+            usuario resultadoU = serviceInstance.pesquisaUsuarioLogin(u);
+            if (resultadoU.Id != 0)
+            {
+                if (resultadoU.Senha.Equals(textBox2.Text))
+                    this.DialogResult = DialogResult.OK;
+                else
+                {
+                    MessageBox.Show("Usuário ou senha Invalido");
+                    this.DialogResult = DialogResult.Cancel;
+                }                                    
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha Invalido");
+                this.DialogResult = DialogResult.Cancel;
+            }            
         }
 
         private void LoginWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -45,6 +60,11 @@ namespace Morada_da_paz_Forms
             {
                 e.Cancel = true;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

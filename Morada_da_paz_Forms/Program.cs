@@ -14,9 +14,10 @@ namespace Morada_da_paz_Forms
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginWindow());
+            Application.Run(new PrincipalWindow());
         }
     }
 }

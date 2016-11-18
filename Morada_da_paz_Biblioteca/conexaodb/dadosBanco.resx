@@ -118,15 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="banco" xml:space="preserve">
-    <value>aluno</value>
+    <value>morada_da_pazdb</value>
+  </data>
+  <data name="SegIntegrada" xml:space="preserve">
+    <value>T</value>
   </data>
   <data name="senha" xml:space="preserve">
-    <value>aluno</value>
+    <value />
   </data>
   <data name="url" xml:space="preserve">
-    <value>PC-032</value>
+    <value>DESKTOP-70UN7UO</value>
   </data>
   <data name="usuario" xml:space="preserve">
-    <value>aluno</value>
+    <value>helio</value>
   </data>
 </root>

@@ -14,11 +14,9 @@ using Morada_da_paz_Forms.Arquivo;
 namespace Morada_da_paz_Forms
 {
     public partial class PrincipalWindow : Form
-    {
-        LoginWindow login;
-        public PrincipalWindow(LoginWindow loginWindow)
+    {        
+        public PrincipalWindow()
         {
-            this.login = loginWindow;
             InitializeComponent();
         }
 
@@ -89,8 +87,6 @@ namespace Morada_da_paz_Forms
 
             if (getResult == DialogResult.Yes)
             {
-                this.login.Show();
-                this.Hide();
             }
         }
     }

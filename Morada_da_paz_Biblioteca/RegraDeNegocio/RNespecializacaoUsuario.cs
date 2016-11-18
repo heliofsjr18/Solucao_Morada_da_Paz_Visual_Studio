@@ -51,7 +51,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
 
             return ceu.consultar(eu);
         }
-        public List<especializacao_usuario> chamarListar(especializacao_usuario eu)
+        public List<especializacao_usuario> chamarListar()
         {
             CrudEspecializacaoUsuario ceu = new CrudEspecializacaoUsuarioImplements();
             return ceu.listar();

@@ -11,9 +11,15 @@ namespace Morada_da_paz_Biblioteca.conexaodb
     {
         public SqlConnection conectar()
         {
-            string stringconnection = @"Data Source="+ dadosBanco.url + ";Initial Catalog="+dadosBanco.banco+ ";User ID="+dadosBanco.usuario+";Password="+dadosBanco.senha+";";
+            string stringconnection;
+            if (dadosBanco.SegIntegrada == "T")
+                stringconnection = @"Data Source=" + dadosBanco.url + ";Initial Catalog=" + dadosBanco.banco + ";User ID=" + dadosBanco.usuario + ";Password=" + dadosBanco.senha + ";Integrated Security=sspi" + ";";
+            else
+                stringconnection = @"Data Source=" + dadosBanco.url + ";Initial Catalog=" + dadosBanco.banco + ";User ID=" + dadosBanco.usuario + ";Password=" + dadosBanco.senha + ";";
+
             SqlConnection con = new SqlConnection(stringconnection);
             con.Open();
+            
             return con;
         }
 

@@ -10,26 +10,32 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
 {
     public class RNunidadeResidencial
     {
-        public void verificaPreenchimento(unidade_residencial ur) { 
-            if(ur == null){
+        public void verificaPreenchimento(unidade_residencial ur)
+        {
+            if (ur == null)
+            {
                 throw new Exception("Objeto Vasio!");
             }
 
-            if(ur.Descricao == null){
+            if (ur.Descricao.Equals(""))
+            {
                 throw new Exception("Descrição Vasia!");
             }
 
-            if(ur.Numero_residencia == null){
+            if (ur.Numero_residencia.Equals(""))
+            {
                 throw new Exception("Nu´mero Residencial Vasio!");
             }
         }
 
         public void chamarInserir(unidade_residencial ur)
         {
+
             CrudUnidadeResidencial cur = new CrudUnidadeResidencialImplements();
             this.verificaPreenchimento(ur);
 
             cur.inserir(ur);
+
         }
 
         public void chamarAtualizar(unidade_residencial ur)

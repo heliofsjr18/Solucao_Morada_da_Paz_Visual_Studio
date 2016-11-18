@@ -13,8 +13,8 @@
 --					  login_ VARCHAR(30) NOT NULL, 
 --					  senha VARCHAR(500) NOT NULL, 
 --					  nome_completo VARCHAR(100) NOT NULL,
---					  id_unidade_residencial REFERENCES unidade_residencial(id) NOT NULL,
---					  id_especializacao REFERENCES especializacao_usuario(id) NOT NULL);
+--					  id_unidade_residencial INT REFERENCES unidade_residencial(id) NOT NULL,
+--					  id_especializacao INT REFERENCES especializacao_usuario(id) NOT NULL);
 
 --CREATE TABLE advertencia (id INT PRIMARY KEY IDENTITY NOT NULL, 
 --						  descricao TEXT NOT NULL);
