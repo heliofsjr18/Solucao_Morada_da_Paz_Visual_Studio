@@ -94,7 +94,8 @@ namespace Morada_da_paz_WebService
         //Service Advertencia
         public void inserirAdvertencia(advertencia a)
         {
-            throw new NotImplementedException();
+            RNadvertencia rna = new RNadvertencia();
+            rna.chamarInserir(a);
         }
 
         public void editarAdvertencia(advertencia a)
