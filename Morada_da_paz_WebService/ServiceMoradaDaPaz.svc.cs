@@ -100,28 +100,33 @@ namespace Morada_da_paz_WebService
 
         public void editarAdvertencia(advertencia a)
         {
-            throw new NotImplementedException();
+            RNadvertencia rna = new RNadvertencia();
+            rna.chamarAtualizar(a);
         }
 
         public List<advertencia> listarAdvertencias()
         {
-            throw new NotImplementedException();
+            RNadvertencia rna = new RNadvertencia();
+            return rna.chamarListar();
         }
 
         public advertencia pesquisaAdvertencia(advertencia a)
         {
-            throw new NotImplementedException();
+            RNadvertencia rna = new RNadvertencia();
+            return rna.chamarConsulta(a);
         }
 
         //Service Especialização do Usuario
         public void inserirEspecializacao(especializacao_usuario eu)
         {
-            throw new NotImplementedException();
+            RNespecializacaoUsuario rneu = new RNespecializacaoUsuario();
+            rneu.chamarInserir(eu);
         }
 
         public void editarEspecializacao(especializacao_usuario eu)
         {
-            throw new NotImplementedException();
+            RNespecializacaoUsuario rneu = new RNespecializacaoUsuario();
+            rneu.chamarAtualizar(eu);
         }
 
         public List<especializacao_usuario> listarEspecializacao()
@@ -132,49 +137,58 @@ namespace Morada_da_paz_WebService
 
         public especializacao_usuario pesquisaEspecializacao(especializacao_usuario eu)
         {
-            throw new NotImplementedException();
+            RNespecializacaoUsuario rneu = new RNespecializacaoUsuario();
+            return rneu.chamarConsulta(eu);
         }
 
         //Service Multa
         public void inserirMulta(multa m)
         {
-            throw new NotImplementedException();
+            RNmulta rnm = new RNmulta();
+            rnm.chamarInserir(m);
         }
 
         public void editarMulta(multa m)
         {
-            throw new NotImplementedException();
+            RNmulta rnm = new RNmulta();
+            rnm.chamarAtualizar(m);
         }
 
         public List<multa> listarMulta()
         {
-            throw new NotImplementedException();
+            RNmulta rnm = new RNmulta();
+            return rnm.chamarListar();
         }
 
         public multa pesquisaMulta(multa m)
         {
-            throw new NotImplementedException();
+            RNmulta rnm = new RNmulta();
+            return rnm.chamarConsulta(m);
         }
 
         //Service Ocorrencia
         public void inserirOcorrencia(ocorrencia o)
         {
-            throw new NotImplementedException();
+            RNocorrencia rno = new RNocorrencia();
+            rno.chamarInseriro(o);
         }
 
         public void editarOcorrencia(ocorrencia o)
         {
-            throw new NotImplementedException();
+            RNocorrencia rno = new RNocorrencia();
+            rno.chamarAtualizar(o);
         }
 
         public List<ocorrencia> listarOcorrencias()
         {
-            throw new NotImplementedException();
+            RNocorrencia rno = new RNocorrencia();
+            return rno.chamarListar();
         }
 
         public ocorrencia pesquisaOcorrencia(ocorrencia o)
         {
-            throw new NotImplementedException();
+            RNocorrencia rno = new RNocorrencia();
+            return rno.chamarConsulta(o);
         }
 
     }

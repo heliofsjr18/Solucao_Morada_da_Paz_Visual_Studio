@@ -55,7 +55,9 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
             
             return ca.consultar(a);
         }
-        public List<advertencia> chamarListar(advertencia a)
+       
+
+        public List<advertencia> chamarListar()
         {
             CrudAdvertencia ca = new CrudAdvertenciaImplements();
             return ca.listar();

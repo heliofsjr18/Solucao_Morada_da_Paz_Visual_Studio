@@ -52,7 +52,9 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
 
             return co.pesquisar(o);
         }
-        public List<ocorrencia> chamarListar(ocorrencia o)
+       
+
+        public List<ocorrencia> chamarListar()
         {
             CrudOcorrencia co = new CrudOcorrenciaImplements();
             return co.listar();

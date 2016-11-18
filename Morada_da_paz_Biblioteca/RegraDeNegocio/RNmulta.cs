@@ -53,7 +53,8 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
 
             return cm.consultar(m);
         }
-        public List<multa> chamarListar(multa m)
+
+        public List<multa> chamarListar()
         {
             CrudMulta cm = new CrudMultaImplements();
             return cm.listar();
