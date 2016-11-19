@@ -68,12 +68,13 @@
             this.buttonEnviar.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.buttonEnviar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonEnviar.Image = global::Morada_da_paz_Forms.Properties.Resources.Custom_Icon_Design_Flatastic_10_Email_send;
-            this.buttonEnviar.Location = new System.Drawing.Point(69, 249);
+            this.buttonEnviar.Location = new System.Drawing.Point(71, 249);
             this.buttonEnviar.Name = "buttonEnviar";
             this.buttonEnviar.Size = new System.Drawing.Size(135, 41);
             this.buttonEnviar.TabIndex = 2;
             this.buttonEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonEnviar.UseVisualStyleBackColor = false;
+            this.buttonEnviar.Click += new System.EventHandler(this.buttonEnviar_Click);
             // 
             // buttonCancelar
             // 

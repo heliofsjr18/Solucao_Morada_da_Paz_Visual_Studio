@@ -15,6 +15,8 @@ namespace Morada_da_paz_Forms.Cadastro
 {
     public partial class UserRegWindow : Form
     {
+        List<especializacao_usuario> listaEspecial;
+        List<unidade_residencial> ListaUnidade;
         public UserRegWindow()
         {
             InitializeComponent();
@@ -32,8 +34,14 @@ namespace Morada_da_paz_Forms.Cadastro
                                         Email = textBoxEmail.Text,
                                         Login = textBoxLogin.Text,
                                         Senha = textBoxSenha.Text};
-            u.Id_especializacao_usuario.Id = Int32.Parse(comboBoxEspecializacao.Text);
-            u.Id_unidade_residencial.Id = Int32.Parse(comboBoxUnidadeResidencial.Text);
+
+            int indexEU = comboBoxEspecializacao.SelectedIndex;
+            especializacao_usuario esp = listaEspecial.ElementAt(indexEU);
+            int indexUR = comboBoxUnidadeResidencial.SelectedIndex;
+            unidade_residencial und = ListaUnidade.ElementAt(indexUR);
+
+            u.Id_especializacao_usuario = esp;
+            u.Id_unidade_residencial = und;
 
             ServiceMoradaDaPaz serviceinstance = new ServiceMoradaDaPaz();
             try
@@ -46,17 +54,17 @@ namespace Morada_da_paz_Forms.Cadastro
                 return;
             }
 
-            MessageBox.Show("Unidade Residencial Cadastrada");
+            MessageBox.Show("Usuario Cadastrado");
             this.Dispose();
         }
 
         private void UserRegWindow_Shown(object sender, EventArgs e)
         {
             ServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
-            List<especializacao_usuario> listaEspecial = serviceInstance.listarEspecializacao();
-            List<unidade_residencial> ListaUnidade = serviceInstance.listarUnidades();
-            comboBoxUnidadeResidencial.Items.Add("");
-            comboBoxEspecializacao.Items.Add("");
+            this.listaEspecial = serviceInstance.listarEspecializacao();
+            this.ListaUnidade = serviceInstance.listarUnidades();
+            //comboBoxUnidadeResidencial.Items.Add("");
+            //comboBoxEspecializacao.Items.Add("");
             for (int i = 0; i < listaEspecial.Count; i++)
             {
                 comboBoxEspecializacao.Items.Add(listaEspecial.ElementAt(i).Descricao);

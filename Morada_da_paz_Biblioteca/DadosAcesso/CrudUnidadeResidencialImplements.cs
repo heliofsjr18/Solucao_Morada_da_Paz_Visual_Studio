@@ -111,7 +111,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 SqlDataReader reader = comand.ExecuteReader();
 
                 List<unidade_residencial> lista = new List<unidade_residencial>();
-                while (reader.NextResult())
+                while (reader.Read())
                 {
                     unidade_residencial urConsulta = new unidade_residencial();
 

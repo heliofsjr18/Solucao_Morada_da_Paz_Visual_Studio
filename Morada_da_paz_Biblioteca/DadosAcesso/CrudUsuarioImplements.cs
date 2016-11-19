@@ -19,7 +19,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string insertSql = "INSERT INTO usuario (nome_completo, email, login, senha, id_unidade_residencial, id_especializacao_usuario)";
+                string insertSql = "INSERT INTO usuario (nome_completo, email, login_, senha, id_unidade_residencial, id_especializacao)";
                 insertSql += " values ";
                 insertSql += " (@nome_completo, @email, @login, @senha, @id_unidade_residencial, @id_especializacao_usuario)";
 

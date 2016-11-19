@@ -78,7 +78,7 @@ namespace Morada_da_paz_Biblioteca.basicas
             }
         }
 
-        internal usuario Id_usuario
+        public usuario Id_usuario
         {
             get
             {
@@ -91,7 +91,7 @@ namespace Morada_da_paz_Biblioteca.basicas
             }
         }
 
-        internal unidade_residencial Id_unidade_residencial
+        public unidade_residencial Id_unidade_residencial
         {
             get
             {
@@ -104,7 +104,7 @@ namespace Morada_da_paz_Biblioteca.basicas
             }
         }
 
-        internal List<multa> Lista_id_multa
+        public List<multa> Lista_id_multa
         {
             get
             {
@@ -117,7 +117,7 @@ namespace Morada_da_paz_Biblioteca.basicas
             }
         }
 
-        internal List<advertencia> Lista_id_advertencia
+        public List<advertencia> Lista_id_advertencia
         {
             get
             {
@@ -127,6 +127,19 @@ namespace Morada_da_paz_Biblioteca.basicas
             set
             {
                 lista_id_advertencia = value;
+            }
+        }
+
+        public bool TipoPublico
+        {
+            get
+            {
+                return tipoPublico;
+            }
+
+            set
+            {
+                tipoPublico = value;
             }
         }
     }

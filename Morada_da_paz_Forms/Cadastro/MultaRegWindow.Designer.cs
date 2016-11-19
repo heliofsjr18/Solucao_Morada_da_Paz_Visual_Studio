@@ -95,6 +95,7 @@
             this.buttonSalvar.Size = new System.Drawing.Size(125, 53);
             this.buttonSalvar.TabIndex = 5;
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // buttonCancelar
             // 

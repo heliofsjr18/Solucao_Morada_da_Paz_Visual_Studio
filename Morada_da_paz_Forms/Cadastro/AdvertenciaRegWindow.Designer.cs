@@ -80,6 +80,7 @@
             this.buttonSalvar.Size = new System.Drawing.Size(102, 55);
             this.buttonSalvar.TabIndex = 3;
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // AdvertenciaRegWindow
             // 

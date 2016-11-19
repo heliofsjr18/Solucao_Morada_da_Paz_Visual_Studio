@@ -108,7 +108,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 SqlDataReader reader = comand.ExecuteReader();
 
                 List<especializacao_usuario> lista = new List<especializacao_usuario>();
-                while (reader.NextResult())
+                while (reader.Read())
                 {
                     especializacao_usuario euConsulta = new especializacao_usuario();
 

@@ -70,7 +70,7 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to T.
+        ///   Looks up a localized string similar to F.
         /// </summary>
         internal static string SegIntegrada {
             get {
@@ -79,7 +79,7 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to aluno.
         /// </summary>
         internal static string senha {
             get {
@@ -88,7 +88,7 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DESKTOP-70UN7UO.
+        ///   Looks up a localized string similar to PC-041.
         /// </summary>
         internal static string url {
             get {
@@ -97,7 +97,7 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to helio.
+        ///   Looks up a localized string similar to aluno.
         /// </summary>
         internal static string usuario {
             get {
