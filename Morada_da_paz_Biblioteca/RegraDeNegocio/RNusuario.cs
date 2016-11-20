@@ -90,8 +90,6 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         public usuario chamarConsultaLogin(usuario u)
         {
             CrudUsuario cU = new CrudUsuarioImplements();
-            this.verificaPreenchimento(u);
-            this.verificaPreenchimento(u);
             return cU.consultarLogin(u);
         }        
 

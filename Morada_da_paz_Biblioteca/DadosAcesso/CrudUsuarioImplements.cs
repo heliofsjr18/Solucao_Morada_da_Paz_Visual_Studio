@@ -145,7 +145,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string querySql = "SELECT id, login, senha, id_especializacao_usuario FROM usuario WHERE login = @login";
+                string querySql = "SELECT id, login_, senha, id_especializacao FROM usuario WHERE login_ = @login";
 
                 SqlCommand comand = new SqlCommand(querySql, conexao);
                 comand.Parameters.AddWithValue("@login", u.Login);
@@ -154,9 +154,9 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 SqlDataReader reader = comand.ExecuteReader();
 
                 usuConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
-                usuConsulta.Login = reader.GetString(reader.GetOrdinal("login"));
+                usuConsulta.Login = reader.GetString(reader.GetOrdinal("login_"));
                 usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
-                usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao_usuario"));
+                usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao"));
 
                 return usuConsulta;
             }

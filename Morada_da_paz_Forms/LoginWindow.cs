@@ -34,11 +34,21 @@ namespace Morada_da_paz_Forms
         private void button1_Click(object sender, EventArgs e)
         {
             usuario u = new usuario() { Login = textBox1.Text, Senha = textBox2.Text };
-            IServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
-            usuario resultadoU = serviceInstance.pesquisaUsuarioLogin(u);
+            usuario resultadoU = new usuario();
+            try
+            {
+                IServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
+                resultadoU = serviceInstance.pesquisaUsuarioLogin(u);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            
             if (resultadoU.Id != 0)
             {
-                if (resultadoU.Senha.Equals(textBox2.Text))
+                if (resultadoU.Senha.Equals(u.Senha))
                     this.DialogResult = DialogResult.OK;
                 else
                 {
