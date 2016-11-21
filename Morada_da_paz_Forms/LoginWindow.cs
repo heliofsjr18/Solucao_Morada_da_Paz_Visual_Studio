@@ -15,6 +15,8 @@ namespace Morada_da_paz_Forms
 {
     public partial class LoginWindow : Form
     {
+        public usuario login = new usuario();
+        public usuario resultadoU = new usuario();
         public LoginWindow()
         {
             InitializeComponent();
@@ -31,37 +33,6 @@ namespace Morada_da_paz_Forms
             textBox2.UseSystemPasswordChar = !getSender.Checked;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            usuario u = new usuario() { Login = textBox1.Text, Senha = textBox2.Text };
-            usuario resultadoU = new usuario();
-            try
-            {
-                IServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
-                resultadoU = serviceInstance.pesquisaUsuarioLogin(u);
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            
-            if (resultadoU.Id != 0)
-            {
-                if (resultadoU.Senha.Equals(u.Senha))
-                    this.DialogResult = DialogResult.OK;
-                else
-                {
-                    MessageBox.Show("Usuário ou senha Invalido");
-                    this.DialogResult = DialogResult.Cancel;
-                }                                    
-            }
-            else
-            {
-                MessageBox.Show("Usuário ou senha Invalido");
-                this.DialogResult = DialogResult.Cancel;
-            }            
-        }
 
         private void LoginWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -75,6 +46,41 @@ namespace Morada_da_paz_Forms
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.login.Login = textBox1.Text;
+            this.login.Senha = textBox2.Text;
+            //usuario resultadoU = new usuario();
+            try
+            {
+                IServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
+                this.resultadoU = serviceInstance.pesquisaUsuarioLogin(this.login);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            if (resultadoU.Id != 0)
+            {
+                if (this.resultadoU.Senha.Equals(login.Senha))
+                {
+                    this.DialogResult = DialogResult.OK;
+                }
+
+                else
+                {
+                    MessageBox.Show("Usuário ou senha Invalido");                    
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha Invalido");                
+                return;
+            }
         }
     }
 }

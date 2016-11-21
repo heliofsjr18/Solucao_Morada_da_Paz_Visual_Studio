@@ -10,14 +10,18 @@ using System.Windows.Forms;
 
 using Morada_da_paz_Forms.Cadastro;
 using Morada_da_paz_Forms.Arquivo;
+using Morada_da_paz_Biblioteca.basicas;
 
 namespace Morada_da_paz_Forms
 {
     public partial class PrincipalWindow : Form
-    {        
-        public PrincipalWindow()
+    {
+        usuario usuarioAtivo = new usuario();
+        public PrincipalWindow(usuario login)
         {
+            this.usuarioAtivo = login;
             InitializeComponent();
+            this.Text += " -> " + usuarioAtivo.Nome_completo;
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,7 +41,7 @@ namespace Morada_da_paz_Forms
 
         private void PrincipalWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-                Application.Exit();            
+            Application.Exit();
         }
 
         private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)

@@ -64,7 +64,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string deleteSql = "DELETE FROM usuario WHERE id = @idpar";                
+                string deleteSql = "DELETE FROM usuario WHERE id = @idpar";
 
                 SqlCommand comand = new SqlCommand(deleteSql, conexao);
                 comand.Parameters.AddWithValue("@idpar", u.Id);
@@ -103,7 +103,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-            }            
+            }
         }
         public List<usuario> listar()
         {
@@ -145,7 +145,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string querySql = "SELECT id, login_, senha, id_especializacao FROM usuario WHERE login_ = @login";
+                string querySql = "SELECT id, login_, senha, id_especializacao, nome_completo  FROM usuario WHERE login_ = @login";
 
                 SqlCommand comand = new SqlCommand(querySql, conexao);
                 comand.Parameters.AddWithValue("@login", u.Login);
@@ -153,10 +153,14 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                 SqlDataReader reader = comand.ExecuteReader();
 
-                usuConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
-                usuConsulta.Login = reader.GetString(reader.GetOrdinal("login_"));
-                usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
-                usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao"));
+                if (reader.Read())
+                {
+                    usuConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
+                    usuConsulta.Login = reader.GetString(reader.GetOrdinal("login_"));
+                    usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
+                    usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao"));
+                    usuConsulta.Nome_completo = reader.GetString(reader.GetOrdinal("nome_completo"));
+                }
 
                 return usuConsulta;
             }
