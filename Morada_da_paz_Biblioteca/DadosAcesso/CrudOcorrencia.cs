@@ -18,6 +18,8 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
         ocorrencia pesquisar(ocorrencia o);
 
+        List<ocorrencia> ListarPorUsuario(usuario u);
+
         List<ocorrencia> listar(); 
     }
 }

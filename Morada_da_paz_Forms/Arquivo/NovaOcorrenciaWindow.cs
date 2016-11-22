@@ -22,11 +22,17 @@ namespace Morada_da_paz_Forms.Arquivo
 
         private void buttonEnviar_Click(object sender, EventArgs e)
         {
-            ocorrencia oco = new ocorrencia() { Situacao = "Em Aberto", Numero_ocorrencia = "156" };
+            Random rnd = new Random();            
+
+            ocorrencia oco = new ocorrencia() { Numero_ocorrencia = "" + rnd.Next(int.MaxValue), Situacao = "Em Aberto" };
+            oco.Id_usuario.Id = PrincipalWindow.usuarioAtivo.Id;
             oco.Descricao = richTextBox1.Text;
-            oco.TipoPublico = false;
+            if (checkBox1.Checked ==  true)            
+                oco.TipoPublico = 1;
+            else
+                oco.TipoPublico = 0;
+
             oco.Id_usuario.Id = 1;
-            oco.Id_unidade_residencial.Id = 1;
             ServiceMoradaDaPaz serviceinstance = new ServiceMoradaDaPaz();
             try
             {
@@ -40,6 +46,10 @@ namespace Morada_da_paz_Forms.Arquivo
 
             MessageBox.Show("Ocorrencia Cadastrada");
             this.Dispose();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {            
         }
     }
 }

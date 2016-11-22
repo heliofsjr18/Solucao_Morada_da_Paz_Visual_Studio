@@ -1,40 +1,61 @@
---CREATE DATABASE morada_da_pazdb
---GO
---USE morada_da_pazdb
---CREATE TABLE especializacao_usuario (id INT PRIMARY KEY IDENTITY NOT NULL,
---									 descricao TEXT NOT NULL);
+--create database morada_da_pazdb
+--go
+--use morada_da_pazdb
+--create table especializacao_usuario (id int primary key identity not null,
+--									 descricao text not null);
 
---CREATE TABLE unidade_residencial (id INT PRIMARY KEY IDENTITY NOT NULL,
---								  numero_unidade VARCHAR(8) NOT NULL, 
---								  descricao TEXT);
+--create table unidade_residencial (id int primary key identity not null,
+--								  numero_unidade varchar(8) not null, 
+--								  descricao text);
 
---CREATE TABLE usuario (id INT PRIMARY KEY IDENTITY NOT NULL,
---					  email VARCHAR(30), 
---					  login_ VARCHAR(30) NOT NULL, 
---					  senha VARCHAR(500) NOT NULL, 
---					  nome_completo VARCHAR(100) NOT NULL,
---					  id_unidade_residencial INT REFERENCES unidade_residencial(id) NOT NULL,
---					  id_especializacao INT REFERENCES especializacao_usuario(id) NOT NULL);
+--create table usuario (id int primary key identity not null,
+--					  email varchar(30), 
+--					  login_ varchar(30) not null, 
+--					  senha varchar(500) not null, 
+--					  nome_completo varchar(100) not null,
+--					  id_unidade_residencial int references unidade_residencial(id) not null,
+--					  id_especializacao int references especializacao_usuario(id) not null);
 
---CREATE TABLE advertencia (id INT PRIMARY KEY IDENTITY NOT NULL, 
---						  descricao TEXT NOT NULL);
+--create table advertencia (id int primary key identity not null, 
+--						  descricao text not null);
 
---CREATE TABLE multa (id INT PRIMARY KEY IDENTITY NOT NULL, 
---					descricao TEXT, 
---					preco DECIMAL(10,2) NOT NULL);
+--create table multa (id int primary key identity not null, 
+--					descricao text, 
+--					preco decimal(10,2) not null);
 
---CREATE TABLE ocorrencia (id INT PRIMARY KEY IDENTITY NOT NULL, 
---						situacao VARCHAR(30) DEFAULT ('aberto') NOT NULL, 
---						numero_ocorrencia VARCHAR(30) NOT NULL, 
---						descricao TEXT NOT NULL,
---						id_usuario INT REFERENCES usuario(id) NOT NULL,
---						id_unidade_residencial INT REFERENCES unidade_residencial(id) NOT NULL);
+--create table ocorrencia (id int primary key identity not null, 
+--						situacao varchar(30) default ('aberto'), 
+--						numero_ocorrencia varchar(30) not null, 
+--						descricao text not null,
+--						tipoPublico int DEFAULT (0),
+--						id_usuario int references usuario(id) not null,
+--						id_unidade_residencial int references unidade_residencial(id));
 
---CREATE TABLE ocorrencia_advertencia (id_ocorrencia INT REFERENCES ocorrencia(id) NOT NULL,
---									 id_advertencia INT REFERENCES advertencia(id) NOT NULL
---									 PRIMARY KEY(id_ocorrencia, id_advertencia));
+--create table ocorrencia_advertencia (id_ocorrencia int references ocorrencia(id) not null,
+--									 id_advertencia int references advertencia(id) not null
+--									 primary key(id_ocorrencia, id_advertencia));
 
---CREATE TABLE ocorrencia_multa (id_ocorrencia INT REFERENCES ocorrencia(id) NOT NULL,
---							   id_multa INT REFERENCES advertencia(id) NOT NULL,
---							   valor_total DECIMAL(8,2) NOT NULL,
---							   PRIMARY KEY(id_ocorrencia, id_multa));
+--create table ocorrencia_multa (id_ocorrencia int references ocorrencia(id) not null,
+--							   id_multa int references advertencia(id) not null,
+--							   valor_total decimal(8,2) not null,
+--							   primary key(id_ocorrencia, id_multa));
+
+--INSERT INTO unidade_residencial (numero_unidade, descricao) VALUES (123, 'alugado');
+
+--INSERT INTO especializacao_usuario (descricao) VALUES ('admin');
+
+--INSERT INTO usuario (login_,senha,nome_completo,id_unidade_residencial, id_especializacao ) 
+--VALUES ('admin', 'admin', 'helio ferreira', 1, 1)
+
+--select * from ocorrencia;
+
+--SELECT * FROM usuario
+
+--SELECT id, situacao, numero_ocorrencia, descricao, id_usuario, id_unidade_residencial FROM ocorrencia
+
+--ALTER TABLE ocorrencia ADD tipoPublico int DEFAULT (0);
+
+--UPDATE ocorrencia SET tipoPublico = 0;
+
+INSERT INTO ocorrencia (situacao,numero_ocorrencia ,descricao, id_usuario, id_unidade_residencial, tipoPublico)
+ VALUES (NULL, 1042512759, 'caguei na piscina', 1, 1, 1)

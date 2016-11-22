@@ -103,7 +103,10 @@ namespace Morada_da_paz_WebService
 
         [OperationContract]
         ocorrencia pesquisaOcorrencia(ocorrencia o);
-        
+
+        [OperationContract]
+        List<ocorrencia> listarOcorrenciasPorUsuario(usuario u);
+
     }
 
 

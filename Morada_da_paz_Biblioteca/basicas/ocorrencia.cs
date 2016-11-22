@@ -13,7 +13,7 @@ namespace Morada_da_paz_Biblioteca.basicas
         private String numero_ocorrencia;
         private String descricao;
         private usuario id_usuario;
-        private bool tipoPublico;
+        private int tipoPublico;
         private unidade_residencial id_unidade_residencial;
         private List<advertencia> lista_id_advertencia;
         private List<multa> lista_id_multa;
@@ -130,7 +130,7 @@ namespace Morada_da_paz_Biblioteca.basicas
             }
         }
 
-        public bool TipoPublico
+        public int TipoPublico
         {
             get
             {

@@ -104,6 +104,6 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         {
             CrudUsuario cU = new CrudUsuarioImplements();
             return cU.listar();
-        }
+        }        
     }
 }

@@ -191,5 +191,10 @@ namespace Morada_da_paz_WebService
             return rno.chamarConsulta(o);
         }
 
+        public List<ocorrencia> listarOcorrenciasPorUsuario(usuario u)
+        {
+            RNocorrencia rno = new RNocorrencia();
+            return rno.chamarListarPorUsuario(u);
+        }
     }
 }

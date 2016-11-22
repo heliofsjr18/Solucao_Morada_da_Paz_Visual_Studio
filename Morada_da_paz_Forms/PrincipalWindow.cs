@@ -11,15 +11,16 @@ using System.Windows.Forms;
 using Morada_da_paz_Forms.Cadastro;
 using Morada_da_paz_Forms.Arquivo;
 using Morada_da_paz_Biblioteca.basicas;
+using Morada_da_paz_WebService;
 
 namespace Morada_da_paz_Forms
 {
     public partial class PrincipalWindow : Form
     {
-        usuario usuarioAtivo = new usuario();
+        public static usuario usuarioAtivo = new usuario();
         public PrincipalWindow(usuario login)
         {
-            this.usuarioAtivo = login;
+            usuarioAtivo = login;
             InitializeComponent();
             this.Text += " -> " + usuarioAtivo.Nome_completo;
         }
@@ -91,6 +92,28 @@ namespace Morada_da_paz_Forms
 
             if (getResult == DialogResult.Yes)
             {
+            }
+        }
+
+        private void PrincipalWindow_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
+                List<ocorrencia> ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo);
+                listViewMinhasOcorrencias.Items.Clear();
+                for (int index = 0; index < ocorrenciaLista.Count; index++)
+                {
+                    
+                    ListViewItem linha = listViewMinhasOcorrencias.Items.Add(ocorrenciaLista.ElementAt(index).Numero_ocorrencia);
+                    linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Descricao);
+                    linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Situacao);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
     }
