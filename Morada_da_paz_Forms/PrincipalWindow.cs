@@ -14,6 +14,7 @@ using Morada_da_paz_Biblioteca.basicas;
 using Morada_da_paz_WebService;
 using System.IO;
 using System.Xml;
+using Morada_da_paz_Forms.Edicao;
 
 namespace Morada_da_paz_Forms
 {
@@ -23,11 +24,15 @@ namespace Morada_da_paz_Forms
         private string caminho = @"c:\xml\ocorrencias.xml";
         public static usuario usuarioAtivo = new usuario();
 
+        ServiceMoradaDaPaz sv;
+        List<ocorrencia> ocorrenciaLista;
+
         public PrincipalWindow(usuario login)
         {
             usuarioAtivo = login;
             InitializeComponent();
             this.Text += " -> " + usuarioAtivo.Nome_completo;
+
         }
 
         
@@ -106,8 +111,8 @@ namespace Morada_da_paz_Forms
         {
             try
             {
-                ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
-                List<ocorrencia> ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo);
+                this.sv = new ServiceMoradaDaPaz();
+               this.ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo);
                 listViewMinhasOcorrencias.Items.Clear();
                 for (int index = 0; index < ocorrenciaLista.Count; index++)
                 {
@@ -155,7 +160,7 @@ namespace Morada_da_paz_Forms
         #endregion
 
         #region add nova linha
-        public void novaLinha()
+        public void novaLinha(ocorrencia o)
         {
             try
             {
@@ -171,10 +176,13 @@ namespace Morada_da_paz_Forms
                 XmlNode status = doc.CreateElement("status");
                 #endregion
 
+                
+
+                
                 #region colocar valores nos elementos xml
-                numero.InnerText = "";
-                descricao.InnerText = "";
-                status.InnerText = "";
+                numero.InnerText = o.Numero_ocorrencia;
+                descricao.InnerText = o.Descricao;
+                status.InnerText = o.Situacao;
                 #endregion
 
                 #region definido hierarquia
@@ -182,13 +190,14 @@ namespace Morada_da_paz_Forms
                 ocorrencia.AppendChild(descricao);
                 ocorrencia.AppendChild(status);
                 #endregion
+                
 
                 #region adicionando ao elemento raiz
                 doc.SelectSingleNode("/minhasOcorrencias").AppendChild(ocorrencia);
                 doc.Save(this.caminho);
                 #endregion
 
-                MessageBox.Show("Documento salvo em :"+this.caminho);
+                
 
 
             }
@@ -198,5 +207,31 @@ namespace Morada_da_paz_Forms
             }
         }
         #endregion
+
+        private void buttonGeraXml_Click(object sender, EventArgs e)
+        {
+            #region instancia do webservice e criação da lista de ocorrencia
+            ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
+            List<ocorrencia> ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo);
+            #endregion
+            #region loop para preenchimento do XML
+            for (int x = 0; x < ocorrenciaLista.Count; x++)
+            {
+                this.criarArquivo();
+                this.novaLinha(ocorrenciaLista.ElementAt(x));
+            }
+            #endregion
+
+            MessageBox.Show("Documento salvo em " + this.caminho);
+        }
+
+        private void listViewMinhasOcorrencias_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int indexListView = listViewMinhasOcorrencias.FocusedItem.Index;
+            ocorrencia oc = this.ocorrenciaLista.ElementAt(indexListView);
+            //MessageBox.Show(oc.Numero_ocorrencia);
+            EditOcorrenciaWindow eo = new EditOcorrenciaWindow(oc);
+            eo.ShowDialog();
+        }
     }
 }

@@ -17,11 +17,12 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection c = conectar();
-                string query = "UPDATE ocorrencia set descricao = @descricao, id_usuario = @id_usuario, id_unidade_residencial = @id_unidade_residencial , tipoPublico = @tipoPublico WHERE id = @id";
+                string query = "UPDATE ocorrencia set situacao = @situacao, descricao = @descricao, id_usuario = @id_usuario, id_unidade_residencial = @id_unidade_residencial , tipoPublico = @tipoPublico WHERE id = @id";
                 SqlCommand comand = new SqlCommand(query,c);
+                comand.Parameters.AddWithValue("@situacao", o.Situacao);
                 comand.Parameters.AddWithValue("@descricao", o.Descricao);
-                comand.Parameters.AddWithValue("@id_usuario", o.Id_usuario);
-                comand.Parameters.AddWithValue("@id_unidade_residencial", o.Id_unidade_residencial);
+                comand.Parameters.AddWithValue("@id_usuario", o.Id_usuario.Id);
+                comand.Parameters.AddWithValue("@id_unidade_residencial", o.Id_unidade_residencial.Id);
                 comand.Parameters.AddWithValue("@id", o.Id);
                 comand.Parameters.AddWithValue("@tipoPublico", o.TipoPublico);
                 comand.ExecuteNonQuery();

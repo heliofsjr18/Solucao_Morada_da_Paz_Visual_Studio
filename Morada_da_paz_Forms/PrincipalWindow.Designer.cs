@@ -204,6 +204,7 @@
             this.listViewMinhasOcorrencias.TabIndex = 1;
             this.listViewMinhasOcorrencias.UseCompatibleStateImageBehavior = false;
             this.listViewMinhasOcorrencias.View = System.Windows.Forms.View.Details;
+            this.listViewMinhasOcorrencias.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewMinhasOcorrencias_MouseDoubleClick);
             // 
             // Número
             // 
@@ -245,6 +246,7 @@
             this.buttonGeraXml.Size = new System.Drawing.Size(75, 41);
             this.buttonGeraXml.TabIndex = 5;
             this.buttonGeraXml.UseVisualStyleBackColor = true;
+            this.buttonGeraXml.Click += new System.EventHandler(this.buttonGeraXml_Click);
             // 
             // label2
             // 

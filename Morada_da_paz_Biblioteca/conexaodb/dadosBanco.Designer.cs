@@ -88,7 +88,7 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GR47.
+        ///   Looks up a localized string similar to DESKTOP-GV2NQNV.
         /// </summary>
         internal static string url {
             get {
@@ -97,7 +97,7 @@ namespace Morada_da_paz_Biblioteca.conexaodb {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GR47.
+        ///   Looks up a localized string similar to DESKTOP-GV2NQNV\Dayvson.
         /// </summary>
         internal static string usuario {
             get {
