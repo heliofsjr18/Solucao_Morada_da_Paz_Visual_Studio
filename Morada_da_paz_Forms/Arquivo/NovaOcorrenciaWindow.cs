@@ -34,9 +34,11 @@ namespace Morada_da_paz_Forms.Arquivo
 
             oco.Id_usuario.Id = 1;
             ServiceMoradaDaPaz serviceinstance = new ServiceMoradaDaPaz();
+            
             try
             {
                 serviceinstance.inserirOcorrencia(oco);
+
             }
             catch (Exception ex)
             {

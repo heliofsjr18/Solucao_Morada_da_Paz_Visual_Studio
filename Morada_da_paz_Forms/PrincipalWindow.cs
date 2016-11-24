@@ -12,18 +12,25 @@ using Morada_da_paz_Forms.Cadastro;
 using Morada_da_paz_Forms.Arquivo;
 using Morada_da_paz_Biblioteca.basicas;
 using Morada_da_paz_WebService;
+using System.IO;
+using System.Xml;
 
 namespace Morada_da_paz_Forms
 {
+     
     public partial class PrincipalWindow : Form
     {
+        private string caminho = @"c:\xml\ocorrencias.xml";
         public static usuario usuarioAtivo = new usuario();
+
         public PrincipalWindow(usuario login)
         {
             usuarioAtivo = login;
             InitializeComponent();
             this.Text += " -> " + usuarioAtivo.Nome_completo;
         }
+
+        
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -95,7 +102,7 @@ namespace Morada_da_paz_Forms
             }
         }
 
-        private void PrincipalWindow_Load(object sender, EventArgs e)
+        public void carregaOcorrencias()
         {
             try
             {
@@ -104,7 +111,7 @@ namespace Morada_da_paz_Forms
                 listViewMinhasOcorrencias.Items.Clear();
                 for (int index = 0; index < ocorrenciaLista.Count; index++)
                 {
-                    
+
                     ListViewItem linha = listViewMinhasOcorrencias.Items.Add(ocorrenciaLista.ElementAt(index).Numero_ocorrencia);
                     linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Descricao);
                     linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Situacao);
@@ -116,5 +123,80 @@ namespace Morada_da_paz_Forms
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void PrincipalWindow_Load(object sender, EventArgs e)
+        {
+            this.carregaOcorrencias();
+        }
+
+        private void buttonAtulizar_Click(object sender, EventArgs e)
+        {
+            this.carregaOcorrencias();
+        }
+
+        #region codigos de manipulação de XML
+        public void criarArquivo()
+        {
+            try
+            {
+                if (File.Exists(this.caminho) == false)
+                {
+                    XmlDocument doc = new XmlDocument();
+                    XmlNode raiz = doc.CreateElement("minhasOcorrencias");
+                    doc.AppendChild(raiz);
+                    doc.Save(this.caminho);
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        #endregion
+
+        #region add nova linha
+        public void novaLinha()
+        {
+            try
+            {
+                #region abrir aquivo
+                XmlDocument doc = new XmlDocument();
+                doc.Load(this.caminho);
+                #endregion
+
+                #region definição dos elementos do xml
+                XmlNode ocorrencia = doc.CreateElement("ocorrencia");
+                XmlNode numero = doc.CreateElement("numero");
+                XmlNode descricao = doc.CreateElement("descricao");
+                XmlNode status = doc.CreateElement("status");
+                #endregion
+
+                #region colocar valores nos elementos xml
+                numero.InnerText = "";
+                descricao.InnerText = "";
+                status.InnerText = "";
+                #endregion
+
+                #region definido hierarquia
+                ocorrencia.AppendChild(numero);
+                ocorrencia.AppendChild(descricao);
+                ocorrencia.AppendChild(status);
+                #endregion
+
+                #region adicionando ao elemento raiz
+                doc.SelectSingleNode("/minhasOcorrencias").AppendChild(ocorrencia);
+                doc.Save(this.caminho);
+                #endregion
+
+                MessageBox.Show("Documento salvo em :"+this.caminho);
+
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        #endregion
     }
 }

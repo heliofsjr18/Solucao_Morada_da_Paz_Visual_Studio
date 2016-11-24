@@ -48,6 +48,10 @@
             this.Descrição = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonAtulizar = new System.Windows.Forms.Button();
+            this.buttonGeraXml = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -223,12 +227,53 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Minhas Ocorrências";
             // 
+            // buttonAtulizar
+            // 
+            this.buttonAtulizar.Image = global::Morada_da_paz_Forms.Properties.Resources.Paomedia_Small_N_Flat_Sign_sync;
+            this.buttonAtulizar.Location = new System.Drawing.Point(410, 151);
+            this.buttonAtulizar.Name = "buttonAtulizar";
+            this.buttonAtulizar.Size = new System.Drawing.Size(75, 42);
+            this.buttonAtulizar.TabIndex = 4;
+            this.buttonAtulizar.UseVisualStyleBackColor = true;
+            this.buttonAtulizar.Click += new System.EventHandler(this.buttonAtulizar_Click);
+            // 
+            // buttonGeraXml
+            // 
+            this.buttonGeraXml.Image = ((System.Drawing.Image)(resources.GetObject("buttonGeraXml.Image")));
+            this.buttonGeraXml.Location = new System.Drawing.Point(525, 151);
+            this.buttonGeraXml.Name = "buttonGeraXml";
+            this.buttonGeraXml.Size = new System.Drawing.Size(75, 41);
+            this.buttonGeraXml.TabIndex = 5;
+            this.buttonGeraXml.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(395, 135);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Atualizar Ocorrências";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(532, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Gerar XML";
+            // 
             // PrincipalWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(656, 361);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.buttonGeraXml);
+            this.Controls.Add(this.buttonAtulizar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listViewMinhasOcorrencias);
             this.Controls.Add(this.menuStrip1);
@@ -267,6 +312,10 @@
         private System.Windows.Forms.ColumnHeader Status;
         private System.Windows.Forms.ToolStripMenuItem muralDeOcorrenciasPublicasToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonAtulizar;
+        private System.Windows.Forms.Button buttonGeraXml;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
