@@ -26,13 +26,14 @@ namespace Morada_da_paz_Forms.Arquivo
 
             ocorrencia oco = new ocorrencia() { Numero_ocorrencia = "" + rnd.Next(int.MaxValue), Situacao = "Em Aberto" };
             oco.Id_usuario.Id = PrincipalWindow.usuarioAtivo.Id;
+            
             oco.Descricao = richTextBox1.Text;
             if (checkBox1.Checked ==  true)            
                 oco.TipoPublico = 1;
             else
                 oco.TipoPublico = 0;
 
-            oco.Id_usuario.Id = 1;
+            
             ServiceMoradaDaPaz serviceinstance = new ServiceMoradaDaPaz();
             
             try

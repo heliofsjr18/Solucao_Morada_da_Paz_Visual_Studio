@@ -39,12 +39,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxUnd = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxMulta = new System.Windows.Forms.CheckBox();
+            this.comboBoxMulta = new System.Windows.Forms.ComboBox();
+            this.checkBoxAdvertencia = new System.Windows.Forms.CheckBox();
+            this.comboBoxAdvertencia = new System.Windows.Forms.ComboBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.Image = global::Morada_da_paz_Forms.Properties.Resources.Hopstarter_Button_Button_Close;
-            this.buttonCancelar.Location = new System.Drawing.Point(319, 296);
+            this.buttonCancelar.Location = new System.Drawing.Point(266, 304);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 43);
             this.buttonCancelar.TabIndex = 1;
@@ -54,7 +60,7 @@
             // buttonSalvar
             // 
             this.buttonSalvar.Image = global::Morada_da_paz_Forms.Properties.Resources.Gakuseisean_Ivista_2_Alarm_Tick;
-            this.buttonSalvar.Location = new System.Drawing.Point(178, 296);
+            this.buttonSalvar.Location = new System.Drawing.Point(125, 304);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(75, 43);
             this.buttonSalvar.TabIndex = 0;
@@ -63,7 +69,8 @@
             // 
             // richTextBoxDescricao
             // 
-            this.richTextBoxDescricao.Location = new System.Drawing.Point(79, 111);
+            this.richTextBoxDescricao.Enabled = false;
+            this.richTextBoxDescricao.Location = new System.Drawing.Point(26, 111);
             this.richTextBoxDescricao.Name = "richTextBoxDescricao";
             this.richTextBoxDescricao.Size = new System.Drawing.Size(423, 153);
             this.richTextBoxDescricao.TabIndex = 2;
@@ -72,7 +79,7 @@
             // checkBoxOcorrenciaPublica
             // 
             this.checkBoxOcorrenciaPublica.AutoSize = true;
-            this.checkBoxOcorrenciaPublica.Location = new System.Drawing.Point(387, 270);
+            this.checkBoxOcorrenciaPublica.Location = new System.Drawing.Point(334, 270);
             this.checkBoxOcorrenciaPublica.Name = "checkBoxOcorrenciaPublica";
             this.checkBoxOcorrenciaPublica.Size = new System.Drawing.Size(115, 17);
             this.checkBoxOcorrenciaPublica.TabIndex = 6;
@@ -86,7 +93,7 @@
             "Em Análise",
             "Finalizada",
             "Cancelada"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(366, 85);
+            this.comboBoxStatus.Location = new System.Drawing.Point(313, 85);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
             this.comboBoxStatus.TabIndex = 7;
@@ -95,7 +102,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(193, 20);
+            this.label1.Location = new System.Drawing.Point(243, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 38);
             this.label1.TabIndex = 8;
@@ -104,7 +111,7 @@
             // textBoxNumero
             // 
             this.textBoxNumero.Enabled = false;
-            this.textBoxNumero.Location = new System.Drawing.Point(242, 86);
+            this.textBoxNumero.Location = new System.Drawing.Point(189, 86);
             this.textBoxNumero.Name = "textBoxNumero";
             this.textBoxNumero.Size = new System.Drawing.Size(100, 20);
             this.textBoxNumero.TabIndex = 9;
@@ -112,7 +119,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(283, 70);
+            this.label2.Location = new System.Drawing.Point(230, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(19, 13);
             this.label2.TabIndex = 10;
@@ -121,7 +128,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(410, 66);
+            this.label3.Location = new System.Drawing.Point(357, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 11;
@@ -130,7 +137,7 @@
             // comboBoxUnd
             // 
             this.comboBoxUnd.FormattingEnabled = true;
-            this.comboBoxUnd.Location = new System.Drawing.Point(96, 84);
+            this.comboBoxUnd.Location = new System.Drawing.Point(43, 84);
             this.comboBoxUnd.Name = "comboBoxUnd";
             this.comboBoxUnd.Size = new System.Drawing.Size(121, 21);
             this.comboBoxUnd.TabIndex = 12;
@@ -138,19 +145,69 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(113, 66);
+            this.label4.Location = new System.Drawing.Point(60, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "Und. Residencial";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.comboBoxAdvertencia);
+            this.groupBox1.Controls.Add(this.checkBoxAdvertencia);
+            this.groupBox1.Controls.Add(this.comboBoxMulta);
+            this.groupBox1.Controls.Add(this.checkBoxMulta);
+            this.groupBox1.Location = new System.Drawing.Point(473, 66);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(234, 253);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sanção Administrativa";
+            // 
+            // checkBoxMulta
+            // 
+            this.checkBoxMulta.AutoSize = true;
+            this.checkBoxMulta.Location = new System.Drawing.Point(51, 62);
+            this.checkBoxMulta.Name = "checkBoxMulta";
+            this.checkBoxMulta.Size = new System.Drawing.Size(52, 17);
+            this.checkBoxMulta.TabIndex = 0;
+            this.checkBoxMulta.Text = "Multa";
+            this.checkBoxMulta.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxMulta
+            // 
+            this.comboBoxMulta.FormattingEnabled = true;
+            this.comboBoxMulta.Location = new System.Drawing.Point(51, 85);
+            this.comboBoxMulta.Name = "comboBoxMulta";
+            this.comboBoxMulta.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxMulta.TabIndex = 1;
+            // 
+            // checkBoxAdvertencia
+            // 
+            this.checkBoxAdvertencia.AutoSize = true;
+            this.checkBoxAdvertencia.Location = new System.Drawing.Point(51, 128);
+            this.checkBoxAdvertencia.Name = "checkBoxAdvertencia";
+            this.checkBoxAdvertencia.Size = new System.Drawing.Size(83, 17);
+            this.checkBoxAdvertencia.TabIndex = 2;
+            this.checkBoxAdvertencia.Text = "Advertência";
+            this.checkBoxAdvertencia.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxAdvertencia
+            // 
+            this.comboBoxAdvertencia.FormattingEnabled = true;
+            this.comboBoxAdvertencia.Location = new System.Drawing.Point(51, 151);
+            this.comboBoxAdvertencia.Name = "comboBoxAdvertencia";
+            this.comboBoxAdvertencia.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxAdvertencia.TabIndex = 3;
             // 
             // EditOcorrenciaWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(583, 359);
+            this.ClientSize = new System.Drawing.Size(734, 359);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxUnd);
             this.Controls.Add(this.label3);
@@ -168,6 +225,8 @@
             this.Text = "EditOcorrenciaWindow";
             this.Load += new System.EventHandler(this.EditOcorrenciaWindow_Load);
             this.Shown += new System.EventHandler(this.EditOcorrenciaWindow_Shown);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +245,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxUnd;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBoxAdvertencia;
+        private System.Windows.Forms.CheckBox checkBoxAdvertencia;
+        private System.Windows.Forms.ComboBox comboBoxMulta;
+        private System.Windows.Forms.CheckBox checkBoxMulta;
     }
 }

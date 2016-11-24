@@ -16,6 +16,8 @@ namespace Morada_da_paz_Forms.Edicao
     {
         ocorrencia oc;
         List<unidade_residencial> ListaUnidade;
+        List<multa> listaMulta;
+        List<advertencia> listaAdvertencia;
         public EditOcorrenciaWindow(ocorrencia o)
         {
             oc = o;
@@ -46,7 +48,8 @@ namespace Morada_da_paz_Forms.Edicao
                 if(comboBoxUnd.Text == "")
                 {
                     MessageBox.Show("Defina a Und. Residencial!");
-                }else
+                }
+                else
                 {
                     int index = comboBoxUnd.SelectedIndex;
                     unidade_residencial und = ListaUnidade.ElementAt(index);
@@ -63,6 +66,16 @@ namespace Morada_da_paz_Forms.Edicao
                     oc.Situacao = comboBoxStatus.Text;
                     ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
                     sv.editarOcorrencia(oc);
+
+                    if (checkBoxMulta.Checked)
+                    {
+                        //implementar
+                    }
+
+                    if (checkBoxAdvertencia.Checked)
+                    {
+                        //implementar
+                    }
                     MessageBox.Show("Transação concluida!");
                     this.Dispose();
                 }
@@ -83,12 +96,35 @@ namespace Morada_da_paz_Forms.Edicao
 
         private void EditOcorrenciaWindow_Shown(object sender, EventArgs e)
         {
-            ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
-            this.ListaUnidade = sv.listarUnidades();
-            for (int i = 0; i < ListaUnidade.Count; i++)
+            try
             {
-                comboBoxUnd.Items.Add(ListaUnidade.ElementAt(i).Descricao);
+                ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
+                this.ListaUnidade = sv.listarUnidades();
+
+                for (int i = 0; i < ListaUnidade.Count; i++)
+                {
+                    comboBoxUnd.Items.Add(ListaUnidade.ElementAt(i).Descricao);
+                }
+
+                this.listaMulta = sv.listarMulta();
+
+                for (int x = 0; x < listaMulta.Count; x++)
+                {
+                    comboBoxMulta.Items.Add(listaMulta.ElementAt(x).Descricao);
+                }
+
+                this.listaAdvertencia = sv.listarAdvertencias();
+
+                for (int y = 0; y < listaAdvertencia.Count; y++)
+                {
+                    comboBoxAdvertencia.Items.Add(listaAdvertencia.ElementAt(y).Descricao);
+                }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

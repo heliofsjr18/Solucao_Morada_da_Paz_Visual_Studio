@@ -15,14 +15,16 @@ using Morada_da_paz_WebService;
 using System.IO;
 using System.Xml;
 using Morada_da_paz_Forms.Edicao;
+using System.Diagnostics;
 
 namespace Morada_da_paz_Forms
 {
      
     public partial class PrincipalWindow : Form
     {
-        private string caminho = @"c:\xml\ocorrencias.xml";
+        
         public static usuario usuarioAtivo = new usuario();
+        private string caminho;
 
         ServiceMoradaDaPaz sv;
         List<ocorrencia> ocorrenciaLista;
@@ -31,7 +33,10 @@ namespace Morada_da_paz_Forms
         {
             usuarioAtivo = login;
             InitializeComponent();
+            caminho = @"c:\xml\ocorrencias"+usuarioAtivo.Nome_completo+".xml";
+            this.verificaUsuario(login);
             this.Text += " -> " + usuarioAtivo.Nome_completo;
+            
 
         }
 
@@ -223,15 +228,34 @@ namespace Morada_da_paz_Forms
             #endregion
 
             MessageBox.Show("Documento salvo em " + this.caminho);
+            Process.Start("Explorer", @"C:\xml");
         }
 
         private void listViewMinhasOcorrencias_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            int indexListView = listViewMinhasOcorrencias.FocusedItem.Index;
-            ocorrencia oc = this.ocorrenciaLista.ElementAt(indexListView);
-            //MessageBox.Show(oc.Numero_ocorrencia);
-            EditOcorrenciaWindow eo = new EditOcorrenciaWindow(oc);
-            eo.ShowDialog();
+            
+            if(usuarioAtivo.Id_especializacao_usuario.Id == 1)
+            {
+                int indexListView = listViewMinhasOcorrencias.FocusedItem.Index;
+                ocorrencia oc = this.ocorrenciaLista.ElementAt(indexListView);
+                EditOcorrenciaWindow eo = new EditOcorrenciaWindow(oc);
+                eo.ShowDialog();
+            }
         }
+            
+
+        private void verificaUsuario(usuario u)
+        {
+            
+            muralDeOcorrenciasPublicasToolStripMenuItem.Enabled = false;
+            
+            if(u.Id_especializacao_usuario.Id > 1)
+            {
+                menuStrip1.Items[1].Enabled = false;
+                menuStrip1.Items[2].Enabled = false;
+            }
+        }
+
+
     }
 }

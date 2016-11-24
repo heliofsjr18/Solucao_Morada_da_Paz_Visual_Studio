@@ -57,5 +57,5 @@
 
 --UPDATE ocorrencia SET tipoPublico = 0;
 
-INSERT INTO ocorrencia (situacao,numero_ocorrencia ,descricao, id_usuario, id_unidade_residencial, tipoPublico)
- VALUES (NULL, 1042512759, 'caguei na piscina', 1, 1, 1)
+--INSERT INTO ocorrencia (situacao,numero_ocorrencia ,descricao, id_usuario, id_unidade_residencial, tipoPublico)
+-- VALUES (NULL, 1042512759, 'caguei na piscina', 1, 1, 1)
