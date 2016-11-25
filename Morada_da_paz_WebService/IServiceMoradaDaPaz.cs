@@ -107,6 +107,11 @@ namespace Morada_da_paz_WebService
         [OperationContract]
         List<ocorrencia> listarOcorrenciasPorUsuario(usuario u);
 
+        [OperationContract]
+        void inserirMultaOcorrencia(multa m, ocorrencia o);
+
+        [OperationContract]
+        void inserirAdvertenciaOcorrencia(advertencia a, ocorrencia o);
     }
 
 

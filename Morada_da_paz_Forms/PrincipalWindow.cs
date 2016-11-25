@@ -16,16 +16,30 @@ using System.IO;
 using System.Xml;
 using Morada_da_paz_Forms.Edicao;
 using System.Diagnostics;
+using System.Net.Sockets;
+using System.Threading;
+using System.Net;
 
 namespace Morada_da_paz_Forms
 {
      
     public partial class PrincipalWindow : Form
     {
-        
+        #region Atributos de sockets
+        private Socket socket;
+        private Thread thread;
+
+
+        private NetworkStream networkStream;
+        private BinaryWriter binaryWriter;
+        private BinaryReader binaryReader;
+
+        TcpListener tcpListener;
+        #endregion
         public static usuario usuarioAtivo = new usuario();
         private string caminho;
 
+        NovaOcorrenciaWindow now = new NovaOcorrenciaWindow();
         ServiceMoradaDaPaz sv;
         List<ocorrencia> ocorrenciaLista;
 
@@ -36,7 +50,18 @@ namespace Morada_da_paz_Forms
             caminho = @"c:\xml\ocorrencias"+usuarioAtivo.Nome_completo+".xml";
             this.verificaUsuario(login);
             this.Text += " -> " + usuarioAtivo.Nome_completo;
-            
+
+            if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
+            {
+                thread = new Thread(new ThreadStart(RunServidor));
+                thread.Start();
+            }else
+            {
+                thread = new Thread(new ThreadStart(now.runCliente));
+                thread.Start();
+            }
+
+
 
         }
 
@@ -117,7 +142,15 @@ namespace Morada_da_paz_Forms
             try
             {
                 this.sv = new ServiceMoradaDaPaz();
-               this.ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo);
+
+                if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
+                {
+                    this.ocorrenciaLista = sv.listarOcorrencias();
+                }else
+                {
+                    this.ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo);
+                }
+                
                 listViewMinhasOcorrencias.Items.Clear();
                 for (int index = 0; index < ocorrenciaLista.Count; index++)
                 {
@@ -142,6 +175,23 @@ namespace Morada_da_paz_Forms
         private void buttonAtulizar_Click(object sender, EventArgs e)
         {
             this.carregaOcorrencias();
+
+            if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
+            {
+                try
+                {
+                    binaryWriter.Write("Ocorrencia Visualizada!");
+                }
+                catch (SocketException socketEx)
+                {
+                    MessageBox.Show(socketEx.Message, "Erro");
+                }
+                catch (Exception socketEx)
+                {
+                    MessageBox.Show(socketEx.Message, "Erro");
+                }
+            }
+                
         }
 
         #region codigos de manipulação de XML
@@ -256,6 +306,81 @@ namespace Morada_da_paz_Forms
             }
         }
 
+        private void mostraMensagem(object oo)
+        {
+            if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
+            {
+                Invoke(new MethodInvoker(
+                         delegate { MessageBox.Show("Server App " + oo); }
+                                         ));
+            }
+                
+        }
+
+        public void RunServidor()
+        {
+            if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
+            {
+                try
+                {
+                    IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2001);
+                    tcpListener = new TcpListener(ipEndPoint);
+                    tcpListener.Start();
+
+                    mostraMensagem("Servidor habilitado e escutando porta..." + "Server App");
+
+                    socket = tcpListener.AcceptSocket();
+                    networkStream = new NetworkStream(socket);
+                    binaryWriter = new BinaryWriter(networkStream);
+                    binaryReader = new BinaryReader(networkStream);
+
+                    //AddToListBox("");
+                    binaryWriter.Write("\nOcorrência Recebida! Mensagem do Server App");
+
+                    string messageReceived = "";
+                    do
+                    {
+                        try
+                        {
+                            messageReceived = binaryReader.ReadString();
+
+                            mostraMensagem("" + messageReceived);
+                        }catch(Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        
+
+                    } while (socket.Connected);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    if (binaryReader != null)
+                    {
+                        binaryReader.Close();
+                    }
+                    if (binaryWriter != null)
+                    {
+                        binaryWriter.Close();
+                    }
+                    if (networkStream != null)
+                    {
+                        networkStream.Close();
+                    }
+                    if (socket != null)
+                    {
+                        socket.Close();
+                    }
+                    MessageBox.Show("conexão finalizada", "Server App");
+
+                }
+            }
+                
+        }
 
     }
 }

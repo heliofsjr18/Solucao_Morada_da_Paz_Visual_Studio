@@ -80,7 +80,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection c = conectar();
-                string query = "SELECT id, situacao, numero_ocorrencia, descricao, id_usuario, id_unidade_residencial FROM ocorrencia";                
+                string query = "SELECT id, situacao, numero_ocorrencia, descricao, id_usuario FROM ocorrencia";                
 
                 SqlCommand comand = new SqlCommand(query, c);
                 SqlDataReader reader = comand.ExecuteReader();
@@ -96,7 +96,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                     oco.Numero_ocorrencia = reader.GetString(reader.GetOrdinal("numero_ocorrencia"));
                     oco.Descricao = reader.GetString(reader.GetOrdinal("descricao"));
                     oco.Id_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_usuario"));
-                    oco.Id_unidade_residencial.Id = reader.GetInt32(reader.GetOrdinal("id_unidade_residencial"));
+                    //oco.Id_unidade_residencial.Id = reader.GetInt32(reader.GetOrdinal("id_unidade_residencial"));
 
                     oc.Add(oco);
 

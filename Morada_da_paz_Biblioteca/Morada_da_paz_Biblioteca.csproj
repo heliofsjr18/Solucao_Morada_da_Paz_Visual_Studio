@@ -71,8 +71,10 @@
     <Compile Include="DadosAcesso\CrudUsuarioImplements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegraDeNegocio\RNadvertencia.cs" />
+    <Compile Include="RegraDeNegocio\RNAdvertenciaOcorrencia.cs" />
     <Compile Include="RegraDeNegocio\RNespecializacaoUsuario.cs" />
     <Compile Include="RegraDeNegocio\RNmulta.cs" />
+    <Compile Include="RegraDeNegocio\RNmultaOcorrencia.cs" />
     <Compile Include="RegraDeNegocio\RNocorrencia.cs" />
     <Compile Include="RegraDeNegocio\RNunidadeResidencial.cs" />
     <Compile Include="RegraDeNegocio\RNusuario.cs" />
