@@ -45,5 +45,10 @@ namespace Morada_da_paz_Forms.Arquivo
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            this.carregaOcorrencias();
+        }
     }
 }
