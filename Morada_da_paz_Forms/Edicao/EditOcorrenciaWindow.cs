@@ -67,14 +67,26 @@ namespace Morada_da_paz_Forms.Edicao
                     ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
                     sv.editarOcorrencia(oc);
 
+                    
                     if (checkBoxMulta.Checked)
                     {
-                        //implementar
+                        if (!comboBoxMulta.Text.Equals(""))
+                        {
+                            int indexMulta = comboBoxMulta.SelectedIndex;
+                            multa mu = listaMulta.ElementAt(indexMulta);
+                            sv.inserirMultaOcorrencia(mu,oc);
+                        }
+                        
                     }
 
                     if (checkBoxAdvertencia.Checked)
                     {
-                        //implementar
+                        if (!comboBoxAdvertencia.Text.Equals(""))
+                        {
+                            int indexAdvertencia = comboBoxAdvertencia.SelectedIndex;
+                            advertencia ad = listaAdvertencia.ElementAt(indexAdvertencia);
+                            sv.inserirAdvertenciaOcorrencia(ad, oc);
+                        }
                     }
                     MessageBox.Show("Transação concluida!");
                     this.Dispose();

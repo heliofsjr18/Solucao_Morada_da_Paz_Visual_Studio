@@ -63,10 +63,10 @@ namespace Morada_da_paz_Forms.Arquivo
             MessageBox.Show("Ocorrencia Cadastrada");
 
             #region comunicando com o lado servidor pelo socket
-
+            
             try
             {
-                binaryWriter.Write("Uma nova ocorrência foi adcionada!\n\nAtualize a Lista! (Mensagem no servido)");
+                PrincipalWindow.binaryWriter.Write("Uma nova ocorrência foi adcionada!\n\nAtualize a Lista!");
             }
             catch (SocketException socketEx)
             {

@@ -28,10 +28,10 @@ namespace Morada_da_paz_Forms
         #region Atributos de sockets
         private Socket socket;
         private Thread thread;
-
+        private TcpClient tcpClient;
 
         private NetworkStream networkStream;
-        private BinaryWriter binaryWriter;
+        public static BinaryWriter binaryWriter;
         private BinaryReader binaryReader;
 
         TcpListener tcpListener;
@@ -57,7 +57,7 @@ namespace Morada_da_paz_Forms
                 thread.Start();
             }else
             {
-                thread = new Thread(new ThreadStart(now.runCliente));
+                thread = new Thread(new ThreadStart(runCliente));
                 thread.Start();
             }
 
@@ -84,6 +84,11 @@ namespace Morada_da_paz_Forms
 
         private void PrincipalWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if(usuarioAtivo.Id_especializacao_usuario.Id == 1)
+            {
+                tcpListener.Stop();
+                Environment.Exit(0);
+            }
             Application.Exit();
         }
 
@@ -118,6 +123,11 @@ namespace Morada_da_paz_Forms
 
         private void gerarNovaOcorrênciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (usuarioAtivo.Id_especializacao_usuario.Id > 1)
+            {
+                //thread = new Thread(new ThreadStart(runCliente));
+                //thread.Abort();     
+            }
             NovaOcorrenciaWindow window = new NovaOcorrenciaWindow();
             window.ShowDialog();
         }
@@ -311,7 +321,7 @@ namespace Morada_da_paz_Forms
             if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
                 Invoke(new MethodInvoker(
-                         delegate { MessageBox.Show("Server App " + oo); }
+                         delegate { MessageBox.Show("" + oo); }
                                          ));
             }
                 
@@ -327,7 +337,7 @@ namespace Morada_da_paz_Forms
                     tcpListener = new TcpListener(ipEndPoint);
                     tcpListener.Start();
 
-                    mostraMensagem("Servidor habilitado e escutando porta..." + "Server App");
+                    //mostraMensagem("Servidor habilitado e escutando porta..." + "Server App");
 
                     socket = tcpListener.AcceptSocket();
                     networkStream = new NetworkStream(socket);
@@ -335,7 +345,7 @@ namespace Morada_da_paz_Forms
                     binaryReader = new BinaryReader(networkStream);
 
                     //AddToListBox("");
-                    binaryWriter.Write("\nOcorrência Recebida! Mensagem do Server App");
+                    //binaryWriter.Write("\nOcorrência Recebida! (Server App)");
 
                     string messageReceived = "";
                     do
@@ -381,6 +391,50 @@ namespace Morada_da_paz_Forms
             }
                 
         }
+        public void runCliente()
+        {
+            try
+            {
+                tcpClient = new TcpClient();
+                //conectando ao servidor
+                tcpClient.Connect("127.0.0.1", 2001);
+
+                networkStream = tcpClient.GetStream();
+                binaryWriter = new BinaryWriter(networkStream);
+                binaryReader = new BinaryReader(networkStream);
+                //binaryWriter.Write("Uma nova ocorrência foi adcionada!\n\nAtualize a Lista!");
+                String message = "";
+
+                #region laço para receber mensagem do servidor
+                do
+                {
+                    try
+                    {
+                        message = binaryReader.ReadString();
+                        Invoke(new MethodInvoker(
+                          delegate { MessageBox.Show("(Cliente App)" + message); }
+                          ));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Erro");
+                        message = "FIM";
+                    }
+                } while (message != "FIM");
+                #endregion
+
+                binaryWriter.Close();
+                binaryReader.Close();
+                networkStream.Close();
+                tcpClient.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro");
+            }
+        }
 
     }
+
 }
+
