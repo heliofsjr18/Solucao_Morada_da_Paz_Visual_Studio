@@ -108,7 +108,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 SqlDataReader reader = comand.ExecuteReader();
 
                 List<advertencia> lista = new List<advertencia>();
-                while (reader.NextResult())
+                while (reader.Read())
                 {
                     advertencia advertConsulta = new advertencia();
 

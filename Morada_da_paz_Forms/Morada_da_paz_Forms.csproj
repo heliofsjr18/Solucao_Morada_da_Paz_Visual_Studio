@@ -84,6 +84,12 @@
     <Compile Include="Cadastro\UserRegWindow.Designer.cs">
       <DependentUpon>UserRegWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edicao\EditOcorrenciaWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\EditOcorrenciaWindow.Designer.cs">
+      <DependentUpon>EditOcorrenciaWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro\UserRegWindow.resx">
       <DependentUpon>UserRegWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\EditOcorrenciaWindow.resx">
+      <DependentUpon>EditOcorrenciaWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>

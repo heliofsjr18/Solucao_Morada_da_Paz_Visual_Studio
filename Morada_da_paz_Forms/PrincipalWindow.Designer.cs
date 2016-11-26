@@ -31,23 +31,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalWindow));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gerarNovaOcorrênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.muralDeOcorrenciasPublicasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mudarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unidadeResidencialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sançãoAdministrativaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.multaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.advertênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listViewMinhasOcorrencias = new System.Windows.Forms.ListView();
             this.Número = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Descrição = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.buttonGeraXml = new System.Windows.Forms.Button();
+            this.buttonAtulizar = new System.Windows.Forms.Button();
+            this.gerarNovaOcorrênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.muralDeOcorrenciasPublicasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mudarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unidadeResidencialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sançãoAdministrativaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.multaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.advertênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aplicarMultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aplicarAdvertênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +63,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
             this.cadastroToolStripMenuItem,
+            this.opçõesToolStripMenuItem,
             this.ajudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -73,6 +81,103 @@
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
+            // 
+            // cadastroToolStripMenuItem
+            // 
+            this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.unidadeResidencialToolStripMenuItem,
+            this.usuárioToolStripMenuItem,
+            this.sançãoAdministrativaToolStripMenuItem});
+            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cadastroToolStripMenuItem.Text = "Cadastro";
+            // 
+            // ajudaToolStripMenuItem
+            // 
+            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sobreToolStripMenuItem});
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajudaToolStripMenuItem.Text = "Ajuda";
+            this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
+            // 
+            // listViewMinhasOcorrencias
+            // 
+            this.listViewMinhasOcorrencias.AllowColumnReorder = true;
+            this.listViewMinhasOcorrencias.CheckBoxes = true;
+            this.listViewMinhasOcorrencias.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Número,
+            this.Descrição,
+            this.Status});
+            this.listViewMinhasOcorrencias.FullRowSelect = true;
+            this.listViewMinhasOcorrencias.GridLines = true;
+            this.listViewMinhasOcorrencias.Location = new System.Drawing.Point(28, 205);
+            this.listViewMinhasOcorrencias.Name = "listViewMinhasOcorrencias";
+            this.listViewMinhasOcorrencias.Size = new System.Drawing.Size(597, 131);
+            this.listViewMinhasOcorrencias.TabIndex = 1;
+            this.listViewMinhasOcorrencias.UseCompatibleStateImageBehavior = false;
+            this.listViewMinhasOcorrencias.View = System.Windows.Forms.View.Details;
+            this.listViewMinhasOcorrencias.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewMinhasOcorrencias_MouseDoubleClick);
+            // 
+            // Número
+            // 
+            this.Número.Text = "Número";
+            // 
+            // Descrição
+            // 
+            this.Descrição.Text = "Descrição";
+            this.Descrição.Width = 473;
+            // 
+            // Status
+            // 
+            this.Status.Text = "Status";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 180);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Minhas Ocorrências";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(395, 135);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Atualizar Ocorrências";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(532, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Gerar XML";
+            // 
+            // buttonGeraXml
+            // 
+            this.buttonGeraXml.Image = ((System.Drawing.Image)(resources.GetObject("buttonGeraXml.Image")));
+            this.buttonGeraXml.Location = new System.Drawing.Point(525, 151);
+            this.buttonGeraXml.Name = "buttonGeraXml";
+            this.buttonGeraXml.Size = new System.Drawing.Size(75, 41);
+            this.buttonGeraXml.TabIndex = 5;
+            this.buttonGeraXml.UseVisualStyleBackColor = true;
+            this.buttonGeraXml.Click += new System.EventHandler(this.buttonGeraXml_Click);
+            // 
+            // buttonAtulizar
+            // 
+            this.buttonAtulizar.Image = global::Morada_da_paz_Forms.Properties.Resources.Paomedia_Small_N_Flat_Sign_sync;
+            this.buttonAtulizar.Location = new System.Drawing.Point(410, 151);
+            this.buttonAtulizar.Name = "buttonAtulizar";
+            this.buttonAtulizar.Size = new System.Drawing.Size(75, 42);
+            this.buttonAtulizar.TabIndex = 4;
+            this.buttonAtulizar.UseVisualStyleBackColor = true;
+            this.buttonAtulizar.Click += new System.EventHandler(this.buttonAtulizar_Click);
             // 
             // gerarNovaOcorrênciaToolStripMenuItem
             // 
@@ -108,16 +213,6 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
-            // cadastroToolStripMenuItem
-            // 
-            this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.unidadeResidencialToolStripMenuItem,
-            this.usuárioToolStripMenuItem,
-            this.sançãoAdministrativaToolStripMenuItem});
-            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // unidadeResidencialToolStripMenuItem
             // 
@@ -166,62 +261,35 @@
             this.advertênciaToolStripMenuItem.Text = "Advertência";
             this.advertênciaToolStripMenuItem.Click += new System.EventHandler(this.advertênciaToolStripMenuItem_Click);
             // 
-            // ajudaToolStripMenuItem
-            // 
-            this.ajudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sobreToolStripMenuItem});
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.ajudaToolStripMenuItem.Text = "Ajuda";
-            this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
-            // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Image = global::Morada_da_paz_Forms.Properties.Resources.Oxygen_Icons_org_Oxygen_Actions_help_about;
             this.sobreToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click_1);
             // 
-            // listViewMinhasOcorrencias
+            // opçõesToolStripMenuItem
             // 
-            this.listViewMinhasOcorrencias.AllowColumnReorder = true;
-            this.listViewMinhasOcorrencias.CheckBoxes = true;
-            this.listViewMinhasOcorrencias.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Número,
-            this.Descrição,
-            this.Status});
-            this.listViewMinhasOcorrencias.FullRowSelect = true;
-            this.listViewMinhasOcorrencias.GridLines = true;
-            this.listViewMinhasOcorrencias.Location = new System.Drawing.Point(28, 205);
-            this.listViewMinhasOcorrencias.Name = "listViewMinhasOcorrencias";
-            this.listViewMinhasOcorrencias.Size = new System.Drawing.Size(597, 131);
-            this.listViewMinhasOcorrencias.TabIndex = 1;
-            this.listViewMinhasOcorrencias.UseCompatibleStateImageBehavior = false;
-            this.listViewMinhasOcorrencias.View = System.Windows.Forms.View.Details;
+            this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aplicarMultaToolStripMenuItem,
+            this.aplicarAdvertênciaToolStripMenuItem});
+            this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
+            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.opçõesToolStripMenuItem.Text = "Opções";
             // 
-            // Número
+            // aplicarMultaToolStripMenuItem
             // 
-            this.Número.Text = "Número";
+            this.aplicarMultaToolStripMenuItem.Name = "aplicarMultaToolStripMenuItem";
+            this.aplicarMultaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.aplicarMultaToolStripMenuItem.Text = "Aplicar Multa";
             // 
-            // Descrição
+            // aplicarAdvertênciaToolStripMenuItem
             // 
-            this.Descrição.Text = "Descrição";
-            this.Descrição.Width = 473;
-            // 
-            // Status
-            // 
-            this.Status.Text = "Status";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 180);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Minhas Ocorrências";
+            this.aplicarAdvertênciaToolStripMenuItem.Name = "aplicarAdvertênciaToolStripMenuItem";
+            this.aplicarAdvertênciaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.aplicarAdvertênciaToolStripMenuItem.Text = "Aplicar Advertência";
             // 
             // PrincipalWindow
             // 
@@ -229,6 +297,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(656, 361);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.buttonGeraXml);
+            this.Controls.Add(this.buttonAtulizar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listViewMinhasOcorrencias);
             this.Controls.Add(this.menuStrip1);
@@ -267,6 +339,13 @@
         private System.Windows.Forms.ColumnHeader Status;
         private System.Windows.Forms.ToolStripMenuItem muralDeOcorrenciasPublicasToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonAtulizar;
+        private System.Windows.Forms.Button buttonGeraXml;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem opçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aplicarMultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aplicarAdvertênciaToolStripMenuItem;
     }
 }
 

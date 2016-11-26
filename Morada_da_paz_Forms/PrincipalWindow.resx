@@ -121,6 +121,18 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonGeraXml.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAXJJREFUOE9jGAEgTVJQ7rmN3s7V+sphUCHSwAEjtfqXdgb/52vIR0CF8IMCOTGl
+        pdqKvlAuwwtb/Vsv7Aw+nTTVCKyXk9CCCmOCUmkR1VuWOgte2On/AuKjILEqRXEzkO13rHQX3bPSXQs0
+        7M89a93lNcri2mBNIGDPwMBxG6TRVv/3S1uDH1ctdWaDXAGSO2umNRFkQL+6jHssMCwumGlNfWmn/w3o
+        or/3rXRXevPzCzKkiAtqgxSBBG9b6RSFMjAwgzSDaKCBL0AYJgYCVyy04oHqf4L0NCpJOYMFV2grxwFD
+        +hbYIFv9O5sNVEJ61WQ8QPyLFloTQWqmqss7PrfVuwASA+JHW/XVsoHCcIPBNoINstW/+dJW//hDa93F
+        IMUtijJmIPn71nobgeIPNuupZHowMLCDNWEDIIOma8lpvbA1+AyKAagwQ4SwsJQxAwMrlIsfdKnKBIJs
+        P2KiUQ8VIg0AI5stV1rMgmgbBxAwMAAAkSmG/9cqS8YAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAgAgIAAAAEAIAAoCAEAhgAAAGBgAAABACAAqJQAAK4IAQBISAAAAQAgAIhUAABWnQEAQEAAAAEA
