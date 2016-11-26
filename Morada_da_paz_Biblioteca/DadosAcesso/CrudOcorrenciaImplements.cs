@@ -171,5 +171,44 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 throw new Exception(ex.Message);
             }
         }
+
+        public List<ocorrencia> ListarPublicas()
+        {
+            try
+            {
+                SqlConnection c = conectar();
+                string query = "SELECT id, situacao, numero_ocorrencia, descricao, id_usuario, tipoPublico FROM ocorrencia WHERE tipoPublico = 1";
+
+                SqlCommand comand = new SqlCommand(query, c);
+                
+
+                SqlDataReader reader = comand.ExecuteReader();
+
+
+                List<ocorrencia> oc = new List<ocorrencia>();
+
+                while (reader.Read())
+                {
+                    ocorrencia oco = new ocorrencia();
+
+                    oco.Id = reader.GetInt32(reader.GetOrdinal("id"));
+                    oco.Situacao = reader.GetString(reader.GetOrdinal("situacao"));
+                    oco.Numero_ocorrencia = reader.GetString(reader.GetOrdinal("numero_ocorrencia"));
+                    oco.Descricao = reader.GetString(reader.GetOrdinal("descricao"));
+                    oco.Id_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_usuario"));
+                    oco.TipoPublico = reader.GetInt32(reader.GetOrdinal("tipoPublico"));
+
+                    oc.Add(oco);
+
+                }
+                return oc;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

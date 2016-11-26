@@ -68,15 +68,17 @@
             // Número
             // 
             this.Número.Text = "Número";
+            this.Número.Width = 72;
             // 
             // Descrição
             // 
             this.Descrição.Text = "Descrição";
-            this.Descrição.Width = 473;
+            this.Descrição.Width = 429;
             // 
             // Status
             // 
             this.Status.Text = "Status";
+            this.Status.Width = 85;
             // 
             // buttonUpdate
             // 

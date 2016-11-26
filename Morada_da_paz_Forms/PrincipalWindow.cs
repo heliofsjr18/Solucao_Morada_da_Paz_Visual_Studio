@@ -307,12 +307,12 @@ namespace Morada_da_paz_Forms
         private void verificaUsuario(usuario u)
         {
             
-            muralDeOcorrenciasPublicasToolStripMenuItem.Enabled = false;
+            //muralDeOcorrenciasPublicasToolStripMenuItem.Enabled = false;
             
             if(u.Id_especializacao_usuario.Id > 1)
             {
-                menuStrip1.Items[1].Enabled = false;
-                menuStrip1.Items[2].Enabled = false;
+                menuStrip1.Items[1].Visible = false;
+                menuStrip1.Items[2].Visible = false;
             }
         }
 

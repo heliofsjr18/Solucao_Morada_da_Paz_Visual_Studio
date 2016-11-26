@@ -65,5 +65,11 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
             CrudOcorrencia co = new CrudOcorrenciaImplements();
             return co.ListarPorUsuario(u);
         }
+
+        public List<ocorrencia> chamarListarPublica()
+        {
+            CrudOcorrencia co = new CrudOcorrenciaImplements();
+            return co.ListarPublicas();
+        }
     }
 }

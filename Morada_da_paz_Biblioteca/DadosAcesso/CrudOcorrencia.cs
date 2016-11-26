@@ -20,6 +20,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
         List<ocorrencia> ListarPorUsuario(usuario u);
 
-        List<ocorrencia> listar(); 
+        List<ocorrencia> listar();
+        List<ocorrencia> ListarPublicas();
     }
 }

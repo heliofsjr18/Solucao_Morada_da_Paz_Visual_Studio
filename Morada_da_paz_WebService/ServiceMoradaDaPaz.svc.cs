@@ -196,7 +196,13 @@ namespace Morada_da_paz_WebService
             RNocorrencia rno = new RNocorrencia();
             return rno.chamarListarPorUsuario(u);
         }
-        
+
+        public List<ocorrencia> listarOcorrencasPublicas()
+        {
+            RNocorrencia rno = new RNocorrencia();
+            return rno.chamarListarPublica();
+        }
+
         //Aplicação de Sanção
         public void inserirMultaOcorrencia(multa m, ocorrencia o)
         {
@@ -209,5 +215,7 @@ namespace Morada_da_paz_WebService
             RNAdvertenciaOcorrencia rnao = new RNAdvertenciaOcorrencia();
             rnao.chamarInserir(a, o);
         }
+
+        
     }
 }
