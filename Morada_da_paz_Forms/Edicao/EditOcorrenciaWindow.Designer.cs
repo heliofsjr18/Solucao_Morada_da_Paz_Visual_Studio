@@ -40,19 +40,20 @@
             this.comboBoxUnd = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBoxMulta = new System.Windows.Forms.CheckBox();
-            this.comboBoxMulta = new System.Windows.Forms.ComboBox();
-            this.checkBoxAdvertencia = new System.Windows.Forms.CheckBox();
             this.comboBoxAdvertencia = new System.Windows.Forms.ComboBox();
+            this.checkBoxAdvertencia = new System.Windows.Forms.CheckBox();
+            this.comboBoxMulta = new System.Windows.Forms.ComboBox();
+            this.checkBoxMulta = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonCancelar
             // 
             this.buttonCancelar.Image = global::Morada_da_paz_Forms.Properties.Resources.Hopstarter_Button_Button_Close;
-            this.buttonCancelar.Location = new System.Drawing.Point(266, 304);
+            this.buttonCancelar.Location = new System.Drawing.Point(189, 293);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(75, 43);
+            this.buttonCancelar.Size = new System.Drawing.Size(75, 54);
             this.buttonCancelar.TabIndex = 1;
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.button2_Click);
@@ -60,9 +61,9 @@
             // buttonSalvar
             // 
             this.buttonSalvar.Image = global::Morada_da_paz_Forms.Properties.Resources.Gakuseisean_Ivista_2_Alarm_Tick;
-            this.buttonSalvar.Location = new System.Drawing.Point(125, 304);
+            this.buttonSalvar.Location = new System.Drawing.Point(48, 293);
             this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(75, 43);
+            this.buttonSalvar.Size = new System.Drawing.Size(75, 54);
             this.buttonSalvar.TabIndex = 0;
             this.buttonSalvar.UseVisualStyleBackColor = true;
             this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
@@ -164,23 +165,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sanção Administrativa";
             // 
-            // checkBoxMulta
+            // comboBoxAdvertencia
             // 
-            this.checkBoxMulta.AutoSize = true;
-            this.checkBoxMulta.Location = new System.Drawing.Point(51, 62);
-            this.checkBoxMulta.Name = "checkBoxMulta";
-            this.checkBoxMulta.Size = new System.Drawing.Size(52, 17);
-            this.checkBoxMulta.TabIndex = 0;
-            this.checkBoxMulta.Text = "Multa";
-            this.checkBoxMulta.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxMulta
-            // 
-            this.comboBoxMulta.FormattingEnabled = true;
-            this.comboBoxMulta.Location = new System.Drawing.Point(51, 85);
-            this.comboBoxMulta.Name = "comboBoxMulta";
-            this.comboBoxMulta.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxMulta.TabIndex = 1;
+            this.comboBoxAdvertencia.FormattingEnabled = true;
+            this.comboBoxAdvertencia.Location = new System.Drawing.Point(51, 151);
+            this.comboBoxAdvertencia.Name = "comboBoxAdvertencia";
+            this.comboBoxAdvertencia.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxAdvertencia.TabIndex = 3;
             // 
             // checkBoxAdvertencia
             // 
@@ -192,13 +183,34 @@
             this.checkBoxAdvertencia.Text = "Advertência";
             this.checkBoxAdvertencia.UseVisualStyleBackColor = true;
             // 
-            // comboBoxAdvertencia
+            // comboBoxMulta
             // 
-            this.comboBoxAdvertencia.FormattingEnabled = true;
-            this.comboBoxAdvertencia.Location = new System.Drawing.Point(51, 151);
-            this.comboBoxAdvertencia.Name = "comboBoxAdvertencia";
-            this.comboBoxAdvertencia.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxAdvertencia.TabIndex = 3;
+            this.comboBoxMulta.FormattingEnabled = true;
+            this.comboBoxMulta.Location = new System.Drawing.Point(51, 85);
+            this.comboBoxMulta.Name = "comboBoxMulta";
+            this.comboBoxMulta.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxMulta.TabIndex = 1;
+            // 
+            // checkBoxMulta
+            // 
+            this.checkBoxMulta.AutoSize = true;
+            this.checkBoxMulta.Location = new System.Drawing.Point(51, 62);
+            this.checkBoxMulta.Name = "checkBoxMulta";
+            this.checkBoxMulta.Size = new System.Drawing.Size(52, 17);
+            this.checkBoxMulta.TabIndex = 0;
+            this.checkBoxMulta.Text = "Multa";
+            this.checkBoxMulta.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(319, 293);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 54);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Excluir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // EditOcorrenciaWindow
             // 
@@ -207,6 +219,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(734, 359);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxUnd);
@@ -250,5 +263,6 @@
         private System.Windows.Forms.CheckBox checkBoxAdvertencia;
         private System.Windows.Forms.ComboBox comboBoxMulta;
         private System.Windows.Forms.CheckBox checkBoxMulta;
+        private System.Windows.Forms.Button button1;
     }
 }

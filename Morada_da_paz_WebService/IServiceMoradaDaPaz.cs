@@ -111,6 +111,9 @@ namespace Morada_da_paz_WebService
         List<ocorrencia> listarOcorrencasPublicas();
 
         [OperationContract]
+        void excluiOcorrencia(ocorrencia o);
+
+        [OperationContract]
         void inserirMultaOcorrencia(multa m, ocorrencia o);
 
         [OperationContract]

@@ -161,5 +161,13 @@ namespace Morada_da_paz_Forms.Edicao
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
+            sv.excluiOcorrencia(this.oc);
+            MessageBox.Show("Ocorrência Excluida!");
+            this.Dispose();
+        }
     }
 }

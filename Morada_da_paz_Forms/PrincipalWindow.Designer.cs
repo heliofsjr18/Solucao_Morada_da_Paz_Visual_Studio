@@ -33,7 +33,6 @@
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarNovaOcorrênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.muralDeOcorrenciasPublicasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mudarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidadeResidencialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,9 +40,6 @@
             this.sançãoAdministrativaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.multaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.advertênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aplicarMultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aplicarAdvertênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listViewMinhasOcorrencias = new System.Windows.Forms.ListView();
@@ -55,6 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.buttonGeraXml = new System.Windows.Forms.Button();
             this.buttonAtulizar = new System.Windows.Forms.Button();
+            this.mudarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +60,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
             this.cadastroToolStripMenuItem,
-            this.opçõesToolStripMenuItem,
             this.ajudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -98,15 +94,6 @@
             this.muralDeOcorrenciasPublicasToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.muralDeOcorrenciasPublicasToolStripMenuItem.Text = "Mural de Ocorrencias Publicas";
             this.muralDeOcorrenciasPublicasToolStripMenuItem.Click += new System.EventHandler(this.muralDeOcorrenciasPublicasToolStripMenuItem_Click);
-            // 
-            // mudarUsuárioToolStripMenuItem
-            // 
-            this.mudarUsuárioToolStripMenuItem.Image = global::Morada_da_paz_Forms.Properties.Resources.Paomedia_Small_N_Flat_Sign_sync;
-            this.mudarUsuárioToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mudarUsuárioToolStripMenuItem.Name = "mudarUsuárioToolStripMenuItem";
-            this.mudarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.mudarUsuárioToolStripMenuItem.Text = "Mudar Usuário";
-            this.mudarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.mudarUsuárioToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -173,27 +160,6 @@
             this.advertênciaToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.advertênciaToolStripMenuItem.Text = "Advertência";
             this.advertênciaToolStripMenuItem.Click += new System.EventHandler(this.advertênciaToolStripMenuItem_Click);
-            // 
-            // opçõesToolStripMenuItem
-            // 
-            this.opçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aplicarMultaToolStripMenuItem,
-            this.aplicarAdvertênciaToolStripMenuItem});
-            this.opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
-            this.opçõesToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.opçõesToolStripMenuItem.Text = "Opções";
-            // 
-            // aplicarMultaToolStripMenuItem
-            // 
-            this.aplicarMultaToolStripMenuItem.Name = "aplicarMultaToolStripMenuItem";
-            this.aplicarMultaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.aplicarMultaToolStripMenuItem.Text = "Aplicar Multa";
-            // 
-            // aplicarAdvertênciaToolStripMenuItem
-            // 
-            this.aplicarAdvertênciaToolStripMenuItem.Name = "aplicarAdvertênciaToolStripMenuItem";
-            this.aplicarAdvertênciaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.aplicarAdvertênciaToolStripMenuItem.Text = "Aplicar Advertência";
             // 
             // ajudaToolStripMenuItem
             // 
@@ -293,6 +259,15 @@
             this.buttonAtulizar.UseVisualStyleBackColor = true;
             this.buttonAtulizar.Click += new System.EventHandler(this.buttonAtulizar_Click);
             // 
+            // mudarUsuárioToolStripMenuItem
+            // 
+            this.mudarUsuárioToolStripMenuItem.Image = global::Morada_da_paz_Forms.Properties.Resources.Paomedia_Small_N_Flat_Sign_sync;
+            this.mudarUsuárioToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mudarUsuárioToolStripMenuItem.Name = "mudarUsuárioToolStripMenuItem";
+            this.mudarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.mudarUsuárioToolStripMenuItem.Text = "Mudar Usuário";
+            this.mudarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.mudarUsuárioToolStripMenuItem_Click);
+            // 
             // PrincipalWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,7 +300,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gerarNovaOcorrênciaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mudarUsuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unidadeResidencialToolStripMenuItem;
@@ -345,9 +319,7 @@
         private System.Windows.Forms.Button buttonGeraXml;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ToolStripMenuItem opçõesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aplicarMultaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aplicarAdvertênciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mudarUsuárioToolStripMenuItem;
     }
 }
 

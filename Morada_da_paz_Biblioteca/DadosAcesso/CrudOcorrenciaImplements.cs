@@ -52,6 +52,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             }
         }
 
+
         public void inserir(ocorrencia o)
         {
             try

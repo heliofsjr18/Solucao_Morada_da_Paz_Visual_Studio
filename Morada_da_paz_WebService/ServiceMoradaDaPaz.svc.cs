@@ -216,6 +216,10 @@ namespace Morada_da_paz_WebService
             rnao.chamarInserir(a, o);
         }
 
-        
+        public void excluiOcorrencia(ocorrencia o)
+        {
+            RNocorrencia rno = new RNocorrencia();
+            rno.chamarDeletar(o);
+        }
     }
 }
