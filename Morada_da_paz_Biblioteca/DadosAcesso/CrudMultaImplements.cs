@@ -104,7 +104,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string querySql = "SELECT id, descricao FROM multa";
+                string querySql = "SELECT id, descricao, preco FROM multa";
 
                 SqlCommand comand = new SqlCommand(querySql, conexao);
 
@@ -117,7 +117,8 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                     multConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
                     multConsulta.Descricao = reader.GetString(reader.GetOrdinal("descricao"));
-                    
+                    multConsulta.Preco = reader.GetDouble(reader.GetOrdinal("preco"));
+
 
                     lista.Add(multConsulta);
                 }

@@ -59,3 +59,11 @@
 
 --INSERT INTO ocorrencia (situacao,numero_ocorrencia ,descricao, id_usuario, id_unidade_residencial, tipoPublico)
 -- VALUES (NULL, 1042512759, 'caguei na piscina', 1, 1, 1)
+--use morada_da_pazdb
+--select * from ocorrencia;
+
+--INSERT INTO especializacao_usuario (descricao) VALUES ('Morador');
+--select * from especializacao_usuario;
+--update ocorrencia set id_usuario = 2 where id = 4
+
+select * from multa;

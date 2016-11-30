@@ -66,7 +66,11 @@ namespace Morada_da_paz_Forms.Arquivo
             
             try
             {
-                PrincipalWindow.binaryWriter.Write("Uma nova ocorrência foi adcionada!\n\nAtualize a Lista!");
+                if(PrincipalWindow.binaryWriter != null)
+                {
+                    PrincipalWindow.binaryWriter.Write("Uma nova ocorrência foi adcionada!\n\nAtualize a Lista!");
+                }
+                
             }
             catch (SocketException socketEx)
             {

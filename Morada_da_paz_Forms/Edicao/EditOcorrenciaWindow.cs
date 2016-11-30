@@ -67,16 +67,28 @@ namespace Morada_da_paz_Forms.Edicao
                     ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
                     sv.editarOcorrencia(oc);
 
-                    
+
                     if (checkBoxMulta.Checked)
                     {
                         if (!comboBoxMulta.Text.Equals(""))
                         {
                             int indexMulta = comboBoxMulta.SelectedIndex;
                             multa mu = listaMulta.ElementAt(indexMulta);
-                            sv.inserirMultaOcorrencia(mu,oc);
+                            sv.inserirMultaOcorrencia(mu, oc);
                         }
-                        
+                        else
+                        {
+                            MessageBox.Show("Escolha a multa!");
+                            return;
+                        }
+
+                    }
+                    else {
+                        if (!comboBoxMulta.Text.Equals(""))
+                        {
+                            MessageBox.Show("Indique quão sanção você deseja aplicar!");
+                            return;
+                        }
                     }
 
                     if (checkBoxAdvertencia.Checked)
@@ -86,6 +98,17 @@ namespace Morada_da_paz_Forms.Edicao
                             int indexAdvertencia = comboBoxAdvertencia.SelectedIndex;
                             advertencia ad = listaAdvertencia.ElementAt(indexAdvertencia);
                             sv.inserirAdvertenciaOcorrencia(ad, oc);
+                        }else
+                        {
+                            MessageBox.Show("Escolha a advertêcia!");
+                            return;
+                        }
+                    }else
+                    {
+                        if (!comboBoxAdvertencia.Text.Equals(""))
+                        { 
+                            MessageBox.Show("Indique quão sanção você deseja aplicar!");
+                            return;
                         }
                     }
                     MessageBox.Show("Transação concluida!");

@@ -47,7 +47,7 @@ namespace Morada_da_paz_Forms
         {
             usuarioAtivo = login;
             InitializeComponent();
-            caminho = @"c:\xml\ocorrencias"+usuarioAtivo.Nome_completo+".xml";
+            caminho = @""+Application.StartupPath +"ocorrencias"+ usuarioAtivo.Nome_completo+".xml";
             this.verificaUsuario(login);
             this.Text += " -> " + usuarioAtivo.Nome_completo;
 
@@ -55,6 +55,7 @@ namespace Morada_da_paz_Forms
             {
                 thread = new Thread(new ThreadStart(RunServidor));
                 thread.Start();
+                this.carregaOcorrencias();
             }else
             {
                 thread = new Thread(new ThreadStart(runCliente));
@@ -86,8 +87,12 @@ namespace Morada_da_paz_Forms
         {
             if(usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
-                tcpListener.Stop();
-                Environment.Exit(0);
+                if (tcpListener != null)
+                {
+                    tcpListener.Stop();
+                    Environment.Exit(0);
+                }
+                
             }
             Application.Exit();
         }
@@ -190,15 +195,19 @@ namespace Morada_da_paz_Forms
             {
                 try
                 {
-                    binaryWriter.Write("Ocorrencia Visualizada!");
+                    if (binaryWriter != null)
+                    {
+                        binaryWriter.Write("Ocorrencia disponível para o síndico!");
+                    }
+                    
                 }
                 catch (SocketException socketEx)
                 {
-                    MessageBox.Show(socketEx.Message, "Erro");
+                    MessageBox.Show(socketEx.Message, "Erro1");
                 }
                 catch (Exception socketEx)
                 {
-                    MessageBox.Show(socketEx.Message, "Erro");
+                    MessageBox.Show(socketEx.Message, "Erro2");
                 }
             }
                 
@@ -277,7 +286,7 @@ namespace Morada_da_paz_Forms
         {
             #region instancia do webservice e criação da lista de ocorrencia
             ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
-            List<ocorrencia> ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo);
+            List<ocorrencia> ocorrenciaLista = this.ocorrenciaLista;//sv.listarOcorrencias();
             #endregion
             #region loop para preenchimento do XML
             for (int x = 0; x < ocorrenciaLista.Count; x++)
@@ -288,7 +297,7 @@ namespace Morada_da_paz_Forms
             #endregion
 
             MessageBox.Show("Documento salvo em " + this.caminho);
-            Process.Start("Explorer", @"C:\xml");
+            Process.Start("Explorer", @""+ Application.StartupPath);
         }
 
         private void listViewMinhasOcorrencias_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -307,7 +316,7 @@ namespace Morada_da_paz_Forms
         private void verificaUsuario(usuario u)
         {
             
-            //muralDeOcorrenciasPublicasToolStripMenuItem.Enabled = false;
+            
             
             if(u.Id_especializacao_usuario.Id > 1)
             {
@@ -337,24 +346,27 @@ namespace Morada_da_paz_Forms
                     tcpListener = new TcpListener(ipEndPoint);
                     tcpListener.Start();
 
-                    //mostraMensagem("Servidor habilitado e escutando porta..." + "Server App");
+                    
 
                     socket = tcpListener.AcceptSocket();
                     networkStream = new NetworkStream(socket);
                     binaryWriter = new BinaryWriter(networkStream);
                     binaryReader = new BinaryReader(networkStream);
 
-                    //AddToListBox("");
-                    //binaryWriter.Write("\nOcorrência Recebida! (Server App)");
+                    
 
-                    string messageReceived = "";
+                    string message = "";
                     do
                     {
                         try
                         {
-                            messageReceived = binaryReader.ReadString();
+                            if(binaryReader != null)
+                            {
+                                message = binaryReader.ReadString();
 
-                            mostraMensagem("" + messageReceived);
+                                mostraMensagem("" + message);
+                            }
+                            
                         }catch(Exception ex)
                         {
                             MessageBox.Show(ex.Message);
@@ -410,10 +422,14 @@ namespace Morada_da_paz_Forms
                 {
                     try
                     {
-                        message = binaryReader.ReadString();
-                        Invoke(new MethodInvoker(
-                          delegate { MessageBox.Show("(Cliente App)" + message); }
-                          ));
+                        if(binaryReader != null)
+                        {
+                            message = binaryReader.ReadString();
+                            Invoke(new MethodInvoker(
+                                delegate { MessageBox.Show("(Cliente App)" + message); }
+                            ));
+                        }
+                        
                     }
                     catch (Exception ex)
                     {
