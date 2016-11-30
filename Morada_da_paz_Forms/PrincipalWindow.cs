@@ -22,7 +22,7 @@ using System.Net;
 
 namespace Morada_da_paz_Forms
 {
-     
+
     public partial class PrincipalWindow : Form
     {
         #region Atributos de sockets
@@ -47,7 +47,7 @@ namespace Morada_da_paz_Forms
         {
             usuarioAtivo = login;
             InitializeComponent();
-            caminho = @""+Application.StartupPath +"ocorrencias"+ usuarioAtivo.Nome_completo+".xml";
+            caminho = @"" + Application.StartupPath + "ocorrencias" + usuarioAtivo.Nome_completo + ".xml";
             this.verificaUsuario(login);
             this.Text += " -> " + usuarioAtivo.Nome_completo;
 
@@ -56,17 +56,17 @@ namespace Morada_da_paz_Forms
                 thread = new Thread(new ThreadStart(RunServidor));
                 thread.Start();
                 this.carregaOcorrencias();
-            }else
+            }
+            else
             {
                 thread = new Thread(new ThreadStart(runCliente));
                 thread.Start();
             }
-
-
+            mudarUsuárioToolStripMenuItem.Visible = false;
 
         }
 
-        
+
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -85,16 +85,16 @@ namespace Morada_da_paz_Forms
 
         private void PrincipalWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(usuarioAtivo.Id_especializacao_usuario.Id == 1)
+            if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
                 if (tcpListener != null)
                 {
-                    tcpListener.Stop();
-                    Environment.Exit(0);
+                        tcpListener.Stop();
+                        Environment.Exit(0);                    
                 }
-                
-            }
-            Application.Exit();
+
+                Application.Exit();
+            }                        
         }
 
         private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -149,6 +149,7 @@ namespace Morada_da_paz_Forms
 
             if (getResult == DialogResult.Yes)
             {
+                Application.Restart();
             }
         }
 
@@ -161,11 +162,12 @@ namespace Morada_da_paz_Forms
                 if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
                 {
                     this.ocorrenciaLista = sv.listarOcorrencias();
-                }else
+                }
+                else
                 {
                     this.ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo);
                 }
-                
+
                 listViewMinhasOcorrencias.Items.Clear();
                 for (int index = 0; index < ocorrenciaLista.Count; index++)
                 {
@@ -199,7 +201,7 @@ namespace Morada_da_paz_Forms
                     {
                         binaryWriter.Write("Ocorrencia disponível para o síndico!");
                     }
-                    
+
                 }
                 catch (SocketException socketEx)
                 {
@@ -210,7 +212,7 @@ namespace Morada_da_paz_Forms
                     MessageBox.Show(socketEx.Message, "Erro2");
                 }
             }
-                
+
         }
 
         #region codigos de manipulação de XML
@@ -226,7 +228,7 @@ namespace Morada_da_paz_Forms
                     doc.Save(this.caminho);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
@@ -250,9 +252,9 @@ namespace Morada_da_paz_Forms
                 XmlNode status = doc.CreateElement("status");
                 #endregion
 
-                
 
-                
+
+
                 #region colocar valores nos elementos xml
                 numero.InnerText = o.Numero_ocorrencia;
                 descricao.InnerText = o.Descricao;
@@ -264,14 +266,14 @@ namespace Morada_da_paz_Forms
                 ocorrencia.AppendChild(descricao);
                 ocorrencia.AppendChild(status);
                 #endregion
-                
+
 
                 #region adicionando ao elemento raiz
                 doc.SelectSingleNode("/minhasOcorrencias").AppendChild(ocorrencia);
                 doc.Save(this.caminho);
                 #endregion
 
-                
+
 
 
             }
@@ -297,13 +299,13 @@ namespace Morada_da_paz_Forms
             #endregion
 
             MessageBox.Show("Documento salvo em " + this.caminho);
-            Process.Start("Explorer", @""+ Application.StartupPath);
+            Process.Start("Explorer", @"" + Application.StartupPath);
         }
 
         private void listViewMinhasOcorrencias_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            
-            if(usuarioAtivo.Id_especializacao_usuario.Id == 1)
+
+            if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
                 int indexListView = listViewMinhasOcorrencias.FocusedItem.Index;
                 ocorrencia oc = this.ocorrenciaLista.ElementAt(indexListView);
@@ -311,14 +313,14 @@ namespace Morada_da_paz_Forms
                 eo.ShowDialog();
             }
         }
-            
+
 
         private void verificaUsuario(usuario u)
         {
-            
-            
-            
-            if(u.Id_especializacao_usuario.Id > 1)
+
+
+
+            if (u.Id_especializacao_usuario.Id > 1)
             {
                 menuStrip1.Items[1].Visible = false;
                 menuStrip1.Items[2].Visible = false;
@@ -333,7 +335,7 @@ namespace Morada_da_paz_Forms
                          delegate { MessageBox.Show("" + oo); }
                                          ));
             }
-                
+
         }
 
         public void RunServidor()
@@ -346,32 +348,33 @@ namespace Morada_da_paz_Forms
                     tcpListener = new TcpListener(ipEndPoint);
                     tcpListener.Start();
 
-                    
+
 
                     socket = tcpListener.AcceptSocket();
                     networkStream = new NetworkStream(socket);
                     binaryWriter = new BinaryWriter(networkStream);
                     binaryReader = new BinaryReader(networkStream);
 
-                    
+
 
                     string message = "";
                     do
                     {
                         try
                         {
-                            if(binaryReader != null)
+                            if (binaryReader != null)
                             {
                                 message = binaryReader.ReadString();
 
                                 mostraMensagem("" + message);
                             }
-                            
-                        }catch(Exception ex)
+
+                        }
+                        catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message);
                         }
-                        
+
 
                     } while (socket.Connected);
                 }
@@ -401,7 +404,7 @@ namespace Morada_da_paz_Forms
 
                 }
             }
-                
+
         }
         public void runCliente()
         {
@@ -422,14 +425,14 @@ namespace Morada_da_paz_Forms
                 {
                     try
                     {
-                        if(binaryReader != null)
+                        if (binaryReader != null)
                         {
                             message = binaryReader.ReadString();
                             Invoke(new MethodInvoker(
                                 delegate { MessageBox.Show("(Cliente App)" + message); }
                             ));
                         }
-                        
+
                     }
                     catch (Exception ex)
                     {

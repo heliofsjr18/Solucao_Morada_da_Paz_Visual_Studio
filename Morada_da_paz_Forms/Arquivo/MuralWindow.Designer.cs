@@ -51,7 +51,6 @@
             // listViewMinhasOcorrencias
             // 
             this.listViewMinhasOcorrencias.AllowColumnReorder = true;
-            this.listViewMinhasOcorrencias.CheckBoxes = true;
             this.listViewMinhasOcorrencias.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Número,
             this.Descrição,

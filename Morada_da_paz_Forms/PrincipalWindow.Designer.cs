@@ -33,6 +33,7 @@
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerarNovaOcorrênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.muralDeOcorrenciasPublicasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mudarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unidadeResidencialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.buttonGeraXml = new System.Windows.Forms.Button();
             this.buttonAtulizar = new System.Windows.Forms.Button();
-            this.mudarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +94,15 @@
             this.muralDeOcorrenciasPublicasToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
             this.muralDeOcorrenciasPublicasToolStripMenuItem.Text = "Mural de Ocorrencias Publicas";
             this.muralDeOcorrenciasPublicasToolStripMenuItem.Click += new System.EventHandler(this.muralDeOcorrenciasPublicasToolStripMenuItem_Click);
+            // 
+            // mudarUsuárioToolStripMenuItem
+            // 
+            this.mudarUsuárioToolStripMenuItem.Image = global::Morada_da_paz_Forms.Properties.Resources.Paomedia_Small_N_Flat_Sign_sync;
+            this.mudarUsuárioToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mudarUsuárioToolStripMenuItem.Name = "mudarUsuárioToolStripMenuItem";
+            this.mudarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.mudarUsuárioToolStripMenuItem.Text = "Mudar Usuário";
+            this.mudarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.mudarUsuárioToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -182,7 +191,6 @@
             // listViewMinhasOcorrencias
             // 
             this.listViewMinhasOcorrencias.AllowColumnReorder = true;
-            this.listViewMinhasOcorrencias.CheckBoxes = true;
             this.listViewMinhasOcorrencias.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Número,
             this.Descrição,
@@ -258,15 +266,6 @@
             this.buttonAtulizar.TabIndex = 4;
             this.buttonAtulizar.UseVisualStyleBackColor = true;
             this.buttonAtulizar.Click += new System.EventHandler(this.buttonAtulizar_Click);
-            // 
-            // mudarUsuárioToolStripMenuItem
-            // 
-            this.mudarUsuárioToolStripMenuItem.Image = global::Morada_da_paz_Forms.Properties.Resources.Paomedia_Small_N_Flat_Sign_sync;
-            this.mudarUsuárioToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mudarUsuárioToolStripMenuItem.Name = "mudarUsuárioToolStripMenuItem";
-            this.mudarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.mudarUsuárioToolStripMenuItem.Text = "Mudar Usuário";
-            this.mudarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.mudarUsuárioToolStripMenuItem_Click);
             // 
             // PrincipalWindow
             // 
