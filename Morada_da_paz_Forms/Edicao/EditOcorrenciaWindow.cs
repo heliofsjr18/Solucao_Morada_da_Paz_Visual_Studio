@@ -45,7 +45,7 @@ namespace Morada_da_paz_Forms.Edicao
         {
             try
             {
-                if(comboBoxUnd.Text == "")
+                if (comboBoxUnd.Text == "")
                 {
                     MessageBox.Show("Defina a Und. Residencial!");
                 }
@@ -53,12 +53,15 @@ namespace Morada_da_paz_Forms.Edicao
                 {
                     int index = comboBoxUnd.SelectedIndex;
                     unidade_residencial und = ListaUnidade.ElementAt(index);
+
                     oc.Id_unidade_residencial = und;
+
 
                     if (checkBoxOcorrenciaPublica.Checked == true)
                     {
                         oc.TipoPublico = 1;
-                    }else
+                    }
+                    else
                     {
                         oc.TipoPublico = 0;
                     }
@@ -98,15 +101,17 @@ namespace Morada_da_paz_Forms.Edicao
                             int indexAdvertencia = comboBoxAdvertencia.SelectedIndex;
                             advertencia ad = listaAdvertencia.ElementAt(indexAdvertencia);
                             sv.inserirAdvertenciaOcorrencia(ad, oc);
-                        }else
+                        }
+                        else
                         {
                             MessageBox.Show("Escolha a advertêcia!");
                             return;
                         }
-                    }else
+                    }
+                    else
                     {
                         if (!comboBoxAdvertencia.Text.Equals(""))
-                        { 
+                        {
                             MessageBox.Show("Indique quão sanção você deseja aplicar!");
                             return;
                         }
@@ -120,7 +125,7 @@ namespace Morada_da_paz_Forms.Edicao
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
 
         }
 
@@ -136,7 +141,6 @@ namespace Morada_da_paz_Forms.Edicao
                 ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
                 this.ListaUnidade = sv.listarUnidades();
 
-                comboBoxUnd.Items.Add("");
 
                 for (int i = 0; i < ListaUnidade.Count; i++)
                 {
@@ -157,11 +161,11 @@ namespace Morada_da_paz_Forms.Edicao
                     comboBoxAdvertencia.Items.Add(listaAdvertencia.ElementAt(y).Descricao);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)

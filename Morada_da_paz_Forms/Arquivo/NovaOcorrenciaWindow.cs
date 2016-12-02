@@ -31,24 +31,28 @@ namespace Morada_da_paz_Forms.Arquivo
         public NovaOcorrenciaWindow()
         {
             InitializeComponent();
+            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id == 2)
+            {
+                checkBox1.Visible = false;
+            }
         }
 
         private void buttonEnviar_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();            
+            Random rnd = new Random();
 
             ocorrencia oco = new ocorrencia() { Numero_ocorrencia = "" + rnd.Next(1000), Situacao = "Em Aberto" };
             oco.Id_usuario.Id = PrincipalWindow.usuarioAtivo.Id;
-            
+
             oco.Descricao = richTextBox1.Text;
-            if (checkBox1.Checked ==  true)            
+            if (checkBox1.Checked == true)
                 oco.TipoPublico = 1;
             else
                 oco.TipoPublico = 0;
 
-            
+
             ServiceMoradaDaPaz serviceinstance = new ServiceMoradaDaPaz();
-            
+
             try
             {
                 serviceinstance.inserirOcorrencia(oco);
@@ -63,14 +67,14 @@ namespace Morada_da_paz_Forms.Arquivo
             MessageBox.Show("Ocorrencia Cadastrada");
 
             #region comunicando com o lado servidor pelo socket
-            
+
             try
             {
-                if(PrincipalWindow.binaryWriter != null)
+                if (PrincipalWindow.binaryWriter != null)
                 {
                     PrincipalWindow.binaryWriter.Write("Uma nova ocorrência foi adcionada!\n\nAtualize a Lista!");
                 }
-                
+
             }
             catch (SocketException socketEx)
             {
@@ -82,7 +86,7 @@ namespace Morada_da_paz_Forms.Arquivo
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {            
+        {
         }
         public void runCliente()
         {
@@ -105,7 +109,7 @@ namespace Morada_da_paz_Forms.Arquivo
                     {
                         message = binaryReader.ReadString();
                         Invoke(new MethodInvoker(
-                          delegate {MessageBox.Show("lado cliente"+message); }
+                          delegate { MessageBox.Show("lado cliente" + message); }
                           ));
                     }
                     catch (Exception ex)
