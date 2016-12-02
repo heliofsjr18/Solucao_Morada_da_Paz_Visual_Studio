@@ -47,7 +47,7 @@ namespace Morada_da_paz_Forms
         {
             usuarioAtivo = login;
             InitializeComponent();
-            caminho = @"" + Application.StartupPath + "ocorrencias" + usuarioAtivo.Nome_completo + ".xml";
+            caminho = @"" + Application.StartupPath + "\\ocorrencias" + usuarioAtivo.Nome_completo + ".xml";
             this.verificaUsuario(login);
             this.Text += " -> " + usuarioAtivo.Nome_completo;
 

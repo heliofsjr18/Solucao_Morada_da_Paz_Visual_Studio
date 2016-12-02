@@ -32,6 +32,7 @@ namespace Morada_da_paz_Forms.Edicao
 
         private void preencheComponentes(ocorrencia o)
         {
+            comboBoxUnd.Text = o.Id_unidade_residencial.Numero_residencia;
             textBoxNumero.Text = o.Numero_ocorrencia;
             richTextBoxDescricao.Text = o.Descricao;
             comboBoxStatus.Text = o.Situacao;
@@ -47,7 +48,12 @@ namespace Morada_da_paz_Forms.Edicao
             {
                 if (comboBoxUnd.Text == "")
                 {
-                    MessageBox.Show("Defina a Und. Residencial!");
+                    unidade_residencial u = new unidade_residencial();
+                    u.Id = 1;
+                    u.Numero_residencia = "0";
+                    u.Descricao = "Nenhuma";
+
+                    oc.Id_unidade_residencial = u;
                 }
                 else
                 {
@@ -55,6 +61,8 @@ namespace Morada_da_paz_Forms.Edicao
                     unidade_residencial und = ListaUnidade.ElementAt(index);
 
                     oc.Id_unidade_residencial = und;
+                }
+                    
 
 
                     if (checkBoxOcorrenciaPublica.Checked == true)
@@ -118,7 +126,7 @@ namespace Morada_da_paz_Forms.Edicao
                     }
                     MessageBox.Show("Transação concluida!");
                     this.Dispose();
-                }
+                
 
             }
             catch (Exception ex)
