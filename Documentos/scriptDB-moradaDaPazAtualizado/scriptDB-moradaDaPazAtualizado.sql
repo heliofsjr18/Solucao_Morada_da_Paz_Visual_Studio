@@ -43,7 +43,7 @@
 
 
 
-INSERT INTO unidade_residencial (numero_unidade, descricao) VALUES (0, 'Nenhuma'),(001, 'Alugada'),(002, 'Vendida'),(003, 'Novata'),(004, 'Policial');
+INSERT INTO unidade_residencial (numero_unidade, descricao) VALUES (0, 'Nenhuma'),(101, 'Primeiro Andar'),(102, 'Primerio Andar'),(201, 'Segundo Andar'),(202, 'Segundo Andar');
 
 INSERT INTO especializacao_usuario (descricao) VALUES ('admin'),('morador');
 
