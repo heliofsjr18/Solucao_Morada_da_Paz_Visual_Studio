@@ -33,37 +33,40 @@
 
 --create table ocorrencia_advertencia (id_ocorrencia int references ocorrencia(id) not null,
 --									 id_advertencia int references advertencia(id) not null
---									 primary key(id_ocorrencia, id_advertencia));
+--									 );
 
 --create table ocorrencia_multa (id_ocorrencia int references ocorrencia(id) not null,
---							   id_multa int references advertencia(id) not null,
+--							   id_multa int references multa(id) not null,
 --							   valor_total Float not null,
---							   primary key(id_ocorrencia, id_multa));
+--							   );
 
---INSERT INTO unidade_residencial (numero_unidade, descricao) VALUES (123, 'alugado');
 
---INSERT INTO especializacao_usuario (descricao) VALUES ('admin');
 
---INSERT INTO usuario (login_,senha,nome_completo,id_unidade_residencial, id_especializacao ) 
---VALUES ('admin', 'admin', 'helio ferreira', 1, 1)
 
---select * from ocorrencia;
+INSERT INTO unidade_residencial (numero_unidade, descricao) VALUES (0, 'Nenhuma'),(001, 'Alugada'),(002, 'Vendida'),(003, 'Novata'),(004, 'Policial');
 
---SELECT * FROM usuario
+INSERT INTO especializacao_usuario (descricao) VALUES ('admin'),('morador');
 
---SELECT id, situacao, numero_ocorrencia, descricao, id_usuario, id_unidade_residencial FROM ocorrencia
+INSERT INTO usuario (login_,senha,nome_completo,id_unidade_residencial, id_especializacao ) 
+VALUES ('admin', 'admin', 'ADM', 1, 1)
 
---ALTER TABLE ocorrencia ADD tipoPublico int DEFAULT (0);
+select * from ocorrencia;
 
---UPDATE ocorrencia SET tipoPublico = 0;
+SELECT * FROM usuario
 
---INSERT INTO ocorrencia (situacao,numero_ocorrencia ,descricao, id_usuario, id_unidade_residencial, tipoPublico)
--- VALUES (NULL, 1042512759, 'caguei na piscina', 1, 1, 1)
---use morada_da_pazdb
---select * from ocorrencia;
+SELECT id, situacao, numero_ocorrencia, descricao, id_usuario, id_unidade_residencial FROM ocorrencia
 
---INSERT INTO especializacao_usuario (descricao) VALUES ('Morador');
---select * from especializacao_usuario;
---update ocorrencia set id_usuario = 2 where id = 4
+ALTER TABLE ocorrencia ADD tipoPublico int DEFAULT (0);
+
+UPDATE ocorrencia SET tipoPublico = 0;
+
+INSERT INTO ocorrencia (situacao,numero_ocorrencia ,descricao, id_usuario, id_unidade_residencial, tipoPublico)
+ VALUES (NULL, 1042512759, 'caguei na piscina', 1, 1, 1)
+use morada_da_pazdb
+select * from ocorrencia;
+
+INSERT INTO especializacao_usuario (descricao) VALUES ('Morador');
+select * from especializacao_usuario;
+update ocorrencia set id_usuario = 2 where id = 4
 
 select * from multa;
