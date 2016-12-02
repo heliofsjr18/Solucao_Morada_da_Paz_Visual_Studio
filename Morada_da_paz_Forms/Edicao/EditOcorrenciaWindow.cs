@@ -18,6 +18,8 @@ namespace Morada_da_paz_Forms.Edicao
         List<unidade_residencial> ListaUnidade;
         List<multa> listaMulta;
         List<advertencia> listaAdvertencia;
+        Boolean controle;
+
         public EditOcorrenciaWindow(ocorrencia o)
         {
             oc = o;
@@ -46,6 +48,7 @@ namespace Morada_da_paz_Forms.Edicao
         {
             try
             {
+                
                 if (comboBoxUnd.Text == "")
                 {
                     unidade_residencial u = new unidade_residencial();
@@ -58,9 +61,13 @@ namespace Morada_da_paz_Forms.Edicao
                 else
                 {
                     int index = comboBoxUnd.SelectedIndex;
-                    unidade_residencial und = ListaUnidade.ElementAt(index);
-
-                    oc.Id_unidade_residencial = und;
+                    if(index >= 0)
+                    {
+                        unidade_residencial und = ListaUnidade.ElementAt(index);
+                    
+                        oc.Id_unidade_residencial = und;
+                    }
+                    
                 }
                     
 
@@ -73,10 +80,15 @@ namespace Morada_da_paz_Forms.Edicao
                     {
                         oc.TipoPublico = 0;
                     }
-
+                
                     oc.Situacao = comboBoxStatus.Text;
+
                     ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
+
+                   
                     sv.editarOcorrencia(oc);
+                    
+                    
 
 
                     if (checkBoxMulta.Checked)
