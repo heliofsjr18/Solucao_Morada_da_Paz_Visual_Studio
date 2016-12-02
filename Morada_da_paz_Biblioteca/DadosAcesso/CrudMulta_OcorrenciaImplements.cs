@@ -16,9 +16,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string insertSql = "INSERT INTO ocorrencia_multa (id_ocorrencia, id_multa, valor_total)";
-                insertSql += " values ";
-                insertSql += " (@id_ocorrencia, @id_multa, @valor_total)";
+                string insertSql = "INSERT INTO ocorrencia_multa (id_ocorrencia, id_multa, valor_total) VALUES (@id_ocorrencia, @id_multa, @valor_total)";
 
                 SqlCommand comand = new SqlCommand(insertSql, conexao);
                 comand.Parameters.AddWithValue("@id_ocorrencia", o.Id);

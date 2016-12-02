@@ -136,9 +136,11 @@ namespace Morada_da_paz_Forms.Edicao
                 ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
                 this.ListaUnidade = sv.listarUnidades();
 
+                comboBoxUnd.Items.Add("");
+
                 for (int i = 0; i < ListaUnidade.Count; i++)
                 {
-                    comboBoxUnd.Items.Add(ListaUnidade.ElementAt(i).Descricao);
+                    comboBoxUnd.Items.Add(ListaUnidade.ElementAt(i).Numero_residencia);
                 }
 
                 this.listaMulta = sv.listarMulta();

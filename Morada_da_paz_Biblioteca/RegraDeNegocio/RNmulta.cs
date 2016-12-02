@@ -22,6 +22,10 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
             if(m.Preco == 0){
                 throw new Exception("Preço vasio!");
             }
+            if (m.Preco.Equals(""))
+            {
+                throw new Exception("Preço vasio!");
+            }
         }
 
         public void chamarInserir(multa m)

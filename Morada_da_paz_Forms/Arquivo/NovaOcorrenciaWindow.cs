@@ -37,7 +37,7 @@ namespace Morada_da_paz_Forms.Arquivo
         {
             Random rnd = new Random();            
 
-            ocorrencia oco = new ocorrencia() { Numero_ocorrencia = "" + rnd.Next(int.MaxValue), Situacao = "Em Aberto" };
+            ocorrencia oco = new ocorrencia() { Numero_ocorrencia = "" + rnd.Next(1000), Situacao = "Em Aberto" };
             oco.Id_usuario.Id = PrincipalWindow.usuarioAtivo.Id;
             
             oco.Descricao = richTextBox1.Text;
