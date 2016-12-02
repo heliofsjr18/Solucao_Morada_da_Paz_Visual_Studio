@@ -85,16 +85,20 @@ namespace Morada_da_paz_Forms
 
         private void PrincipalWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
+           
+
             if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
-                if (tcpListener != null)
-                {
-                        tcpListener.Stop();
-                        Environment.Exit(0);                    
-                }
 
-                Application.Exit();
-            }                        
+                if (tcpListener != null)
+                {                    
+                        tcpListener.Stop();
+                }
+                
+            }
+
+            Environment.Exit(0);
+
         }
 
         private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -327,12 +331,12 @@ namespace Morada_da_paz_Forms
             }
         }
 
-        private void mostraMensagem(object oo)
+        private void mostraMensagem(object ob)
         {
             if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
                 Invoke(new MethodInvoker(
-                         delegate { MessageBox.Show("" + oo); }
+                         delegate { MessageBox.Show(this, "" + ob, "MRDP -> ADM"); }
                                          ));
             }
 
@@ -372,7 +376,7 @@ namespace Morada_da_paz_Forms
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show(this, ex.Message, "ADM");
                         }
 
 
@@ -400,7 +404,7 @@ namespace Morada_da_paz_Forms
                     {
                         socket.Close();
                     }
-                    MessageBox.Show("conexão finalizada", "Server App");
+                    MessageBox.Show("conexão finalizada", "ADM");
 
                 }
             }
@@ -429,7 +433,7 @@ namespace Morada_da_paz_Forms
                         {
                             message = binaryReader.ReadString();
                             Invoke(new MethodInvoker(
-                                delegate { MessageBox.Show("(Cliente App)" + message); }
+                                delegate { MessageBox.Show(this, "" + message, "MRDP -> Morador"); }
                             ));
                         }
 
@@ -447,9 +451,13 @@ namespace Morada_da_paz_Forms
                 networkStream.Close();
                 tcpClient.Close();
             }
+            catch (SocketException ex) {
+                MessageBox.Show("No momento o síndico não está logado, sua Ocorrência pode demorar a ser visualizada!", "Síndico indisponivel!");
+            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro");
+                MessageBox.Show("" + ex);
+                MessageBox.Show(ex.Message, "Erro2");
             }
         }
 
