@@ -63,16 +63,19 @@ namespace Morada_da_paz_Forms.Cadastro
             ServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
             this.listaEspecial = serviceInstance.listarEspecializacao();
             this.ListaUnidade = serviceInstance.listarUnidades();
-            //comboBoxUnidadeResidencial.Items.Add("");
-            //comboBoxEspecializacao.Items.Add("");
             for (int i = 0; i < listaEspecial.Count; i++)
             {
                 comboBoxEspecializacao.Items.Add(listaEspecial.ElementAt(i).Descricao);
             }
             for (int i = 0; i < ListaUnidade.Count; i++)
             {
-                comboBoxUnidadeResidencial.Items.Add(ListaUnidade.ElementAt(i).Descricao);
+                comboBoxUnidadeResidencial.Items.Add(ListaUnidade.ElementAt(i).Numero_residencia);
             }
+        }
+
+        private void UserRegWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

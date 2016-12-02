@@ -214,6 +214,7 @@
             this.Name = "UserRegWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "UserRegWindow";
+            this.Load += new System.EventHandler(this.UserRegWindow_Load);
             this.Shown += new System.EventHandler(this.UserRegWindow_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();

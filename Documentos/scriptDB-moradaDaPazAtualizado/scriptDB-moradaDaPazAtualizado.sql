@@ -21,7 +21,7 @@
 
 --create table multa (id int primary key identity not null, 
 --					descricao text, 
---					preco decimal(10,2) not null);
+--					preco Float not null);
 
 --create table ocorrencia (id int primary key identity not null, 
 --						situacao varchar(30) default ('aberto'), 
@@ -37,7 +37,7 @@
 
 --create table ocorrencia_multa (id_ocorrencia int references ocorrencia(id) not null,
 --							   id_multa int references advertencia(id) not null,
---							   valor_total decimal(8,2) not null,
+--							   valor_total Float not null,
 --							   primary key(id_ocorrencia, id_multa));
 
 --INSERT INTO unidade_residencial (numero_unidade, descricao) VALUES (123, 'alugado');

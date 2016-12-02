@@ -14,7 +14,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
             if (o == null) {
                 throw new Exception("Objeto vasio!");
             }
-            if (o.Descricao == null) {
+            if (o.Descricao.Equals("")) {
                 throw new Exception("Descrição Vasia!");
             }
             if(o.Id_usuario == null){
