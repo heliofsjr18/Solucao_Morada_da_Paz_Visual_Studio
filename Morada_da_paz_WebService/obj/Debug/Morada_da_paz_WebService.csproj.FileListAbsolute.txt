@@ -1,0 +1,8 @@
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_WebService\bin\Morada_da_paz_WebService.dll.config
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_WebService\bin\Morada_da_paz_WebService.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_WebService\bin\Morada_da_paz_WebService.pdb
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_WebService\bin\Morada_da_paz_Biblioteca.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_WebService\bin\Morada_da_paz_Biblioteca.pdb
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_WebService\obj\Debug\Morada_da_paz_WebService.csprojResolveAssemblyReference.cache
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_WebService\obj\Debug\Morada_da_paz_WebService.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_WebService\obj\Debug\Morada_da_paz_WebService.pdb

@@ -15,11 +15,11 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         {
             if (a == null)
             {
-                throw new Exception("Objeto Vasio!");
+                throw new Exception("Objeto Vazio!");
             }
             if (a.Descricao.Equals(""))
             {
-                throw new Exception("Descrição Vasia!");
+                throw new Exception("Descrição Vazia!");
             }
         }
 
@@ -27,11 +27,11 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         {
             if (o == null)
             {
-                throw new Exception("Objeto vasio!");
+                throw new Exception("Objeto vazio!");
             }
             if (o.Descricao == null)
             {
-                throw new Exception("Descrição Vasia!");
+                throw new Exception("Descrição Vazia!");
             }
             if (o.Id_usuario == null)
             {

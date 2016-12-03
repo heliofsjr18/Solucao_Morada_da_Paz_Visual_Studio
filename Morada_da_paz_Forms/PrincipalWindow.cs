@@ -10,8 +10,7 @@ using System.Windows.Forms;
 
 using Morada_da_paz_Forms.Cadastro;
 using Morada_da_paz_Forms.Arquivo;
-using Morada_da_paz_Biblioteca.basicas;
-using Morada_da_paz_WebService;
+
 using System.IO;
 using System.Xml;
 using Morada_da_paz_Forms.Edicao;
@@ -19,6 +18,7 @@ using System.Diagnostics;
 using System.Net.Sockets;
 using System.Threading;
 using System.Net;
+using Morada_da_paz_Forms.MRDP;
 
 namespace Morada_da_paz_Forms
 {
@@ -36,16 +36,17 @@ namespace Morada_da_paz_Forms
 
         TcpListener tcpListener;
         #endregion
-        public static usuario usuarioAtivo = new usuario();
+        public static usuario usuarioAtivo;
         private string caminho;
 
-        NovaOcorrenciaWindow now = new NovaOcorrenciaWindow();
-        ServiceMoradaDaPaz sv;
+        NovaOcorrenciaWindow now;
+        MRDP.ServiceMorada_Da_PazClient sv;
         List<ocorrencia> ocorrenciaLista;
 
         public PrincipalWindow(usuario login)
         {
             usuarioAtivo = login;
+            now = new NovaOcorrenciaWindow(login);
             InitializeComponent();
             caminho = @"" + Application.StartupPath + "\\ocorrencias" + usuarioAtivo.Nome_completo + ".xml";
             this.verificaUsuario(login);
@@ -94,10 +95,22 @@ namespace Morada_da_paz_Forms
                 {                    
                         tcpListener.Stop();
                 }
-                
-            }
 
-            Environment.Exit(0);
+                /*if(thread != null)
+                {
+                    thread.Abort();
+                }*/
+                Environment.Exit(0);
+
+            }else
+            {
+                
+                Application.Exit();
+            }
+           
+            
+            
+            
 
         }
 
@@ -137,7 +150,7 @@ namespace Morada_da_paz_Forms
                 //thread = new Thread(new ThreadStart(runCliente));
                 //thread.Abort();     
             }
-            NovaOcorrenciaWindow window = new NovaOcorrenciaWindow();
+            NovaOcorrenciaWindow window = new NovaOcorrenciaWindow(usuarioAtivo);
             window.ShowDialog();
         }
 
@@ -161,15 +174,15 @@ namespace Morada_da_paz_Forms
         {
             try
             {
-                this.sv = new ServiceMoradaDaPaz();
+                this.sv = new ServiceMorada_Da_PazClient();
 
                 if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
                 {
-                    this.ocorrenciaLista = sv.listarOcorrencias();
+                    this.ocorrenciaLista = sv.listarOcorrencias().ToList();
                 }
                 else
                 {
-                    this.ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo);
+                    this.ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo).ToList();
                 }
 
                 listViewMinhasOcorrencias.Items.Clear();
@@ -251,24 +264,44 @@ namespace Morada_da_paz_Forms
 
                 #region definição dos elementos do xml
                 XmlNode ocorrencia = doc.CreateElement("ocorrencia");
+                XmlNode id = doc.CreateElement("id");
                 XmlNode numero = doc.CreateElement("numero");
                 XmlNode descricao = doc.CreateElement("descricao");
+                XmlNode usuario = doc.CreateElement("usuario");
+                XmlNode id_usuario = doc.CreateElement("idUsuario");
                 XmlNode status = doc.CreateElement("status");
+                XmlNode publico = doc.CreateElement("publico");
+                XmlNode undResidencial = doc.CreateElement("unidadeResidencial");
+                XmlNode id_und = doc.CreateElement("id_und");
+
+
                 #endregion
-
-
 
 
                 #region colocar valores nos elementos xml
+                id.InnerText = ""+o.Id;
                 numero.InnerText = o.Numero_ocorrencia;
                 descricao.InnerText = o.Descricao;
+                id_usuario.InnerText = ""+o.Id_usuario.Id;
                 status.InnerText = o.Situacao;
+                publico.InnerText = ""+o.TipoPublico;
+                id_und.InnerText = "" + o.Id_unidade_residencial.Id;
                 #endregion
 
                 #region definido hierarquia
+                ocorrencia.AppendChild(id);
                 ocorrencia.AppendChild(numero);
                 ocorrencia.AppendChild(descricao);
+
+                usuario.AppendChild(id_usuario);
+
+                ocorrencia.AppendChild(usuario);
                 ocorrencia.AppendChild(status);
+                ocorrencia.AppendChild(publico);
+
+                undResidencial.AppendChild(id_und);
+
+                ocorrencia.AppendChild(undResidencial);
                 #endregion
 
 
@@ -291,7 +324,7 @@ namespace Morada_da_paz_Forms
         private void buttonGeraXml_Click(object sender, EventArgs e)
         {
             #region instancia do webservice e criação da lista de ocorrencia
-            ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
+            MRDP.ServiceMorada_Da_PazClient sv = new ServiceMorada_Da_PazClient();
             List<ocorrencia> ocorrenciaLista = this.ocorrenciaLista;//sv.listarOcorrencias();
             #endregion
             #region loop para preenchimento do XML
@@ -382,6 +415,7 @@ namespace Morada_da_paz_Forms
 
                     } while (socket.Connected);
                 }
+                
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
@@ -461,6 +495,10 @@ namespace Morada_da_paz_Forms
             }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

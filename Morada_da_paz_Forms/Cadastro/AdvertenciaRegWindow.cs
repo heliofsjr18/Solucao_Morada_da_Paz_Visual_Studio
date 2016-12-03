@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Morada_da_paz_Forms.MRDP;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,8 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Morada_da_paz_WebService;
-using Morada_da_paz_Biblioteca.basicas;
+//using Morada_da_paz_Biblioteca.basicas;
 
 namespace Morada_da_paz_Forms.Cadastro
 {
@@ -25,7 +25,8 @@ namespace Morada_da_paz_Forms.Cadastro
             try
             {
                 advertencia adv = new advertencia() { Descricao = richTextBoxAdvertencia.Text };
-                ServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
+                
+                MRDP.ServiceMorada_Da_PazClient serviceInstance = new ServiceMorada_Da_PazClient();
                 serviceInstance.inserirAdvertencia(adv);
                 MessageBox.Show("Advertencia Cadastrada");
             }

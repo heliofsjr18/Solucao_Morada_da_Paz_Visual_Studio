@@ -12,10 +12,10 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
     {
         private void verificaPreenchimento(ocorrencia o) {
             if (o == null) {
-                throw new Exception("Objeto vasio!");
+                throw new Exception("Objeto vazio!");
             }
             if (o.Descricao.Equals("")) {
-                throw new Exception("Descrição Vasia!");
+                throw new Exception("Descrição Vazia!");
             }
             
             if(o.Id_usuario == null){

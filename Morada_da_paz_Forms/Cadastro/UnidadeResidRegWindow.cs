@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Morada_da_paz_WebService;
-using Morada_da_paz_Biblioteca.basicas;
+using Morada_da_paz_Forms.MRDP;
 
 namespace Morada_da_paz_Forms.Cadastro
 {
@@ -33,7 +32,9 @@ namespace Morada_da_paz_Forms.Cadastro
         private void buttonSave_Click(object sender, EventArgs e)
         {
             unidade_residencial uR = new unidade_residencial() { Numero_residencia = textBox1.Text, Descricao = textBox2.Text };
-            ServiceMoradaDaPaz serviceinstance = new ServiceMoradaDaPaz();
+            MRDP.ServiceMorada_Da_PazClient serviceinstance = new ServiceMorada_Da_PazClient();
+
+
             try
             {
                 serviceinstance.inseirUnidadeResidencial(uR);

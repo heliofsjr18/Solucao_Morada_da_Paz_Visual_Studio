@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Morada_da_paz_Biblioteca.basicas;
-using Morada_da_paz_WebService;
+using Morada_da_paz_Forms.MRDP;
 
 namespace Morada_da_paz_Forms.Cadastro
 {
@@ -43,7 +42,8 @@ namespace Morada_da_paz_Forms.Cadastro
             u.Id_especializacao_usuario = esp;
             u.Id_unidade_residencial = und;
 
-            ServiceMoradaDaPaz serviceinstance = new ServiceMoradaDaPaz();
+            
+            MRDP.ServiceMorada_Da_PazClient serviceinstance = new ServiceMorada_Da_PazClient();
             try
             {
                 serviceinstance.inseirUsuario(u);
@@ -60,9 +60,11 @@ namespace Morada_da_paz_Forms.Cadastro
 
         private void UserRegWindow_Shown(object sender, EventArgs e)
         {
-            ServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
-            this.listaEspecial = serviceInstance.listarEspecializacao();
-            this.ListaUnidade = serviceInstance.listarUnidades();
+            
+            
+            MRDP.ServiceMorada_Da_PazClient serviceinstance = new ServiceMorada_Da_PazClient();
+            this.listaEspecial = serviceinstance.listarEspecializacao().ToList();
+            this.ListaUnidade = serviceinstance.listarUnidades().ToList() ;
             for (int i = 0; i < listaEspecial.Count; i++)
             {
                 comboBoxEspecializacao.Items.Add(listaEspecial.ElementAt(i).Descricao);

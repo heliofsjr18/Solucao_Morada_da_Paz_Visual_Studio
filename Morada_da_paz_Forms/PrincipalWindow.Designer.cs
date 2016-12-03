@@ -63,7 +63,7 @@
             this.ajudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(656, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1240, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -197,9 +197,9 @@
             this.Status});
             this.listViewMinhasOcorrencias.FullRowSelect = true;
             this.listViewMinhasOcorrencias.GridLines = true;
-            this.listViewMinhasOcorrencias.Location = new System.Drawing.Point(28, 205);
+            this.listViewMinhasOcorrencias.Location = new System.Drawing.Point(324, 256);
             this.listViewMinhasOcorrencias.Name = "listViewMinhasOcorrencias";
-            this.listViewMinhasOcorrencias.Size = new System.Drawing.Size(597, 131);
+            this.listViewMinhasOcorrencias.Size = new System.Drawing.Size(877, 160);
             this.listViewMinhasOcorrencias.TabIndex = 1;
             this.listViewMinhasOcorrencias.UseCompatibleStateImageBehavior = false;
             this.listViewMinhasOcorrencias.View = System.Windows.Forms.View.Details;
@@ -213,26 +213,27 @@
             // Descrição
             // 
             this.Descrição.Text = "Descrição";
-            this.Descrição.Width = 440;
+            this.Descrição.Width = 515;
             // 
             // Status
             // 
             this.Status.Text = "Status";
-            this.Status.Width = 78;
+            this.Status.Width = 571;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 180);
+            this.label1.Location = new System.Drawing.Point(321, 228);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Minhas Ocorrências";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(395, 135);
+            this.label2.Location = new System.Drawing.Point(529, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 13);
             this.label2.TabIndex = 6;
@@ -241,7 +242,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(532, 135);
+            this.label3.Location = new System.Drawing.Point(751, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 7;
@@ -250,7 +251,7 @@
             // buttonGeraXml
             // 
             this.buttonGeraXml.Image = ((System.Drawing.Image)(resources.GetObject("buttonGeraXml.Image")));
-            this.buttonGeraXml.Location = new System.Drawing.Point(525, 151);
+            this.buttonGeraXml.Location = new System.Drawing.Point(734, 121);
             this.buttonGeraXml.Name = "buttonGeraXml";
             this.buttonGeraXml.Size = new System.Drawing.Size(75, 41);
             this.buttonGeraXml.TabIndex = 5;
@@ -260,7 +261,7 @@
             // buttonAtulizar
             // 
             this.buttonAtulizar.Image = global::Morada_da_paz_Forms.Properties.Resources.Paomedia_Small_N_Flat_Sign_sync;
-            this.buttonAtulizar.Location = new System.Drawing.Point(410, 151);
+            this.buttonAtulizar.Location = new System.Drawing.Point(549, 121);
             this.buttonAtulizar.Name = "buttonAtulizar";
             this.buttonAtulizar.Size = new System.Drawing.Size(75, 42);
             this.buttonAtulizar.TabIndex = 4;
@@ -272,7 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(656, 361);
+            this.ClientSize = new System.Drawing.Size(1240, 439);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonGeraXml);

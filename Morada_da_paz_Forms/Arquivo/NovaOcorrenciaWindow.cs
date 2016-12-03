@@ -8,11 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Morada_da_paz_Biblioteca.basicas;
-using Morada_da_paz_WebService;
 using System.Net.Sockets;
 using System.IO;
 using System.Threading;
+using Morada_da_paz_Forms.MRDP;
 
 namespace Morada_da_paz_Forms.Arquivo
 {
@@ -27,11 +26,13 @@ namespace Morada_da_paz_Forms.Arquivo
 
         private Thread thread;
         #endregion
-
-        public NovaOcorrenciaWindow()
+        usuario us;
+        public NovaOcorrenciaWindow(usuario u)
         {
+            
             InitializeComponent();
-            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id == 2)
+            this.us = u;
+            if (u.Id_especializacao_usuario.Id > 1)
             {
                 checkBox1.Visible = false;
             }
@@ -42,7 +43,8 @@ namespace Morada_da_paz_Forms.Arquivo
             Random rnd = new Random();
 
             ocorrencia oco = new ocorrencia() { Numero_ocorrencia = "" + rnd.Next(1000), Situacao = "Em Aberto" };
-            oco.Id_usuario.Id = PrincipalWindow.usuarioAtivo.Id;
+            MessageBox.Show(""+this.us.Id);
+            oco.Id_usuario = this.us;
 
             oco.Descricao = richTextBox1.Text;
             if (checkBox1.Checked == true)
@@ -50,8 +52,8 @@ namespace Morada_da_paz_Forms.Arquivo
             else
                 oco.TipoPublico = 0;
 
-
-            ServiceMoradaDaPaz serviceinstance = new ServiceMoradaDaPaz();
+            
+            MRDP.ServiceMorada_Da_PazClient serviceinstance = new ServiceMorada_Da_PazClient();
 
             try
             {

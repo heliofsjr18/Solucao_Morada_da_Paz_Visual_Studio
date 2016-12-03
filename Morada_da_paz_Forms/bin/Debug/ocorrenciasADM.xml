@@ -1,0 +1,392 @@
+<minhasOcorrencias>
+  <ocorrencia>
+    <id>1</id>
+    <numero>880</numero>
+    <descricao>Som alto após as 22h</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Finalizada</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>2</id>
+    <numero>696</numero>
+    <descricao>O visinho quebrou meu carro</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Finalizada</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>3</id>
+    <numero>469</numero>
+    <descricao>O Visinho quebrou janela</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Análise</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>4</id>
+    <numero>876</numero>
+    <descricao>Lixo na piscina</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Cancelada</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>5</id>
+    <numero>980</numero>
+    <descricao>Lixo no corredor</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Finalizada</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>6</id>
+    <numero>120</numero>
+    <descricao>Lixo por toda parte</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>7</id>
+    <numero>104</numero>
+    <descricao>Lixo Lixo</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>8</id>
+    <numero>527</numero>
+    <descricao>Lixo</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>9</id>
+    <numero>240</numero>
+    <descricao>Ocorrencia</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Cancelada</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>11</id>
+    <numero>345</numero>
+    <descricao>ooooo</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Cancelada</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>12</id>
+    <numero>687</numero>
+    <descricao>ocorrenciasss</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>13</id>
+    <numero>297</numero>
+    <descricao>jhgljhlgjhglhj</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>14</id>
+    <numero>235</numero>
+    <descricao>oooooooooooo</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>15</id>
+    <numero>585</numero>
+    <descricao>nonooooonononono</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>16</id>
+    <numero>159</numero>
+    <descricao>aaaaa</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>17</id>
+    <numero>477</numero>
+    <descricao>helio quebrou o pc...</descricao>
+    <usuario>
+      <idUsuario>1</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>18</id>
+    <numero>456</numero>
+    <descricao>asdasdasd</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>19</id>
+    <numero>470</numero>
+    <descricao>ocorrenciaaaaaaa</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>20</id>
+    <numero>426</numero>
+    <descricao>tetetete</descricao>
+    <usuario>
+      <idUsuario>1</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>21</id>
+    <numero>66</numero>
+    <descricao>alalalalala</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>22</id>
+    <numero>248</numero>
+    <descricao>ococococococooocoococococ</descricao>
+    <usuario>
+      <idUsuario>4</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>23</id>
+    <numero>336</numero>
+    <descricao>ojojojojojojo</descricao>
+    <usuario>
+      <idUsuario>4</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>24</id>
+    <numero>169</numero>
+    <descricao>asdas</descricao>
+    <usuario>
+      <idUsuario>4</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>25</id>
+    <numero>176</numero>
+    <descricao>depósito de lixo</descricao>
+    <usuario>
+      <idUsuario>4</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>26</id>
+    <numero>404</numero>
+    <descricao>depósito de lixo</descricao>
+    <usuario>
+      <idUsuario>4</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>27</id>
+    <numero>182</numero>
+    <descricao>depósito de lixo</descricao>
+    <usuario>
+      <idUsuario>4</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>28</id>
+    <numero>548</numero>
+    <descricao>depósito de lixo</descricao>
+    <usuario>
+      <idUsuario>4</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>29</id>
+    <numero>410</numero>
+    <descricao>depósito de lixo</descricao>
+    <usuario>
+      <idUsuario>4</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>30</id>
+    <numero>121</numero>
+    <descricao>melo</descricao>
+    <usuario>
+      <idUsuario>1</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+  <ocorrencia>
+    <id>31</id>
+    <numero>900</numero>
+    <descricao>teste</descricao>
+    <usuario>
+      <idUsuario>2</idUsuario>
+    </usuario>
+    <status>Em Aberto</status>
+    <publico>0</publico>
+    <unidadeResidencial>
+      <id_und>0</id_und>
+    </unidadeResidencial>
+  </ocorrencia>
+</minhasOcorrencias>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1763a4ed-20e4-4f24-997a-17c8abac3d06" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:60993/ServiceMorada_Da_Paz.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceMorada_Da_Paz.xsd" MetadataType="Schema" ID="fcc8fc90-b0f0-4294-86b3-1ca40359933a" SourceId="1" SourceUrl="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceMorada_Da_Paz1.xsd" MetadataType="Schema" ID="34796a0c-1d5c-485d-9bb6-27077be11857" SourceId="1" SourceUrl="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceMorada_Da_Paz2.xsd" MetadataType="Schema" ID="9431d259-e95b-4f0c-be8f-23a3d78bd452" SourceId="1" SourceUrl="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="302ca342-5668-43e5-a70a-a1d3d33d029f" SourceId="1" SourceUrl="http://localhost:60993/ServiceMorada_Da_Paz.svc?wsdl" />
+    <MetadataFile FileName="ServiceMorada_Da_Paz3.xsd" MetadataType="Schema" ID="e0905fd8-fc61-451f-8afe-dc4eb08d2330" SourceId="1" SourceUrl="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceMorada_Da_Paz.disco" MetadataType="Disco" ID="a9e2295f-4c34-4bbb-aac4-32ce83e849e8" SourceId="1" SourceUrl="http://localhost:60993/ServiceMorada_Da_Paz.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

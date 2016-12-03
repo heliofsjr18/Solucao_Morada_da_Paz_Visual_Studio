@@ -1,5 +1,5 @@
-﻿using Morada_da_paz_Biblioteca.basicas;
-using Morada_da_paz_WebService;
+﻿
+using Morada_da_paz_Forms.MRDP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,10 +83,11 @@ namespace Morada_da_paz_Forms.Edicao
                 
                     oc.Situacao = comboBoxStatus.Text;
 
-                    ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
+                    
+                MRDP.ServiceMorada_Da_PazClient sv = new ServiceMorada_Da_PazClient();
 
-                   
-                    sv.editarOcorrencia(oc);
+
+                sv.editarOcorrencia(oc);
                     
                     
 
@@ -158,8 +159,9 @@ namespace Morada_da_paz_Forms.Edicao
         {
             try
             {
-                ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
-                this.ListaUnidade = sv.listarUnidades();
+                
+                MRDP.ServiceMorada_Da_PazClient sv = new ServiceMorada_Da_PazClient();
+                this.ListaUnidade = sv.listarUnidades().ToList();
 
 
                 for (int i = 0; i < ListaUnidade.Count; i++)
@@ -167,14 +169,14 @@ namespace Morada_da_paz_Forms.Edicao
                     comboBoxUnd.Items.Add(ListaUnidade.ElementAt(i).Numero_residencia);
                 }
 
-                this.listaMulta = sv.listarMulta();
+                this.listaMulta = sv.listarMulta().ToList();
 
                 for (int x = 0; x < listaMulta.Count; x++)
                 {
                     comboBoxMulta.Items.Add(listaMulta.ElementAt(x).Descricao);
                 }
 
-                this.listaAdvertencia = sv.listarAdvertencias();
+                this.listaAdvertencia = sv.listarAdvertencias().ToList();
 
                 for (int y = 0; y < listaAdvertencia.Count; y++)
                 {
@@ -190,7 +192,8 @@ namespace Morada_da_paz_Forms.Edicao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
+            
+            MRDP.ServiceMorada_Da_PazClient sv = new ServiceMorada_Da_PazClient();
             sv.excluiOcorrencia(this.oc);
             MessageBox.Show("Ocorrência Excluida!");
             this.Dispose();

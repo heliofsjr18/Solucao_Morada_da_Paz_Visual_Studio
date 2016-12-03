@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Morada_Da_Paz_Service" />
+  <xs:import schemaLocation="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Morada_Da_Paz_Service" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Morada_Da_Paz_Service" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inseirUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="u" nillable="true" type="q3:usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inseirUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="u" nillable="true" type="q4:usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarUsuarios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="listarUsuariosResult" nillable="true" type="q5:ArrayOfusuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="u" nillable="true" type="q6:usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="pesquisaUsuarioResult" nillable="true" type="q7:usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaUsuarioLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="u" nillable="true" type="q8:usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaUsuarioLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="pesquisaUsuarioLoginResult" nillable="true" type="q9:usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inseirUnidadeResidencial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="ur" nillable="true" type="q10:unidade_residencial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inseirUnidadeResidencialResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editaUnidadeResisencial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="ur" nillable="true" type="q11:unidade_residencial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editaUnidadeResisencialResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarUnidades">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarUnidadesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="listarUnidadesResult" nillable="true" type="q12:ArrayOfunidade_residencial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaUnidade">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="ur" nillable="true" type="q13:unidade_residencial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaUnidadeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="pesquisaUnidadeResult" nillable="true" type="q14:unidade_residencial" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirAdvertencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="a" nillable="true" type="q15:advertencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirAdvertenciaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editarAdvertencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="a" nillable="true" type="q16:advertencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editarAdvertenciaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarAdvertencias">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarAdvertenciasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="listarAdvertenciasResult" nillable="true" type="q17:ArrayOfadvertencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaAdvertencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="a" nillable="true" type="q18:advertencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaAdvertenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="pesquisaAdvertenciaResult" nillable="true" type="q19:advertencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirEspecializacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="eu" nillable="true" type="q20:especializacao_usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirEspecializacaoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editarEspecializacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="eu" nillable="true" type="q21:especializacao_usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editarEspecializacaoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarEspecializacao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarEspecializacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="listarEspecializacaoResult" nillable="true" type="q22:ArrayOfespecializacao_usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaEspecializacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="eu" nillable="true" type="q23:especializacao_usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaEspecializacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="pesquisaEspecializacaoResult" nillable="true" type="q24:especializacao_usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirMulta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="m" nillable="true" type="q25:multa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirMultaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editarMulta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="m" nillable="true" type="q26:multa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editarMultaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarMulta">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarMultaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="listarMultaResult" nillable="true" type="q27:ArrayOfmulta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaMulta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="m" nillable="true" type="q28:multa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaMultaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="pesquisaMultaResult" nillable="true" type="q29:multa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirOcorrencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="o" nillable="true" type="q30:ocorrencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirOcorrenciaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editarOcorrencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="o" nillable="true" type="q31:ocorrencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editarOcorrenciaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarOcorrencias">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarOcorrenciasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="listarOcorrenciasResult" nillable="true" type="q32:ArrayOfocorrencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaOcorrencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="o" nillable="true" type="q33:ocorrencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pesquisaOcorrenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="pesquisaOcorrenciaResult" nillable="true" type="q34:ocorrencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarOcorrenciasPorUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="u" nillable="true" type="q35:usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarOcorrenciasPorUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="listarOcorrenciasPorUsuarioResult" nillable="true" type="q36:ArrayOfocorrencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarOcorrencasPublicas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarOcorrencasPublicasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="listarOcorrencasPublicasResult" nillable="true" type="q37:ArrayOfocorrencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="excluiOcorrencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="o" nillable="true" type="q38:ocorrencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="excluiOcorrenciaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirMultaOcorrencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="m" nillable="true" type="q39:multa" />
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="o" nillable="true" type="q40:ocorrencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirMultaOcorrenciaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirAdvertenciaOcorrencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="a" nillable="true" type="q41:advertencia" />
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" minOccurs="0" name="o" nillable="true" type="q42:ocorrencia" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirAdvertenciaOcorrenciaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

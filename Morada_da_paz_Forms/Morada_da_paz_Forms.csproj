@@ -104,7 +104,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\Morada_da_paz_WebService\Reference.cs">
+    <Compile Include="Service References\MRDP\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -152,6 +152,7 @@
     <None Include="Properties\DataSources\Morada_da_paz_Biblioteca.basicas.ocorrencia.datasource" />
     <None Include="Properties\DataSources\Morada_da_paz_Biblioteca.basicas.unidade_residencial.datasource" />
     <None Include="Properties\DataSources\Morada_da_paz_Biblioteca.basicas.usuario.datasource" />
+    <None Include="Properties\DataSources\Morada_Da_Paz_Service.CompositeType.datasource" />
     <None Include="Properties\DataSources\Morada_da_paz_WebService.CompositeType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -162,38 +163,35 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\Morada_da_paz_WebService\Morada_da_paz_Forms.Morada_da_paz_WebService.advertencia.datasource">
+    <None Include="Service References\MRDP\Morada_da_paz_Forms.MRDP.advertencia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Morada_da_paz_WebService\Morada_da_paz_Forms.Morada_da_paz_WebService.CompositeType.datasource">
+    <None Include="Service References\MRDP\Morada_da_paz_Forms.MRDP.especializacao_usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Morada_da_paz_WebService\Morada_da_paz_Forms.Morada_da_paz_WebService.especializacao_usuario.datasource">
+    <None Include="Service References\MRDP\Morada_da_paz_Forms.MRDP.multa.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Morada_da_paz_WebService\Morada_da_paz_Forms.Morada_da_paz_WebService.multa.datasource">
+    <None Include="Service References\MRDP\Morada_da_paz_Forms.MRDP.ocorrencia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Morada_da_paz_WebService\Morada_da_paz_Forms.Morada_da_paz_WebService.ocorrencia.datasource">
+    <None Include="Service References\MRDP\Morada_da_paz_Forms.MRDP.unidade_residencial.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Morada_da_paz_WebService\Morada_da_paz_Forms.Morada_da_paz_WebService.unidade_residencial.datasource">
+    <None Include="Service References\MRDP\Morada_da_paz_Forms.MRDP.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Morada_da_paz_WebService\Morada_da_paz_Forms.Morada_da_paz_WebService.usuario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Morada_da_paz_WebService\ServiceMoradaDaPaz.wsdl" />
-    <None Include="Service References\Morada_da_paz_WebService\ServiceMoradaDaPaz.xsd">
+    <None Include="Service References\MRDP\Service1.wsdl" />
+    <None Include="Service References\MRDP\ServiceMorada_Da_Paz.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Morada_da_paz_WebService\ServiceMoradaDaPaz1.xsd">
+    <None Include="Service References\MRDP\ServiceMorada_Da_Paz1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Morada_da_paz_WebService\ServiceMoradaDaPaz2.xsd">
+    <None Include="Service References\MRDP\ServiceMorada_Da_Paz2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Morada_da_paz_WebService\ServiceMoradaDaPaz3.xsd">
+    <None Include="Service References\MRDP\ServiceMorada_Da_Paz3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -240,32 +238,28 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Morada_da_paz_Biblioteca\Morada_da_paz_Biblioteca.csproj">
-      <Project>{63a33ce4-75f0-4abe-973c-64b67add69a7}</Project>
-      <Name>Morada_da_paz_Biblioteca</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Morada_da_paz_WebService\Morada_da_paz_WebService.csproj">
-      <Project>{0530c8bc-d533-4db6-aa1c-1526de2e848c}</Project>
-      <Name>Morada_da_paz_WebService</Name>
-    </ProjectReference>
+    <WCFMetadataStorage Include="Service References\MRDP\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\Morada_da_paz_WebService\" />
+    <None Include="Service References\MRDP\ServiceMorada_Da_Paz.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Morada_da_paz_WebService\ServiceMoradaDaPaz.disco" />
+    <None Include="Service References\MRDP\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Morada_da_paz_WebService\configuration91.svcinfo" />
+    <None Include="Service References\MRDP\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Morada_da_paz_WebService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\Morada_da_paz_WebService\Reference.svcmap">
+    <None Include="Service References\MRDP\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Morada_Da_Paz_Service\Morada_Da_Paz_Service.csproj">
+      <Project>{6B2533B1-0A85-470D-8693-2D9D32FC690E}</Project>
+      <Name>Morada_Da_Paz_Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

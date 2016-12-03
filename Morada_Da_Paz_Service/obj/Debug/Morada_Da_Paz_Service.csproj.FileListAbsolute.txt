@@ -1,0 +1,42 @@
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\ApplicationInsights.config
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Morada_Da_Paz_Service.dll.config
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Morada_Da_Paz_Service.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Morada_Da_Paz_Service.pdb
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.AI.Web.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Morada_da_paz_Biblioteca.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Morada_da_paz_Biblioteca.pdb
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.AI.Web.xml
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\obj\Debug\Morada_Da_Paz_Service.csprojResolveAssemblyReference.cache
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\obj\Debug\Morada_Da_Paz_Service.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_Da_Paz_Service\obj\Debug\Morada_Da_Paz_Service.pdb
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\ApplicationInsights.config
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Morada_Da_Paz_Service.dll.config
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Morada_Da_Paz_Service.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Morada_Da_Paz_Service.pdb
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.AI.Web.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.ApplicationInsights.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Morada_da_paz_Biblioteca.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Morada_da_paz_Biblioteca.pdb
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.AI.Web.xml
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\bin\Microsoft.ApplicationInsights.xml
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\obj\Debug\Morada_Da_Paz_Service.csprojResolveAssemblyReference.cache
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\obj\Debug\Morada_Da_Paz_Service.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_Da_Paz_Service\obj\Debug\Morada_Da_Paz_Service.pdb

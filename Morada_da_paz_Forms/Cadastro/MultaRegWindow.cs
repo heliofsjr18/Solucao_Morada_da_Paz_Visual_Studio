@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Morada_da_paz_WebService;
-using Morada_da_paz_Biblioteca.basicas;
+using Morada_da_paz_Forms.MRDP;
 
 namespace Morada_da_paz_Forms.Cadastro
 {
@@ -25,7 +24,8 @@ namespace Morada_da_paz_Forms.Cadastro
             try
             {
                 multa mult = new multa() { Descricao = richTextBox1.Text, Preco = Convert.ToDouble(numericUpDown1.Value)};
-                ServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
+                
+                MRDP.ServiceMorada_Da_PazClient serviceInstance = new ServiceMorada_Da_PazClient();
                 serviceInstance.inserirMulta(mult);
                 MessageBox.Show("Multa Cadastrada");
             }

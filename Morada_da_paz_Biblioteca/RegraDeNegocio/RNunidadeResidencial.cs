@@ -14,17 +14,17 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         {
             if (ur == null)
             {
-                throw new Exception("Objeto Vasio!");
+                throw new Exception("Objeto Vazio!");
             }
 
             if (ur.Descricao.Equals(""))
             {
-                throw new Exception("Descrição Vasia!");
+                throw new Exception("Descrição Vazia!");
             }
 
             if (ur.Numero_residencia.Equals(""))
             {
-                throw new Exception("Nu´mero Residencial Vasio!");
+                throw new Exception("Nu´mero Residencial Vazio!");
             }
         }
 

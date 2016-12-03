@@ -1,5 +1,6 @@
-﻿using Morada_da_paz_Biblioteca.basicas;
-using Morada_da_paz_WebService;
+﻿
+using Morada_da_paz_Forms.MRDP;
+using Morada_Da_Paz_Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +11,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Morada_da_paz_Forms.Arquivo
 {
     public partial class MuralWindow : Form
     {
-        ServiceMoradaDaPaz sv;
+
         List<ocorrencia> ocorrenciaLista;
         public MuralWindow()
         {
@@ -26,10 +28,12 @@ namespace Morada_da_paz_Forms.Arquivo
         {
             try
             {
-                this.sv = new ServiceMoradaDaPaz();
+
+
+                //this.ocorrenciaLista = sv.listarOcorrencasPublicas();
                 
-                this.ocorrenciaLista = sv.listarOcorrencasPublicas();
-                
+                ocorrenciaLista = new ServiceMorada_Da_PazClient().listarOcorrencasPublicas().ToList();
+
                 listViewMinhasOcorrencias.Items.Clear();
                 for (int index = 0; index < ocorrenciaLista.Count; index++)
                 {
