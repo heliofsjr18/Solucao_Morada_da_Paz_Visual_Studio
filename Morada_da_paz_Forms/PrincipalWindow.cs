@@ -57,11 +57,15 @@ namespace Morada_da_paz_Forms
                 thread = new Thread(new ThreadStart(RunServidor));
                 thread.Start();
                 this.carregaOcorrencias();
+                this.labelCadastro.Visible = true;
+                this.labelConsulta.Visible = false;
             }
             else
             {
                 thread = new Thread(new ThreadStart(runCliente));
                 thread.Start();
+                this.labelCadastro.Visible = false;
+                this.labelConsulta.Visible = true;
             }
             mudarUsuárioToolStripMenuItem.Visible = false;
 
@@ -185,13 +189,13 @@ namespace Morada_da_paz_Forms
                     this.ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo).ToList();
                 }
 
-                listViewMinhasOcorrencias.Items.Clear();
+                //listViewMinhasOcorrencias.Items.Clear();
                 for (int index = 0; index < ocorrenciaLista.Count; index++)
                 {
 
-                    ListViewItem linha = listViewMinhasOcorrencias.Items.Add(ocorrenciaLista.ElementAt(index).Numero_ocorrencia);
-                    linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Descricao);
-                    linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Situacao);
+                    //ListViewItem linha = listViewMinhasOcorrencias.Items.Add(ocorrenciaLista.ElementAt(index).Numero_ocorrencia);
+                    //linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Descricao);
+                    //linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Situacao);
                 }
             }
             catch (Exception ex)
@@ -202,7 +206,12 @@ namespace Morada_da_paz_Forms
         }
 
         private void PrincipalWindow_Load(object sender, EventArgs e)
-        {
+        {            
+            textBoxNameUser.Text = usuarioAtivo.Nome_completo;
+            usuarioAtivo.Id_unidade_residencial.Descricao = "Busca";
+            usuarioAtivo.Id_unidade_residencial.Numero_residencia = "0";
+            unidade_residencial usuUR = new MRDP.ServiceMorada_Da_PazClient().pesquisaUnidade(usuarioAtivo.Id_unidade_residencial);
+            textBoxUR.Text = usuUR.Numero_residencia;
             this.carregaOcorrencias();
         }
 
@@ -344,10 +353,10 @@ namespace Morada_da_paz_Forms
 
             if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
-                int indexListView = listViewMinhasOcorrencias.FocusedItem.Index;
-                ocorrencia oc = this.ocorrenciaLista.ElementAt(indexListView);
-                EditOcorrenciaWindow eo = new EditOcorrenciaWindow(oc);
-                eo.ShowDialog();
+                //int indexListView = listViewMinhasOcorrencias.FocusedItem.Index;
+                //ocorrencia oc = this.ocorrenciaLista.ElementAt(indexListView);
+                //EditOcorrenciaWindow eo = new EditOcorrenciaWindow(oc);
+                //eo.ShowDialog();
             }
         }
 
@@ -486,7 +495,7 @@ namespace Morada_da_paz_Forms
                 tcpClient.Close();
             }
             catch (SocketException ex) {
-                MessageBox.Show("No momento o síndico não está logado, sua Ocorrência pode demorar a ser visualizada!", "Síndico indisponivel!");
+                MessageBox.Show("No momento o síndico não está logado, sua Ocorrência pode demorar a ser visualizada!", "Síndico indisponivel!..."+ ex.Message);
             }
             catch (Exception ex)
             {
@@ -496,6 +505,72 @@ namespace Morada_da_paz_Forms
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserRegWindow userWindow = new UserRegWindow();
+            userWindow.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

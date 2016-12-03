@@ -18,7 +18,7 @@ namespace Morada_da_paz_Forms.Edicao
         List<unidade_residencial> ListaUnidade;
         List<multa> listaMulta;
         List<advertencia> listaAdvertencia;
-        Boolean controle;
+        //Boolean controle;
 
         public EditOcorrenciaWindow(ocorrencia o)
         {
@@ -34,13 +34,13 @@ namespace Morada_da_paz_Forms.Edicao
 
         private void preencheComponentes(ocorrencia o)
         {
-            comboBoxUnd.Text = o.Id_unidade_residencial.Numero_residencia;
-            textBoxNumero.Text = o.Numero_ocorrencia;
-            richTextBoxDescricao.Text = o.Descricao;
-            comboBoxStatus.Text = o.Situacao;
+            //comboBoxUnd.Text = o.Id_unidade_residencial.Numero_residencia;
+            //textBoxNumero.Text = o.Numero_ocorrencia;
+            //richTextBoxDescricao.Text = o.Descricao;
+            //comboBoxStatus.Text = o.Situacao;
             if (o.TipoPublico == 1)
             {
-                checkBoxOcorrenciaPublica.Checked = true;
+                //checkBoxOcorrenciaPublica.Checked = true;
             }
         }
 
@@ -49,7 +49,7 @@ namespace Morada_da_paz_Forms.Edicao
             try
             {
                 
-                if (comboBoxUnd.Text == "")
+                /*if (comboBoxUnd.Text == "")
                 {
                     unidade_residencial u = new unidade_residencial();
                     u.Id = 1;
@@ -68,11 +68,11 @@ namespace Morada_da_paz_Forms.Edicao
                         oc.Id_unidade_residencial = und;
                     }
                     
-                }
+                }*/
                     
 
 
-                    if (checkBoxOcorrenciaPublica.Checked == true)
+                    /*if (checkBoxOcorrenciaPublica.Checked == true)
                     {
                         oc.TipoPublico = 1;
                     }
@@ -81,7 +81,7 @@ namespace Morada_da_paz_Forms.Edicao
                         oc.TipoPublico = 0;
                     }
                 
-                    oc.Situacao = comboBoxStatus.Text;
+                    oc.Situacao = comboBoxStatus.Text;*/
 
                     
                 MRDP.ServiceMorada_Da_PazClient sv = new ServiceMorada_Da_PazClient();
@@ -166,7 +166,7 @@ namespace Morada_da_paz_Forms.Edicao
 
                 for (int i = 0; i < ListaUnidade.Count; i++)
                 {
-                    comboBoxUnd.Items.Add(ListaUnidade.ElementAt(i).Numero_residencia);
+                    //comboBoxUnd.Items.Add(ListaUnidade.ElementAt(i).Numero_residencia);
                 }
 
                 this.listaMulta = sv.listarMulta().ToList();

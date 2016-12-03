@@ -67,9 +67,12 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                 SqlDataReader reader = comand.ExecuteReader();
 
-                urConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
-                urConsulta.Descricao = reader.GetString(reader.GetOrdinal("descricao"));
-                urConsulta.Numero_residencia = reader.GetString(reader.GetOrdinal("numero_unidade"));
+                if (reader.Read())
+                {
+                    urConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
+                    urConsulta.Descricao = reader.GetString(reader.GetOrdinal("descricao"));
+                    urConsulta.Numero_residencia = reader.GetString(reader.GetOrdinal("numero_unidade"));
+                }
 
                 return urConsulta;
             }

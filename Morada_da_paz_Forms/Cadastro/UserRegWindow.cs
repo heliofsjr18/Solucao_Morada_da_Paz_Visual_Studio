@@ -19,6 +19,7 @@ namespace Morada_da_paz_Forms.Cadastro
         public UserRegWindow()
         {
             InitializeComponent();
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

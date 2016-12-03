@@ -261,6 +261,33 @@
       <Name>Morada_Da_Paz_Service</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_telaprincipal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ocorrencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sançãoadm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tela_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario_telaprincipal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mural_ocorrencias_publicas.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

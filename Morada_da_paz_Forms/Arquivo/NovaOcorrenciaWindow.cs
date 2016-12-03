@@ -24,7 +24,7 @@ namespace Morada_da_paz_Forms.Arquivo
         private BinaryReader binaryReader;
         private TcpClient tcpClient;
 
-        private Thread thread;
+        //private Thread thread;
         #endregion
         usuario us;
         public NovaOcorrenciaWindow(usuario u)
