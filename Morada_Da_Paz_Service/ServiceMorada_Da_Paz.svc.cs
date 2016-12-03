@@ -35,8 +35,15 @@ namespace Morada_Da_Paz_Service
         // Service Usuario
         public void inseirUsuario(usuario u)
         {
-            RNusuario rnu = new RNusuario();
-            rnu.chamarInserir(u);
+            try
+            {
+                RNusuario rnu = new RNusuario();
+                rnu.chamarInserir(u);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void editarUsuario(usuario u)

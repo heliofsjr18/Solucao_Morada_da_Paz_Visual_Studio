@@ -8,1078 +8,1298 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Morada_da_paz_Forms.MRDP {
+namespace Morada_da_paz_Forms.MRDP
+{
     using System.Runtime.Serialization;
     using System;
-    
-    
+
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="usuario", Namespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "usuario", Namespace = "http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
     [System.SerializableAttribute()]
-    public partial class usuario : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
+    public partial class usuario : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
+    {
+
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Morada_da_paz_Forms.MRDP.especializacao_usuario Id_especializacao_usuarioField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Morada_da_paz_Forms.MRDP.unidade_residencial Id_unidade_residencialField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LoginField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Nome_completoField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SenhaField;
-        
+
         [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
                 return this.extensionDataField;
             }
-            set {
+            set
+            {
                 this.extensionDataField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
-            get {
+        public string Email
+        {
+            get
+            {
                 return this.EmailField;
             }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.EmailField, value) != true))
+                {
                     this.EmailField = value;
                     this.RaisePropertyChanged("Email");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
+        public int Id
+        {
+            get
+            {
                 return this.IdField;
             }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
+            set
+            {
+                if ((this.IdField.Equals(value) != true))
+                {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Morada_da_paz_Forms.MRDP.especializacao_usuario Id_especializacao_usuario {
-            get {
+        public Morada_da_paz_Forms.MRDP.especializacao_usuario Id_especializacao_usuario
+        {
+            get
+            {
                 return this.Id_especializacao_usuarioField;
             }
-            set {
-                if ((object.ReferenceEquals(this.Id_especializacao_usuarioField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.Id_especializacao_usuarioField, value) != true))
+                {
                     this.Id_especializacao_usuarioField = value;
                     this.RaisePropertyChanged("Id_especializacao_usuario");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Morada_da_paz_Forms.MRDP.unidade_residencial Id_unidade_residencial {
-            get {
+        public Morada_da_paz_Forms.MRDP.unidade_residencial Id_unidade_residencial
+        {
+            get
+            {
                 return this.Id_unidade_residencialField;
             }
-            set {
-                if ((object.ReferenceEquals(this.Id_unidade_residencialField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.Id_unidade_residencialField, value) != true))
+                {
                     this.Id_unidade_residencialField = value;
                     this.RaisePropertyChanged("Id_unidade_residencial");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Login {
-            get {
+        public string Login
+        {
+            get
+            {
                 return this.LoginField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LoginField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LoginField, value) != true))
+                {
                     this.LoginField = value;
                     this.RaisePropertyChanged("Login");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nome_completo {
-            get {
+        public string Nome_completo
+        {
+            get
+            {
                 return this.Nome_completoField;
             }
-            set {
-                if ((object.ReferenceEquals(this.Nome_completoField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.Nome_completoField, value) != true))
+                {
                     this.Nome_completoField = value;
                     this.RaisePropertyChanged("Nome_completo");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Senha {
-            get {
+        public string Senha
+        {
+            get
+            {
                 return this.SenhaField;
             }
-            set {
-                if ((object.ReferenceEquals(this.SenhaField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.SenhaField, value) != true))
+                {
                     this.SenhaField = value;
                     this.RaisePropertyChanged("Senha");
                 }
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="especializacao_usuario", Namespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "especializacao_usuario", Namespace = "http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
     [System.SerializableAttribute()]
-    public partial class especializacao_usuario : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
+    public partial class especializacao_usuario : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
+    {
+
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescricaoField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
-        
+
         [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
                 return this.extensionDataField;
             }
-            set {
+            set
+            {
                 this.extensionDataField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descricao {
-            get {
+        public string Descricao
+        {
+            get
+            {
                 return this.DescricaoField;
             }
-            set {
-                if ((object.ReferenceEquals(this.DescricaoField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.DescricaoField, value) != true))
+                {
                     this.DescricaoField = value;
                     this.RaisePropertyChanged("Descricao");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
+        public int Id
+        {
+            get
+            {
                 return this.IdField;
             }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
+            set
+            {
+                if ((this.IdField.Equals(value) != true))
+                {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
                 }
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="unidade_residencial", Namespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "unidade_residencial", Namespace = "http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
     [System.SerializableAttribute()]
-    public partial class unidade_residencial : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
+    public partial class unidade_residencial : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
+    {
+
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescricaoField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Numero_residenciaField;
-        
+
         [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
                 return this.extensionDataField;
             }
-            set {
+            set
+            {
                 this.extensionDataField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descricao {
-            get {
+        public string Descricao
+        {
+            get
+            {
                 return this.DescricaoField;
             }
-            set {
-                if ((object.ReferenceEquals(this.DescricaoField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.DescricaoField, value) != true))
+                {
                     this.DescricaoField = value;
                     this.RaisePropertyChanged("Descricao");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
+        public int Id
+        {
+            get
+            {
                 return this.IdField;
             }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
+            set
+            {
+                if ((this.IdField.Equals(value) != true))
+                {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Numero_residencia {
-            get {
+        public string Numero_residencia
+        {
+            get
+            {
                 return this.Numero_residenciaField;
             }
-            set {
-                if ((object.ReferenceEquals(this.Numero_residenciaField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.Numero_residenciaField, value) != true))
+                {
                     this.Numero_residenciaField = value;
                     this.RaisePropertyChanged("Numero_residencia");
                 }
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="advertencia", Namespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "advertencia", Namespace = "http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
     [System.SerializableAttribute()]
-    public partial class advertencia : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
+    public partial class advertencia : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
+    {
+
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescricaoField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
-        
+
         [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
                 return this.extensionDataField;
             }
-            set {
+            set
+            {
                 this.extensionDataField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descricao {
-            get {
+        public string Descricao
+        {
+            get
+            {
                 return this.DescricaoField;
             }
-            set {
-                if ((object.ReferenceEquals(this.DescricaoField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.DescricaoField, value) != true))
+                {
                     this.DescricaoField = value;
                     this.RaisePropertyChanged("Descricao");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
+        public int Id
+        {
+            get
+            {
                 return this.IdField;
             }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
+            set
+            {
+                if ((this.IdField.Equals(value) != true))
+                {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
                 }
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="multa", Namespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "multa", Namespace = "http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
     [System.SerializableAttribute()]
-    public partial class multa : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
+    public partial class multa : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
+    {
+
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescricaoField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double PrecoField;
-        
+
         [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
                 return this.extensionDataField;
             }
-            set {
+            set
+            {
                 this.extensionDataField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descricao {
-            get {
+        public string Descricao
+        {
+            get
+            {
                 return this.DescricaoField;
             }
-            set {
-                if ((object.ReferenceEquals(this.DescricaoField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.DescricaoField, value) != true))
+                {
                     this.DescricaoField = value;
                     this.RaisePropertyChanged("Descricao");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
+        public int Id
+        {
+            get
+            {
                 return this.IdField;
             }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
+            set
+            {
+                if ((this.IdField.Equals(value) != true))
+                {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public double Preco {
-            get {
+        public double Preco
+        {
+            get
+            {
                 return this.PrecoField;
             }
-            set {
-                if ((this.PrecoField.Equals(value) != true)) {
+            set
+            {
+                if ((this.PrecoField.Equals(value) != true))
+                {
                     this.PrecoField = value;
                     this.RaisePropertyChanged("Preco");
                 }
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ocorrencia", Namespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "ocorrencia", Namespace = "http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas")]
     [System.SerializableAttribute()]
-    public partial class ocorrencia : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
+    public partial class ocorrencia : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
+    {
+
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescricaoField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Morada_da_paz_Forms.MRDP.unidade_residencial Id_unidade_residencialField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Morada_da_paz_Forms.MRDP.usuario Id_usuarioField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Morada_da_paz_Forms.MRDP.advertencia[] Lista_id_advertenciaField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Morada_da_paz_Forms.MRDP.multa[] Lista_id_multaField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string Numero_ocorrenciaField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SituacaoField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TipoPublicoField;
-        
+
         [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
                 return this.extensionDataField;
             }
-            set {
+            set
+            {
                 this.extensionDataField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Descricao {
-            get {
+        public string Descricao
+        {
+            get
+            {
                 return this.DescricaoField;
             }
-            set {
-                if ((object.ReferenceEquals(this.DescricaoField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.DescricaoField, value) != true))
+                {
                     this.DescricaoField = value;
                     this.RaisePropertyChanged("Descricao");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
+        public int Id
+        {
+            get
+            {
                 return this.IdField;
             }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
+            set
+            {
+                if ((this.IdField.Equals(value) != true))
+                {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Morada_da_paz_Forms.MRDP.unidade_residencial Id_unidade_residencial {
-            get {
+        public Morada_da_paz_Forms.MRDP.unidade_residencial Id_unidade_residencial
+        {
+            get
+            {
                 return this.Id_unidade_residencialField;
             }
-            set {
-                if ((object.ReferenceEquals(this.Id_unidade_residencialField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.Id_unidade_residencialField, value) != true))
+                {
                     this.Id_unidade_residencialField = value;
                     this.RaisePropertyChanged("Id_unidade_residencial");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Morada_da_paz_Forms.MRDP.usuario Id_usuario {
-            get {
+        public Morada_da_paz_Forms.MRDP.usuario Id_usuario
+        {
+            get
+            {
                 return this.Id_usuarioField;
             }
-            set {
-                if ((object.ReferenceEquals(this.Id_usuarioField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.Id_usuarioField, value) != true))
+                {
                     this.Id_usuarioField = value;
                     this.RaisePropertyChanged("Id_usuario");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Morada_da_paz_Forms.MRDP.advertencia[] Lista_id_advertencia {
-            get {
+        public Morada_da_paz_Forms.MRDP.advertencia[] Lista_id_advertencia
+        {
+            get
+            {
                 return this.Lista_id_advertenciaField;
             }
-            set {
-                if ((object.ReferenceEquals(this.Lista_id_advertenciaField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.Lista_id_advertenciaField, value) != true))
+                {
                     this.Lista_id_advertenciaField = value;
                     this.RaisePropertyChanged("Lista_id_advertencia");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Morada_da_paz_Forms.MRDP.multa[] Lista_id_multa {
-            get {
+        public Morada_da_paz_Forms.MRDP.multa[] Lista_id_multa
+        {
+            get
+            {
                 return this.Lista_id_multaField;
             }
-            set {
-                if ((object.ReferenceEquals(this.Lista_id_multaField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.Lista_id_multaField, value) != true))
+                {
                     this.Lista_id_multaField = value;
                     this.RaisePropertyChanged("Lista_id_multa");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Numero_ocorrencia {
-            get {
+        public string Numero_ocorrencia
+        {
+            get
+            {
                 return this.Numero_ocorrenciaField;
             }
-            set {
-                if ((object.ReferenceEquals(this.Numero_ocorrenciaField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.Numero_ocorrenciaField, value) != true))
+                {
                     this.Numero_ocorrenciaField = value;
                     this.RaisePropertyChanged("Numero_ocorrencia");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Situacao {
-            get {
+        public string Situacao
+        {
+            get
+            {
                 return this.SituacaoField;
             }
-            set {
-                if ((object.ReferenceEquals(this.SituacaoField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.SituacaoField, value) != true))
+                {
                     this.SituacaoField = value;
                     this.RaisePropertyChanged("Situacao");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TipoPublico {
-            get {
+        public int TipoPublico
+        {
+            get
+            {
                 return this.TipoPublicoField;
             }
-            set {
-                if ((this.TipoPublicoField.Equals(value) != true)) {
+            set
+            {
+                if ((this.TipoPublicoField.Equals(value) != true))
+                {
                     this.TipoPublicoField = value;
                     this.RaisePropertyChanged("TipoPublico");
                 }
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MRDP.IServiceMorada_Da_Paz")]
-    public interface IServiceMorada_Da_Paz {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/GetData", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/GetDataResponse")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName = "MRDP.IServiceMorada_Da_Paz")]
+    public interface IServiceMorada_Da_Paz
+    {
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/GetData", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/GetDataResponse")]
         string GetData(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/GetData", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/GetDataResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/GetData", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/GetDataUsingDataContractResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/GetDataUsingDataContract", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/GetDataUsingDataContractResponse")]
         Morada_Da_Paz_Service.CompositeType GetDataUsingDataContract(Morada_Da_Paz_Service.CompositeType composite);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/GetDataUsingDataContractResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/GetDataUsingDataContract", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<Morada_Da_Paz_Service.CompositeType> GetDataUsingDataContractAsync(Morada_Da_Paz_Service.CompositeType composite);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuario", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuarioResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuario", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuarioResponse")]                
         void inseirUsuario(Morada_da_paz_Forms.MRDP.usuario u);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuario", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuarioResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuario", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuarioResponse")]
         System.Threading.Tasks.Task inseirUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editarUsuario", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editarUsuarioResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editarUsuario", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editarUsuarioResponse")]
         void editarUsuario(Morada_da_paz_Forms.MRDP.usuario u);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editarUsuario", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editarUsuarioResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editarUsuario", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editarUsuarioResponse")]
         System.Threading.Tasks.Task editarUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarUsuarios", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarUsuariosResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarUsuarios", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarUsuariosResponse")]
         Morada_da_paz_Forms.MRDP.usuario[] listarUsuarios();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarUsuarios", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarUsuariosResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarUsuarios", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarUsuariosResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.usuario[]> listarUsuariosAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuario", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuario", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioResponse")]
         Morada_da_paz_Forms.MRDP.usuario pesquisaUsuario(Morada_da_paz_Forms.MRDP.usuario u);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuario", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuario", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.usuario> pesquisaUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioLogin", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioLoginResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioLogin", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioLoginResponse")]
         Morada_da_paz_Forms.MRDP.usuario pesquisaUsuarioLogin(Morada_da_paz_Forms.MRDP.usuario u);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioLogin", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioLoginResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioLogin", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUsuarioLoginResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.usuario> pesquisaUsuarioLoginAsync(Morada_da_paz_Forms.MRDP.usuario u);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inseirUnidadeResidencial", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inseirUnidadeResidencialResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inseirUnidadeResidencial", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inseirUnidadeResidencialResponse")]
         void inseirUnidadeResidencial(Morada_da_paz_Forms.MRDP.unidade_residencial ur);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inseirUnidadeResidencial", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inseirUnidadeResidencialResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inseirUnidadeResidencial", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inseirUnidadeResidencialResponse")]
         System.Threading.Tasks.Task inseirUnidadeResidencialAsync(Morada_da_paz_Forms.MRDP.unidade_residencial ur);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editaUnidadeResisencial", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editaUnidadeResisencialResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editaUnidadeResisencial", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editaUnidadeResisencialResponse")]
         void editaUnidadeResisencial(Morada_da_paz_Forms.MRDP.unidade_residencial ur);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editaUnidadeResisencial", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editaUnidadeResisencialResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editaUnidadeResisencial", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editaUnidadeResisencialResponse")]
         System.Threading.Tasks.Task editaUnidadeResisencialAsync(Morada_da_paz_Forms.MRDP.unidade_residencial ur);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarUnidades", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarUnidadesResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarUnidades", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarUnidadesResponse")]
         Morada_da_paz_Forms.MRDP.unidade_residencial[] listarUnidades();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarUnidades", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarUnidadesResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarUnidades", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarUnidadesResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.unidade_residencial[]> listarUnidadesAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUnidade", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUnidadeResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUnidade", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUnidadeResponse")]
         Morada_da_paz_Forms.MRDP.unidade_residencial pesquisaUnidade(Morada_da_paz_Forms.MRDP.unidade_residencial ur);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUnidade", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUnidadeResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUnidade", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaUnidadeResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.unidade_residencial> pesquisaUnidadeAsync(Morada_da_paz_Forms.MRDP.unidade_residencial ur);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaResponse")]
         void inserirAdvertencia(Morada_da_paz_Forms.MRDP.advertencia a);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaResponse")]
         System.Threading.Tasks.Task inserirAdvertenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editarAdvertencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editarAdvertenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editarAdvertencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editarAdvertenciaResponse")]
         void editarAdvertencia(Morada_da_paz_Forms.MRDP.advertencia a);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editarAdvertencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editarAdvertenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editarAdvertencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editarAdvertenciaResponse")]
         System.Threading.Tasks.Task editarAdvertenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarAdvertencias", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarAdvertenciasResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarAdvertencias", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarAdvertenciasResponse")]
         Morada_da_paz_Forms.MRDP.advertencia[] listarAdvertencias();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarAdvertencias", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarAdvertenciasResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarAdvertencias", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarAdvertenciasResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.advertencia[]> listarAdvertenciasAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaAdvertencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaAdvertenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaAdvertencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaAdvertenciaResponse")]
         Morada_da_paz_Forms.MRDP.advertencia pesquisaAdvertencia(Morada_da_paz_Forms.MRDP.advertencia a);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaAdvertencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaAdvertenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaAdvertencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaAdvertenciaResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.advertencia> pesquisaAdvertenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirEspecializacao", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirEspecializacaoResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirEspecializacao", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirEspecializacaoResponse")]
         void inserirEspecializacao(Morada_da_paz_Forms.MRDP.especializacao_usuario eu);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirEspecializacao", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirEspecializacaoResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirEspecializacao", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirEspecializacaoResponse")]
         System.Threading.Tasks.Task inserirEspecializacaoAsync(Morada_da_paz_Forms.MRDP.especializacao_usuario eu);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editarEspecializacao", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editarEspecializacaoResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editarEspecializacao", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editarEspecializacaoResponse")]
         void editarEspecializacao(Morada_da_paz_Forms.MRDP.especializacao_usuario eu);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editarEspecializacao", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editarEspecializacaoResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editarEspecializacao", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editarEspecializacaoResponse")]
         System.Threading.Tasks.Task editarEspecializacaoAsync(Morada_da_paz_Forms.MRDP.especializacao_usuario eu);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarEspecializacao", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarEspecializacaoResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarEspecializacao", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarEspecializacaoResponse")]
         Morada_da_paz_Forms.MRDP.especializacao_usuario[] listarEspecializacao();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarEspecializacao", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarEspecializacaoResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarEspecializacao", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarEspecializacaoResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.especializacao_usuario[]> listarEspecializacaoAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaEspecializacao", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaEspecializacaoResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaEspecializacao", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaEspecializacaoResponse")]
         Morada_da_paz_Forms.MRDP.especializacao_usuario pesquisaEspecializacao(Morada_da_paz_Forms.MRDP.especializacao_usuario eu);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaEspecializacao", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaEspecializacaoResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaEspecializacao", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaEspecializacaoResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.especializacao_usuario> pesquisaEspecializacaoAsync(Morada_da_paz_Forms.MRDP.especializacao_usuario eu);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirMulta", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirMulta", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaResponse")]
         void inserirMulta(Morada_da_paz_Forms.MRDP.multa m);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirMulta", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirMulta", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaResponse")]
         System.Threading.Tasks.Task inserirMultaAsync(Morada_da_paz_Forms.MRDP.multa m);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editarMulta", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editarMultaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editarMulta", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editarMultaResponse")]
         void editarMulta(Morada_da_paz_Forms.MRDP.multa m);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editarMulta", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editarMultaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editarMulta", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editarMultaResponse")]
         System.Threading.Tasks.Task editarMultaAsync(Morada_da_paz_Forms.MRDP.multa m);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarMulta", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarMultaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarMulta", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarMultaResponse")]
         Morada_da_paz_Forms.MRDP.multa[] listarMulta();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarMulta", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarMultaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarMulta", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarMultaResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.multa[]> listarMultaAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaMulta", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaMultaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaMulta", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaMultaResponse")]
         Morada_da_paz_Forms.MRDP.multa pesquisaMulta(Morada_da_paz_Forms.MRDP.multa m);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaMulta", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaMultaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaMulta", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaMultaResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.multa> pesquisaMultaAsync(Morada_da_paz_Forms.MRDP.multa m);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirOcorrenciaResponse")]
         void inserirOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirOcorrenciaResponse")]
         System.Threading.Tasks.Task inserirOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editarOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editarOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editarOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editarOcorrenciaResponse")]
         void editarOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/editarOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/editarOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/editarOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/editarOcorrenciaResponse")]
         System.Threading.Tasks.Task editarOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencias", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencias", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasResponse")]
         Morada_da_paz_Forms.MRDP.ocorrencia[] listarOcorrencias();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencias", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencias", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia[]> listarOcorrenciasAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaOcorrenciaResponse")]
         Morada_da_paz_Forms.MRDP.ocorrencia pesquisaOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/pesquisaOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/pesquisaOcorrenciaResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia> pesquisaOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasPorUsuario", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasPorUsuarioResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasPorUsuario", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasPorUsuarioResponse")]
         Morada_da_paz_Forms.MRDP.ocorrencia[] listarOcorrenciasPorUsuario(Morada_da_paz_Forms.MRDP.usuario u);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasPorUsuario", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasPorUsuarioResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasPorUsuario", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrenciasPorUsuarioResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia[]> listarOcorrenciasPorUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencasPublicas", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencasPublicasResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencasPublicas", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencasPublicasResponse")]
         Morada_da_paz_Forms.MRDP.ocorrencia[] listarOcorrencasPublicas();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencasPublicas", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencasPublicasResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencasPublicas", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/listarOcorrencasPublicasResponse")]
         System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia[]> listarOcorrencasPublicasAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/excluiOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/excluiOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/excluiOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/excluiOcorrenciaResponse")]
         void excluiOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/excluiOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/excluiOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/excluiOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/excluiOcorrenciaResponse")]
         System.Threading.Tasks.Task excluiOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaOcorrenciaResponse")]
         void inserirMultaOcorrencia(Morada_da_paz_Forms.MRDP.multa m, Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirMultaOcorrenciaResponse")]
         System.Threading.Tasks.Task inserirMultaOcorrenciaAsync(Morada_da_paz_Forms.MRDP.multa m, Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaOcorrenciaResponse")]
         void inserirAdvertenciaOcorrencia(Morada_da_paz_Forms.MRDP.advertencia a, Morada_da_paz_Forms.MRDP.ocorrencia o);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaOcorrencia", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaOcorrenciaResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaOcorrencia", ReplyAction = "http://tempuri.org/IServiceMorada_Da_Paz/inserirAdvertenciaOcorrenciaResponse")]
         System.Threading.Tasks.Task inserirAdvertenciaOcorrenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a, Morada_da_paz_Forms.MRDP.ocorrencia o);
     }
-    
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServiceMorada_Da_PazChannel : Morada_da_paz_Forms.MRDP.IServiceMorada_Da_Paz, System.ServiceModel.IClientChannel {
+    public interface IServiceMorada_Da_PazChannel : Morada_da_paz_Forms.MRDP.IServiceMorada_Da_Paz, System.ServiceModel.IClientChannel
+    {
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceMorada_Da_PazClient : System.ServiceModel.ClientBase<Morada_da_paz_Forms.MRDP.IServiceMorada_Da_Paz>, Morada_da_paz_Forms.MRDP.IServiceMorada_Da_Paz {
-        
-        public ServiceMorada_Da_PazClient() {
+    public partial class ServiceMorada_Da_PazClient : System.ServiceModel.ClientBase<Morada_da_paz_Forms.MRDP.IServiceMorada_Da_Paz>, Morada_da_paz_Forms.MRDP.IServiceMorada_Da_Paz
+    {
+
+        public ServiceMorada_Da_PazClient()
+        {
         }
-        
-        public ServiceMorada_Da_PazClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
+
+        public ServiceMorada_Da_PazClient(string endpointConfigurationName) :
+                base(endpointConfigurationName)
+        {
         }
-        
-        public ServiceMorada_Da_PazClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+
+        public ServiceMorada_Da_PazClient(string endpointConfigurationName, string remoteAddress) :
+                base(endpointConfigurationName, remoteAddress)
+        {
         }
-        
-        public ServiceMorada_Da_PazClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+
+        public ServiceMorada_Da_PazClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
+                base(endpointConfigurationName, remoteAddress)
+        {
         }
-        
-        public ServiceMorada_Da_PazClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
+
+        public ServiceMorada_Da_PazClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+                base(binding, remoteAddress)
+        {
         }
-        
-        public string GetData(int value) {
+
+        public string GetData(int value)
+        {
             return base.Channel.GetData(value);
         }
-        
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
+
+        public System.Threading.Tasks.Task<string> GetDataAsync(int value)
+        {
             return base.Channel.GetDataAsync(value);
         }
-        
-        public Morada_Da_Paz_Service.CompositeType GetDataUsingDataContract(Morada_Da_Paz_Service.CompositeType composite) {
+
+        public Morada_Da_Paz_Service.CompositeType GetDataUsingDataContract(Morada_Da_Paz_Service.CompositeType composite)
+        {
             return base.Channel.GetDataUsingDataContract(composite);
         }
-        
-        public System.Threading.Tasks.Task<Morada_Da_Paz_Service.CompositeType> GetDataUsingDataContractAsync(Morada_Da_Paz_Service.CompositeType composite) {
+
+        public System.Threading.Tasks.Task<Morada_Da_Paz_Service.CompositeType> GetDataUsingDataContractAsync(Morada_Da_Paz_Service.CompositeType composite)
+        {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
-        
-        public void inseirUsuario(Morada_da_paz_Forms.MRDP.usuario u) {
-            base.Channel.inseirUsuario(u);
+
+        public void inseirUsuario(Morada_da_paz_Forms.MRDP.usuario u)
+        {
+            try
+            {
+                base.Channel.inseirUsuario(u);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
-        
-        public System.Threading.Tasks.Task inseirUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u) {
+
+        public System.Threading.Tasks.Task inseirUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u)
+        {
             return base.Channel.inseirUsuarioAsync(u);
         }
-        
-        public void editarUsuario(Morada_da_paz_Forms.MRDP.usuario u) {
+
+        public void editarUsuario(Morada_da_paz_Forms.MRDP.usuario u)
+        {
             base.Channel.editarUsuario(u);
         }
-        
-        public System.Threading.Tasks.Task editarUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u) {
+
+        public System.Threading.Tasks.Task editarUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u)
+        {
             return base.Channel.editarUsuarioAsync(u);
         }
-        
-        public Morada_da_paz_Forms.MRDP.usuario[] listarUsuarios() {
+
+        public Morada_da_paz_Forms.MRDP.usuario[] listarUsuarios()
+        {
             return base.Channel.listarUsuarios();
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.usuario[]> listarUsuariosAsync() {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.usuario[]> listarUsuariosAsync()
+        {
             return base.Channel.listarUsuariosAsync();
         }
-        
-        public Morada_da_paz_Forms.MRDP.usuario pesquisaUsuario(Morada_da_paz_Forms.MRDP.usuario u) {
+
+        public Morada_da_paz_Forms.MRDP.usuario pesquisaUsuario(Morada_da_paz_Forms.MRDP.usuario u)
+        {
             return base.Channel.pesquisaUsuario(u);
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.usuario> pesquisaUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u) {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.usuario> pesquisaUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u)
+        {
             return base.Channel.pesquisaUsuarioAsync(u);
         }
-        
-        public Morada_da_paz_Forms.MRDP.usuario pesquisaUsuarioLogin(Morada_da_paz_Forms.MRDP.usuario u) {
+
+        public Morada_da_paz_Forms.MRDP.usuario pesquisaUsuarioLogin(Morada_da_paz_Forms.MRDP.usuario u)
+        {
             return base.Channel.pesquisaUsuarioLogin(u);
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.usuario> pesquisaUsuarioLoginAsync(Morada_da_paz_Forms.MRDP.usuario u) {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.usuario> pesquisaUsuarioLoginAsync(Morada_da_paz_Forms.MRDP.usuario u)
+        {
             return base.Channel.pesquisaUsuarioLoginAsync(u);
         }
-        
-        public void inseirUnidadeResidencial(Morada_da_paz_Forms.MRDP.unidade_residencial ur) {
+
+        public void inseirUnidadeResidencial(Morada_da_paz_Forms.MRDP.unidade_residencial ur)
+        {
             base.Channel.inseirUnidadeResidencial(ur);
         }
-        
-        public System.Threading.Tasks.Task inseirUnidadeResidencialAsync(Morada_da_paz_Forms.MRDP.unidade_residencial ur) {
+
+        public System.Threading.Tasks.Task inseirUnidadeResidencialAsync(Morada_da_paz_Forms.MRDP.unidade_residencial ur)
+        {
             return base.Channel.inseirUnidadeResidencialAsync(ur);
         }
-        
-        public void editaUnidadeResisencial(Morada_da_paz_Forms.MRDP.unidade_residencial ur) {
+
+        public void editaUnidadeResisencial(Morada_da_paz_Forms.MRDP.unidade_residencial ur)
+        {
             base.Channel.editaUnidadeResisencial(ur);
         }
-        
-        public System.Threading.Tasks.Task editaUnidadeResisencialAsync(Morada_da_paz_Forms.MRDP.unidade_residencial ur) {
+
+        public System.Threading.Tasks.Task editaUnidadeResisencialAsync(Morada_da_paz_Forms.MRDP.unidade_residencial ur)
+        {
             return base.Channel.editaUnidadeResisencialAsync(ur);
         }
-        
-        public Morada_da_paz_Forms.MRDP.unidade_residencial[] listarUnidades() {
+
+        public Morada_da_paz_Forms.MRDP.unidade_residencial[] listarUnidades()
+        {
             return base.Channel.listarUnidades();
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.unidade_residencial[]> listarUnidadesAsync() {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.unidade_residencial[]> listarUnidadesAsync()
+        {
             return base.Channel.listarUnidadesAsync();
         }
-        
-        public Morada_da_paz_Forms.MRDP.unidade_residencial pesquisaUnidade(Morada_da_paz_Forms.MRDP.unidade_residencial ur) {
+
+        public Morada_da_paz_Forms.MRDP.unidade_residencial pesquisaUnidade(Morada_da_paz_Forms.MRDP.unidade_residencial ur)
+        {
             return base.Channel.pesquisaUnidade(ur);
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.unidade_residencial> pesquisaUnidadeAsync(Morada_da_paz_Forms.MRDP.unidade_residencial ur) {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.unidade_residencial> pesquisaUnidadeAsync(Morada_da_paz_Forms.MRDP.unidade_residencial ur)
+        {
             return base.Channel.pesquisaUnidadeAsync(ur);
         }
-        
-        public void inserirAdvertencia(Morada_da_paz_Forms.MRDP.advertencia a) {
+
+        public void inserirAdvertencia(Morada_da_paz_Forms.MRDP.advertencia a)
+        {
             base.Channel.inserirAdvertencia(a);
         }
-        
-        public System.Threading.Tasks.Task inserirAdvertenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a) {
+
+        public System.Threading.Tasks.Task inserirAdvertenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a)
+        {
             return base.Channel.inserirAdvertenciaAsync(a);
         }
-        
-        public void editarAdvertencia(Morada_da_paz_Forms.MRDP.advertencia a) {
+
+        public void editarAdvertencia(Morada_da_paz_Forms.MRDP.advertencia a)
+        {
             base.Channel.editarAdvertencia(a);
         }
-        
-        public System.Threading.Tasks.Task editarAdvertenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a) {
+
+        public System.Threading.Tasks.Task editarAdvertenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a)
+        {
             return base.Channel.editarAdvertenciaAsync(a);
         }
-        
-        public Morada_da_paz_Forms.MRDP.advertencia[] listarAdvertencias() {
+
+        public Morada_da_paz_Forms.MRDP.advertencia[] listarAdvertencias()
+        {
             return base.Channel.listarAdvertencias();
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.advertencia[]> listarAdvertenciasAsync() {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.advertencia[]> listarAdvertenciasAsync()
+        {
             return base.Channel.listarAdvertenciasAsync();
         }
-        
-        public Morada_da_paz_Forms.MRDP.advertencia pesquisaAdvertencia(Morada_da_paz_Forms.MRDP.advertencia a) {
+
+        public Morada_da_paz_Forms.MRDP.advertencia pesquisaAdvertencia(Morada_da_paz_Forms.MRDP.advertencia a)
+        {
             return base.Channel.pesquisaAdvertencia(a);
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.advertencia> pesquisaAdvertenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a) {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.advertencia> pesquisaAdvertenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a)
+        {
             return base.Channel.pesquisaAdvertenciaAsync(a);
         }
-        
-        public void inserirEspecializacao(Morada_da_paz_Forms.MRDP.especializacao_usuario eu) {
+
+        public void inserirEspecializacao(Morada_da_paz_Forms.MRDP.especializacao_usuario eu)
+        {
             base.Channel.inserirEspecializacao(eu);
         }
-        
-        public System.Threading.Tasks.Task inserirEspecializacaoAsync(Morada_da_paz_Forms.MRDP.especializacao_usuario eu) {
+
+        public System.Threading.Tasks.Task inserirEspecializacaoAsync(Morada_da_paz_Forms.MRDP.especializacao_usuario eu)
+        {
             return base.Channel.inserirEspecializacaoAsync(eu);
         }
-        
-        public void editarEspecializacao(Morada_da_paz_Forms.MRDP.especializacao_usuario eu) {
+
+        public void editarEspecializacao(Morada_da_paz_Forms.MRDP.especializacao_usuario eu)
+        {
             base.Channel.editarEspecializacao(eu);
         }
-        
-        public System.Threading.Tasks.Task editarEspecializacaoAsync(Morada_da_paz_Forms.MRDP.especializacao_usuario eu) {
+
+        public System.Threading.Tasks.Task editarEspecializacaoAsync(Morada_da_paz_Forms.MRDP.especializacao_usuario eu)
+        {
             return base.Channel.editarEspecializacaoAsync(eu);
         }
-        
-        public Morada_da_paz_Forms.MRDP.especializacao_usuario[] listarEspecializacao() {
+
+        public Morada_da_paz_Forms.MRDP.especializacao_usuario[] listarEspecializacao()
+        {
             return base.Channel.listarEspecializacao();
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.especializacao_usuario[]> listarEspecializacaoAsync() {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.especializacao_usuario[]> listarEspecializacaoAsync()
+        {
             return base.Channel.listarEspecializacaoAsync();
         }
-        
-        public Morada_da_paz_Forms.MRDP.especializacao_usuario pesquisaEspecializacao(Morada_da_paz_Forms.MRDP.especializacao_usuario eu) {
+
+        public Morada_da_paz_Forms.MRDP.especializacao_usuario pesquisaEspecializacao(Morada_da_paz_Forms.MRDP.especializacao_usuario eu)
+        {
             return base.Channel.pesquisaEspecializacao(eu);
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.especializacao_usuario> pesquisaEspecializacaoAsync(Morada_da_paz_Forms.MRDP.especializacao_usuario eu) {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.especializacao_usuario> pesquisaEspecializacaoAsync(Morada_da_paz_Forms.MRDP.especializacao_usuario eu)
+        {
             return base.Channel.pesquisaEspecializacaoAsync(eu);
         }
-        
-        public void inserirMulta(Morada_da_paz_Forms.MRDP.multa m) {
+
+        public void inserirMulta(Morada_da_paz_Forms.MRDP.multa m)
+        {
             base.Channel.inserirMulta(m);
         }
-        
-        public System.Threading.Tasks.Task inserirMultaAsync(Morada_da_paz_Forms.MRDP.multa m) {
+
+        public System.Threading.Tasks.Task inserirMultaAsync(Morada_da_paz_Forms.MRDP.multa m)
+        {
             return base.Channel.inserirMultaAsync(m);
         }
-        
-        public void editarMulta(Morada_da_paz_Forms.MRDP.multa m) {
+
+        public void editarMulta(Morada_da_paz_Forms.MRDP.multa m)
+        {
             base.Channel.editarMulta(m);
         }
-        
-        public System.Threading.Tasks.Task editarMultaAsync(Morada_da_paz_Forms.MRDP.multa m) {
+
+        public System.Threading.Tasks.Task editarMultaAsync(Morada_da_paz_Forms.MRDP.multa m)
+        {
             return base.Channel.editarMultaAsync(m);
         }
-        
-        public Morada_da_paz_Forms.MRDP.multa[] listarMulta() {
+
+        public Morada_da_paz_Forms.MRDP.multa[] listarMulta()
+        {
             return base.Channel.listarMulta();
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.multa[]> listarMultaAsync() {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.multa[]> listarMultaAsync()
+        {
             return base.Channel.listarMultaAsync();
         }
-        
-        public Morada_da_paz_Forms.MRDP.multa pesquisaMulta(Morada_da_paz_Forms.MRDP.multa m) {
+
+        public Morada_da_paz_Forms.MRDP.multa pesquisaMulta(Morada_da_paz_Forms.MRDP.multa m)
+        {
             return base.Channel.pesquisaMulta(m);
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.multa> pesquisaMultaAsync(Morada_da_paz_Forms.MRDP.multa m) {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.multa> pesquisaMultaAsync(Morada_da_paz_Forms.MRDP.multa m)
+        {
             return base.Channel.pesquisaMultaAsync(m);
         }
-        
-        public void inserirOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public void inserirOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             base.Channel.inserirOcorrencia(o);
         }
-        
-        public System.Threading.Tasks.Task inserirOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public System.Threading.Tasks.Task inserirOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             return base.Channel.inserirOcorrenciaAsync(o);
         }
-        
-        public void editarOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public void editarOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             base.Channel.editarOcorrencia(o);
         }
-        
-        public System.Threading.Tasks.Task editarOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public System.Threading.Tasks.Task editarOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             return base.Channel.editarOcorrenciaAsync(o);
         }
-        
-        public Morada_da_paz_Forms.MRDP.ocorrencia[] listarOcorrencias() {
+
+        public Morada_da_paz_Forms.MRDP.ocorrencia[] listarOcorrencias()
+        {
             return base.Channel.listarOcorrencias();
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia[]> listarOcorrenciasAsync() {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia[]> listarOcorrenciasAsync()
+        {
             return base.Channel.listarOcorrenciasAsync();
         }
-        
-        public Morada_da_paz_Forms.MRDP.ocorrencia pesquisaOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public Morada_da_paz_Forms.MRDP.ocorrencia pesquisaOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             return base.Channel.pesquisaOcorrencia(o);
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia> pesquisaOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia> pesquisaOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             return base.Channel.pesquisaOcorrenciaAsync(o);
         }
-        
-        public Morada_da_paz_Forms.MRDP.ocorrencia[] listarOcorrenciasPorUsuario(Morada_da_paz_Forms.MRDP.usuario u) {
+
+        public Morada_da_paz_Forms.MRDP.ocorrencia[] listarOcorrenciasPorUsuario(Morada_da_paz_Forms.MRDP.usuario u)
+        {
             return base.Channel.listarOcorrenciasPorUsuario(u);
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia[]> listarOcorrenciasPorUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u) {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia[]> listarOcorrenciasPorUsuarioAsync(Morada_da_paz_Forms.MRDP.usuario u)
+        {
             return base.Channel.listarOcorrenciasPorUsuarioAsync(u);
         }
-        
-        public Morada_da_paz_Forms.MRDP.ocorrencia[] listarOcorrencasPublicas() {
+
+        public Morada_da_paz_Forms.MRDP.ocorrencia[] listarOcorrencasPublicas()
+        {
             return base.Channel.listarOcorrencasPublicas();
         }
-        
-        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia[]> listarOcorrencasPublicasAsync() {
+
+        public System.Threading.Tasks.Task<Morada_da_paz_Forms.MRDP.ocorrencia[]> listarOcorrencasPublicasAsync()
+        {
             return base.Channel.listarOcorrencasPublicasAsync();
         }
-        
-        public void excluiOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public void excluiOcorrencia(Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             base.Channel.excluiOcorrencia(o);
         }
-        
-        public System.Threading.Tasks.Task excluiOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public System.Threading.Tasks.Task excluiOcorrenciaAsync(Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             return base.Channel.excluiOcorrenciaAsync(o);
         }
-        
-        public void inserirMultaOcorrencia(Morada_da_paz_Forms.MRDP.multa m, Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public void inserirMultaOcorrencia(Morada_da_paz_Forms.MRDP.multa m, Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             base.Channel.inserirMultaOcorrencia(m, o);
         }
-        
-        public System.Threading.Tasks.Task inserirMultaOcorrenciaAsync(Morada_da_paz_Forms.MRDP.multa m, Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public System.Threading.Tasks.Task inserirMultaOcorrenciaAsync(Morada_da_paz_Forms.MRDP.multa m, Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             return base.Channel.inserirMultaOcorrenciaAsync(m, o);
         }
-        
-        public void inserirAdvertenciaOcorrencia(Morada_da_paz_Forms.MRDP.advertencia a, Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public void inserirAdvertenciaOcorrencia(Morada_da_paz_Forms.MRDP.advertencia a, Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             base.Channel.inserirAdvertenciaOcorrencia(a, o);
         }
-        
-        public System.Threading.Tasks.Task inserirAdvertenciaOcorrenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a, Morada_da_paz_Forms.MRDP.ocorrencia o) {
+
+        public System.Threading.Tasks.Task inserirAdvertenciaOcorrenciaAsync(Morada_da_paz_Forms.MRDP.advertencia a, Morada_da_paz_Forms.MRDP.ocorrencia o)
+        {
             return base.Channel.inserirAdvertenciaOcorrenciaAsync(a, o);
         }
     }

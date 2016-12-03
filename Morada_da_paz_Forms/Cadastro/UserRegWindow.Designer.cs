@@ -42,13 +42,13 @@
             this.textBoxSenha = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.buttonSalvar = new System.Windows.Forms.Button();
-            this.buttonCancelar = new System.Windows.Forms.Button();
+            this.listViewUsuarios = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonSalvar = new System.Windows.Forms.Button();
+            this.buttonCancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -172,20 +172,40 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // listView1
+            // listViewUsuarios
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewUsuarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(74, 60);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(864, 198);
-            this.listView1.TabIndex = 17;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewUsuarios.FullRowSelect = true;
+            this.listViewUsuarios.Location = new System.Drawing.Point(74, 60);
+            this.listViewUsuarios.Name = "listViewUsuarios";
+            this.listViewUsuarios.Size = new System.Drawing.Size(864, 198);
+            this.listViewUsuarios.TabIndex = 17;
+            this.listViewUsuarios.UseCompatibleStateImageBehavior = false;
+            this.listViewUsuarios.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Nome Completo";
+            this.columnHeader1.Width = 302;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Email";
+            this.columnHeader2.Width = 261;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "U.R";
+            this.columnHeader3.Width = 72;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Condição";
+            this.columnHeader4.Width = 224;
             // 
             // buttonSalvar
             // 
@@ -215,26 +235,6 @@
             this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Nome Completo";
-            this.columnHeader1.Width = 302;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Email";
-            this.columnHeader2.Width = 261;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "U.R";
-            this.columnHeader3.Width = 72;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Condição";
-            this.columnHeader4.Width = 224;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -253,9 +253,9 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.buttonCancelar;
-            this.ClientSize = new System.Drawing.Size(977, 282);
+            this.ClientSize = new System.Drawing.Size(977, 523);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewUsuarios);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
@@ -301,7 +301,7 @@
         private System.Windows.Forms.Button buttonSalvar;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewUsuarios;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

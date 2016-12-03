@@ -110,24 +110,27 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string querySql = "SELECT id, nome_completo, email, login, senha, id_unidade_residencial, id_especializacao_usuario FROM usuario";
+                string querySql = "SELECT id, nome_completo, email, login_, senha, id_unidade_residencial, id_especializacao FROM usuario";
 
                 SqlCommand comand = new SqlCommand(querySql, conexao);
 
                 SqlDataReader reader = comand.ExecuteReader();
 
                 List<usuario> lista = new List<usuario>();
-                while (reader.NextResult())
+                while (reader.Read())
                 {
                     usuario usuConsulta = new usuario();
 
                     usuConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
                     usuConsulta.Nome_completo = reader.GetString(reader.GetOrdinal("nome_completo"));
-                    usuConsulta.Email = reader.GetString(reader.GetOrdinal("email"));
-                    usuConsulta.Login = reader.GetString(reader.GetOrdinal("login"));
+                    if (reader.GetValue(reader.GetOrdinal("email")) == null)
+                        usuConsulta.Email = reader.GetString(reader.GetOrdinal("email"));
+                    else
+                        usuConsulta.Email = "Nenhum";
+                    usuConsulta.Login = reader.GetString(reader.GetOrdinal("login_"));
                     usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
                     usuConsulta.Id_unidade_residencial.Id = reader.GetInt32(reader.GetOrdinal("id_unidade_residencial"));
-                    usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao_usuario"));
+                    usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao"));
 
                     lista.Add(usuConsulta);
                 }

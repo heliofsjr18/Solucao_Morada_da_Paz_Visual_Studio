@@ -20,11 +20,11 @@ namespace Morada_da_paz_Forms.Edicao
         List<advertencia> listaAdvertencia;
         //Boolean controle;
 
-        public EditOcorrenciaWindow(ocorrencia o)
+        public EditOcorrenciaWindow()
         {
-            oc = o;
+            //oc = o;
             InitializeComponent();
-            this.preencheComponentes(o);
+            //this.preencheComponentes(o);
         }
 
         private void button2_Click(object sender, EventArgs e)

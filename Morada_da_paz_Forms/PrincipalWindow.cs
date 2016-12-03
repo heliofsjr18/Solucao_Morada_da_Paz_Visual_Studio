@@ -56,7 +56,8 @@ namespace Morada_da_paz_Forms
             {
                 thread = new Thread(new ThreadStart(RunServidor));
                 thread.Start();
-                this.carregaOcorrencias();
+                //this.carregaOcorrencias();                
+                this.labelCadastro.Location = new Point(281, 25);
                 this.labelCadastro.Visible = true;
                 this.labelConsulta.Visible = false;
             }
@@ -90,14 +91,14 @@ namespace Morada_da_paz_Forms
 
         private void PrincipalWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+
 
             if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
 
                 if (tcpListener != null)
-                {                    
-                        tcpListener.Stop();
+                {
+                    tcpListener.Stop();
                 }
 
                 /*if(thread != null)
@@ -106,15 +107,16 @@ namespace Morada_da_paz_Forms
                 }*/
                 Environment.Exit(0);
 
-            }else
+            }
+            else
             {
-                
+
                 Application.Exit();
             }
-           
-            
-            
-            
+
+
+
+
 
         }
 
@@ -206,7 +208,7 @@ namespace Morada_da_paz_Forms
         }
 
         private void PrincipalWindow_Load(object sender, EventArgs e)
-        {            
+        {
             textBoxNameUser.Text = usuarioAtivo.Nome_completo;
             usuarioAtivo.Id_unidade_residencial.Descricao = "Busca";
             usuarioAtivo.Id_unidade_residencial.Numero_residencia = "0";
@@ -288,12 +290,12 @@ namespace Morada_da_paz_Forms
 
 
                 #region colocar valores nos elementos xml
-                id.InnerText = ""+o.Id;
+                id.InnerText = "" + o.Id;
                 numero.InnerText = o.Numero_ocorrencia;
                 descricao.InnerText = o.Descricao;
-                id_usuario.InnerText = ""+o.Id_usuario.Id;
+                id_usuario.InnerText = "" + o.Id_usuario.Id;
                 status.InnerText = o.Situacao;
-                publico.InnerText = ""+o.TipoPublico;
+                publico.InnerText = "" + o.TipoPublico;
                 id_und.InnerText = "" + o.Id_unidade_residencial.Id;
                 #endregion
 
@@ -424,7 +426,7 @@ namespace Morada_da_paz_Forms
 
                     } while (socket.Connected);
                 }
-                
+
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
@@ -494,8 +496,9 @@ namespace Morada_da_paz_Forms
                 networkStream.Close();
                 tcpClient.Close();
             }
-            catch (SocketException ex) {
-                MessageBox.Show("No momento o síndico não está logado, sua Ocorrência pode demorar a ser visualizada!", "Síndico indisponivel!..."+ ex.Message);
+            catch (SocketException ex)
+            {
+                MessageBox.Show("No momento o síndico não está logado, sua Ocorrência pode demorar a ser visualizada!", "Síndico indisponivel!..." + ex.Message);
             }
             catch (Exception ex)
             {
@@ -531,23 +534,26 @@ namespace Morada_da_paz_Forms
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            MuralWindow muralWindow = new MuralWindow();
+            muralWindow.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             UserRegWindow userWindow = new UserRegWindow();
-            userWindow.Show();
+            userWindow.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            AdvertenciaRegWindow advertenciaWindow = new AdvertenciaRegWindow();
+            advertenciaWindow.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            MultaRegWindow multaWindow = new MultaRegWindow();
+            multaWindow.ShowDialog();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -567,12 +573,24 @@ namespace Morada_da_paz_Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            NovaOcorrenciaWindow ocorrenciaWindow = new NovaOcorrenciaWindow(PrincipalWindow.usuarioAtivo);
+            ocorrenciaWindow.ShowDialog();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            EditOcorrenciaWindow sansaoWindow = new EditOcorrenciaWindow();
+            sansaoWindow.ShowDialog();
         }
     }
 
