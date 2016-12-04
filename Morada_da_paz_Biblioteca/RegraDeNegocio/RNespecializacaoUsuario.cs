@@ -47,7 +47,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         public especializacao_usuario chamarConsulta(especializacao_usuario eu)
         {
             CrudEspecializacaoUsuario ceu = new CrudEspecializacaoUsuarioImplements();
-            this.verificaPreenchimento(eu);
+            //this.verificaPreenchimento(eu);
 
             return ceu.consultar(eu);
         }

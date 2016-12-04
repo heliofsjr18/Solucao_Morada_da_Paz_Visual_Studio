@@ -55,7 +55,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         public unidade_residencial chamarConsulta(unidade_residencial ur)
         {
             CrudUnidadeResidencial cur = new CrudUnidadeResidencialImplements();
-            this.verificaPreenchimento(ur);
+            //this.verificaPreenchimento(ur);
 
             return cur.consultar(ur);
         }
