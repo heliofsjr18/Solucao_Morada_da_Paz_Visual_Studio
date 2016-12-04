@@ -204,12 +204,6 @@
     <None Include="Service References\ServiceReference1\ServiceMorada_Da_Paz3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference1\ServiceMorada_Da_Paz4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference1\ServiceMorada_Da_Paz41.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web References\MRDP\advertencia.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -240,12 +234,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\MRDP\ServiceMorada_Da_Paz2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\MRDP\ServiceMorada_Da_Paz3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\MRDP\ServiceMorada_Da_Paz4.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\MRDP\unidade_residencial.datasource">

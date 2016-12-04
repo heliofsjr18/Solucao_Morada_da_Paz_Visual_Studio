@@ -22,5 +22,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
         List<ocorrencia> listar();
         List<ocorrencia> ListarPublicas();
+
+        void atribuirUnidade(ocorrencia oco);
     }
 }

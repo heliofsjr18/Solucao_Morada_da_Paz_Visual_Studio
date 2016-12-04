@@ -110,6 +110,8 @@
             // 
             // comboBoxAdvertencia
             // 
+            this.comboBoxAdvertencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAdvertencia.Enabled = false;
             this.comboBoxAdvertencia.FormattingEnabled = true;
             this.comboBoxAdvertencia.Location = new System.Drawing.Point(147, 50);
             this.comboBoxAdvertencia.Name = "comboBoxAdvertencia";
@@ -127,9 +129,12 @@
             this.checkBoxAdvertencia.TabIndex = 2;
             this.checkBoxAdvertencia.Text = "Advertência";
             this.checkBoxAdvertencia.UseVisualStyleBackColor = true;
+            this.checkBoxAdvertencia.CheckedChanged += new System.EventHandler(this.checkBoxAdvertencia_CheckedChanged);
             // 
             // comboBoxMulta
             // 
+            this.comboBoxMulta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMulta.Enabled = false;
             this.comboBoxMulta.FormattingEnabled = true;
             this.comboBoxMulta.Location = new System.Drawing.Point(6, 50);
             this.comboBoxMulta.Name = "comboBoxMulta";
@@ -147,6 +152,7 @@
             this.checkBoxMulta.TabIndex = 0;
             this.checkBoxMulta.Text = "Multa";
             this.checkBoxMulta.UseVisualStyleBackColor = true;
+            this.checkBoxMulta.CheckedChanged += new System.EventHandler(this.checkBoxMulta_CheckedChanged);
             // 
             // listViewMinhasOcorrencias
             // 
@@ -162,13 +168,13 @@
             this.listViewMinhasOcorrencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewMinhasOcorrencias.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.listViewMinhasOcorrencias.FullRowSelect = true;
-            this.listViewMinhasOcorrencias.GridLines = true;
             this.listViewMinhasOcorrencias.Location = new System.Drawing.Point(6, 19);
             this.listViewMinhasOcorrencias.Name = "listViewMinhasOcorrencias";
             this.listViewMinhasOcorrencias.Size = new System.Drawing.Size(1008, 182);
             this.listViewMinhasOcorrencias.TabIndex = 16;
             this.listViewMinhasOcorrencias.UseCompatibleStateImageBehavior = false;
             this.listViewMinhasOcorrencias.View = System.Windows.Forms.View.Details;
+            this.listViewMinhasOcorrencias.SelectedIndexChanged += new System.EventHandler(this.listViewMinhasOcorrencias_SelectedIndexChanged);
             // 
             // Número
             // 
@@ -285,6 +291,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(6, 26);
             this.comboBox1.Name = "comboBox1";
@@ -305,6 +312,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(6, 26);
             this.comboBox2.Name = "comboBox2";
@@ -321,6 +329,7 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "EXCLUIR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox6
             // 

@@ -3,11 +3,9 @@
   <Results>
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd1" filename="ServiceMorada_Da_Paz.xsd" />
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd0" filename="ServiceMorada_Da_Paz0.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd4" filename="ServiceMorada_Da_Paz1.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd2" filename="ServiceMorada_Da_Paz2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd2" filename="ServiceMorada_Da_Paz1.xsd" />
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:60993/ServiceMorada_Da_Paz.svc?wsdl" filename="Service1.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd5" filename="ServiceMorada_Da_Paz3.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd3" filename="ServiceMorada_Da_Paz4.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd3" filename="ServiceMorada_Da_Paz2.xsd" />
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:60993/ServiceMorada_Da_Paz.svc?disco" filename="ServiceMorada_Da_Paz.disco" />
   </Results>
 </DiscoveryClientResultsFile>

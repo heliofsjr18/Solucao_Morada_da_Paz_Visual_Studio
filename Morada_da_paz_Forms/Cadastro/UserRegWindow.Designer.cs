@@ -106,6 +106,7 @@
             // 
             // comboBoxUnidadeResidencial
             // 
+            this.comboBoxUnidadeResidencial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUnidadeResidencial.FormattingEnabled = true;
             this.comboBoxUnidadeResidencial.Location = new System.Drawing.Point(410, 39);
             this.comboBoxUnidadeResidencial.Name = "comboBoxUnidadeResidencial";
@@ -114,6 +115,7 @@
             // 
             // comboBoxEspecializacao
             // 
+            this.comboBoxEspecializacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEspecializacao.FormattingEnabled = true;
             this.comboBoxEspecializacao.Location = new System.Drawing.Point(410, 97);
             this.comboBoxEspecializacao.Name = "comboBoxEspecializacao";

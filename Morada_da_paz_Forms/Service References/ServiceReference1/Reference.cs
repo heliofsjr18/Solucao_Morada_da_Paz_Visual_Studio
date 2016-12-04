@@ -681,7 +681,6 @@ namespace Morada_da_paz_Forms.ServiceReference1 {
         System.Threading.Tasks.Task<Morada_da_paz_Forms.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(Morada_da_paz_Forms.ServiceReference1.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuario", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuarioResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(System.IO.FileNotFoundException), Action="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuarioFileNotFoundExceptionFault", Name="FileNotFoundException", Namespace="http://schemas.datacontract.org/2004/07/System.IO")]
         void inseirUsuario(Morada_da_paz_Forms.ServiceReference1.usuario u);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuario", ReplyAction="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuarioResponse")]

@@ -35,8 +35,8 @@ namespace Morada_Da_Paz_Service
         // Service Usuario
         public void inseirUsuario(usuario u)
         {
-                RNusuario rnu = new RNusuario();
-                rnu.chamarInserir(u);
+            RNusuario rnu = new RNusuario();
+            rnu.chamarInserir(u);
         }
 
         public void editarUsuario(usuario u)
@@ -200,6 +200,11 @@ namespace Morada_Da_Paz_Service
             RNocorrencia rno = new RNocorrencia();
             return rno.chamarListarPublica();
         }
+        public void atribuirUnidade(ocorrencia oco)
+        {
+            RNocorrencia rno = new RNocorrencia();
+            rno.chamarAtribuirUnidade(oco);
+        }
 
         //Aplicação de Sanção
         public void inserirMultaOcorrencia(multa m, ocorrencia o)
@@ -219,5 +224,6 @@ namespace Morada_Da_Paz_Service
             RNocorrencia rno = new RNocorrencia();
             rno.chamarDeletar(o);
         }
+
     }
 }

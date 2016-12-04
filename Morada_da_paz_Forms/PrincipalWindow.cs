@@ -19,6 +19,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Net;
 using Morada_da_paz_Forms.MRDP;
+using System.Web.Services.Protocols;
 
 namespace Morada_da_paz_Forms
 {

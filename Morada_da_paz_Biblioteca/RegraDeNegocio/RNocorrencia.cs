@@ -42,7 +42,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         public void chamarDeletar(ocorrencia o)
         {
             CrudOcorrencia co = new CrudOcorrenciaImplements();
-            this.verificaPreenchimento(o);
+            //this.verificaPreenchimento(o);
 
             co.excluir(o);
         }
@@ -71,6 +71,12 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         {
             CrudOcorrencia co = new CrudOcorrenciaImplements();
             return co.ListarPublicas();
+        }
+
+        public void chamarAtribuirUnidade(ocorrencia oco)
+        {
+            CrudOcorrencia co = new CrudOcorrenciaImplements();
+            co.atribuirUnidade(oco);
         }
     }
 }

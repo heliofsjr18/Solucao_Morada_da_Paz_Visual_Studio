@@ -60,7 +60,7 @@ namespace Morada_da_paz_Forms.MRDP {
         private System.Threading.SendOrPostCallback pesquisaAdvertenciaOperationCompleted;
         
         private System.Threading.SendOrPostCallback inserirEspecializacaoOperationCompleted;
-        
+
         private System.Threading.SendOrPostCallback editarEspecializacaoOperationCompleted;
         
         private System.Threading.SendOrPostCallback listarEspecializacaoOperationCompleted;

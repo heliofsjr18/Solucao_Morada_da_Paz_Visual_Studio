@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Morada_da_paz_Forms.MRDP;
+using System.Web.Services.Protocols;
 
 namespace Morada_da_paz_Forms.Cadastro
 {

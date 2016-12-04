@@ -5,9 +5,7 @@
       <xsd:import schemaLocation="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Morada_Da_Paz_Service" />
-      <xsd:import schemaLocation="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
       <xsd:import schemaLocation="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Morada_da_paz_Biblioteca.basicas" />
-      <xsd:import schemaLocation="http://localhost:60993/ServiceMorada_Da_Paz.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IServiceMorada_Da_Paz_GetData_InputMessage">
@@ -27,9 +25,6 @@
   </wsdl:message>
   <wsdl:message name="IServiceMorada_Da_Paz_inseirUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:inseirUsuarioResponse" />
-  </wsdl:message>
-  <wsdl:message name="IServiceMorada_Da_Paz_inseirUsuario_FileNotFoundExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/System.IO" name="detail" element="q1:FileNotFoundException" />
   </wsdl:message>
   <wsdl:message name="IServiceMorada_Da_Paz_editarUsuario_InputMessage">
     <wsdl:part name="parameters" element="tns:editarUsuario" />
@@ -217,7 +212,6 @@
     <wsdl:operation name="inseirUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuario" message="tns:IServiceMorada_Da_Paz_inseirUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuarioResponse" message="tns:IServiceMorada_Da_Paz_inseirUsuario_OutputMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/IServiceMorada_Da_Paz/inseirUsuarioFileNotFoundExceptionFault" name="FileNotFoundExceptionFault" message="tns:IServiceMorada_Da_Paz_inseirUsuario_FileNotFoundExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="editarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceMorada_Da_Paz/editarUsuario" message="tns:IServiceMorada_Da_Paz_editarUsuario_InputMessage" />
@@ -364,9 +358,6 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
-      <wsdl:fault name="FileNotFoundExceptionFault">
-        <soap:fault use="literal" name="FileNotFoundExceptionFault" namespace="" />
-      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="editarUsuario">
       <soap:operation soapAction="http://tempuri.org/IServiceMorada_Da_Paz/editarUsuario" style="document" />

@@ -7,6 +7,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Xaml;
 
 namespace Morada_Da_Paz_Service
 {
@@ -119,6 +120,8 @@ namespace Morada_Da_Paz_Service
 
         [OperationContract]
         void inserirAdvertenciaOcorrencia(advertencia a, ocorrencia o);
+        [OperationContract]
+        void atribuirUnidade(ocorrencia oco);
     }
 
 

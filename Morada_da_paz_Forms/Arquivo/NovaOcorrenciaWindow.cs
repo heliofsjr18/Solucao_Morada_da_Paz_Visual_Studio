@@ -12,6 +12,7 @@ using System.Net.Sockets;
 using System.IO;
 using System.Threading;
 using Morada_da_paz_Forms.MRDP;
+using System.Web.Services.Protocols;
 
 namespace Morada_da_paz_Forms.Arquivo
 {
@@ -135,58 +136,68 @@ namespace Morada_da_paz_Forms.Arquivo
 
         private void NovaOcorrenciaWindow_Load(object sender, EventArgs e)
         {
-            Service1 serviceInstance = new Service1();
-            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id != 1)
+            try
             {
-                ocorrencia[] listaOcorrencia = serviceInstance.listarOcorrenciasPorUsuario(PrincipalWindow.usuarioAtivo);
-                for (int i = 0; i < listaOcorrencia.Count(); i++)
+
+
+                Service1 serviceInstance = new Service1();
+                if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id != 1)
                 {
-                    usuario usu = new usuario();
-                    especializacao_usuario usuES = new especializacao_usuario();
-                    unidade_residencial usuUR = new unidade_residencial();
-                    //listaUsu.ElementAt(i).Id_unidade_residencial.Descricao = "Busca";
-                    //listaUsu.ElementAt(i).Id_unidade_residencial.Numero_residencia = "0";
+                    ocorrencia[] listaOcorrencia = serviceInstance.listarOcorrenciasPorUsuario(PrincipalWindow.usuarioAtivo);
+                    for (int i = 0; i < listaOcorrencia.Count(); i++)
+                    {
+                        usuario usu = new usuario();
+                        especializacao_usuario usuES = new especializacao_usuario();
+                        unidade_residencial usuUR = new unidade_residencial();
+                        //listaUsu.ElementAt(i).Id_unidade_residencial.Descricao = "Busca";
+                        //listaUsu.ElementAt(i).Id_unidade_residencial.Numero_residencia = "0";
 
-                    usu = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario);
-                    //usu.Id_especializacao_usuario.Id = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario).Id_especializacao_usuario.Id;
-                    //usu.Id_unidade_residencial.Id = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario).Id_unidade_residencial.Id;
-                    usuES.Descricao = serviceInstance.pesquisaEspecializacao(usu.Id_especializacao_usuario).Descricao;
-                    usuUR.Numero_residencia = serviceInstance.pesquisaUnidade(usu.Id_unidade_residencial).Numero_residencia;
+                        usu = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario);
+                        //usu.Id_especializacao_usuario.Id = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario).Id_especializacao_usuario.Id;
+                        //usu.Id_unidade_residencial.Id = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario).Id_unidade_residencial.Id;
+                        usuES.Descricao = serviceInstance.pesquisaEspecializacao(usu.Id_especializacao_usuario).Descricao;
+                        usuUR.Numero_residencia = serviceInstance.pesquisaUnidade(usu.Id_unidade_residencial).Numero_residencia;
 
 
-                    ListViewItem linha = listViewMinhasOcorrencias.Items.Add(listaOcorrencia.ElementAt(i).Numero_ocorrencia);
-                    linha.SubItems.Add(listaOcorrencia.ElementAt(i).Descricao);
-                    linha.SubItems.Add(listaOcorrencia.ElementAt(i).Situacao);
-                    linha.SubItems.Add(usu.Nome_completo);
-                    linha.SubItems.Add(usuUR.Numero_residencia);
-                    linha.SubItems.Add(usuES.Descricao);
+                        ListViewItem linha = listViewMinhasOcorrencias.Items.Add(listaOcorrencia.ElementAt(i).Numero_ocorrencia);
+                        linha.SubItems.Add(listaOcorrencia.ElementAt(i).Descricao);
+                        linha.SubItems.Add(listaOcorrencia.ElementAt(i).Situacao);
+                        linha.SubItems.Add(usu.Nome_completo);
+                        linha.SubItems.Add(usuUR.Numero_residencia);
+                        linha.SubItems.Add(usuES.Descricao);
+                    }
+                }
+                else
+                {
+                    ocorrencia[] listaOcorrencia = serviceInstance.listarOcorrencias();
+                    for (int i = 0; i < listaOcorrencia.Count(); i++)
+                    {
+                        usuario usu = new usuario();
+                        especializacao_usuario usuES = new especializacao_usuario();
+                        unidade_residencial usuUR = new unidade_residencial();
+                        //listaUsu.ElementAt(i).Id_unidade_residencial.Descricao = "Busca";
+                        //listaUsu.ElementAt(i).Id_unidade_residencial.Numero_residencia = "0";
+
+                        usu = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario);
+                        //usu.Id_especializacao_usuario.Id = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario).Id_especializacao_usuario.Id;
+                        //usu.Id_unidade_residencial.Id = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario).Id_unidade_residencial.Id;
+                        usuES.Descricao = serviceInstance.pesquisaEspecializacao(usu.Id_especializacao_usuario).Descricao;
+                        usuUR.Numero_residencia = serviceInstance.pesquisaUnidade(usu.Id_unidade_residencial).Numero_residencia;
+
+
+                        ListViewItem linha = listViewMinhasOcorrencias.Items.Add(listaOcorrencia.ElementAt(i).Numero_ocorrencia);
+                        linha.SubItems.Add(listaOcorrencia.ElementAt(i).Descricao);
+                        linha.SubItems.Add(usu.Nome_completo);
+                        linha.SubItems.Add(usuUR.Numero_residencia);
+                        linha.SubItems.Add(usuES.Descricao);
+                        linha.SubItems.Add(listaOcorrencia.ElementAt(i).Situacao);
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                ocorrencia[] listaOcorrencia = serviceInstance.listarOcorrencias();
-                for (int i = 0; i < listaOcorrencia.Count(); i++)
-                {
-                    usuario usu = new usuario();
-                    especializacao_usuario usuES = new especializacao_usuario();
-                    unidade_residencial usuUR = new unidade_residencial();
-                    //listaUsu.ElementAt(i).Id_unidade_residencial.Descricao = "Busca";
-                    //listaUsu.ElementAt(i).Id_unidade_residencial.Numero_residencia = "0";
 
-                    usu = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario);
-                    //usu.Id_especializacao_usuario.Id = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario).Id_especializacao_usuario.Id;
-                    //usu.Id_unidade_residencial.Id = serviceInstance.pesquisaUsuario(listaOcorrencia.ElementAt(i).Id_usuario).Id_unidade_residencial.Id;
-                    usuES.Descricao = serviceInstance.pesquisaEspecializacao(usu.Id_especializacao_usuario).Descricao;
-                    usuUR.Numero_residencia = serviceInstance.pesquisaUnidade(usu.Id_unidade_residencial).Numero_residencia;
-
-
-                    ListViewItem linha = listViewMinhasOcorrencias.Items.Add(listaOcorrencia.ElementAt(i).Numero_ocorrencia);
-                    linha.SubItems.Add(listaOcorrencia.ElementAt(i).Descricao);
-                    linha.SubItems.Add(usu.Nome_completo);
-                    linha.SubItems.Add(usuUR.Numero_residencia);
-                    linha.SubItems.Add(usuES.Descricao);
-                    linha.SubItems.Add(listaOcorrencia.ElementAt(i).Situacao);
-                }
+                MessageBox.Show(ex.Message);
             }
         }
     }
