@@ -31,151 +31,181 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NovaOcorrenciaWindow));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.buttonEnviar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listViewMinhasOcorrencias = new System.Windows.Forms.ListView();
+            this.Número = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Descrição = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NomeCompleto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UnidadeRes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Condição = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(34, 295);
+            this.richTextBox1.Location = new System.Drawing.Point(6, 41);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(423, 153);
+            this.richTextBox1.Size = new System.Drawing.Size(624, 115);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 279);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 13);
+            this.label1.Size = new System.Drawing.Size(389, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Digite a sua ocorrência aqui, e clique em enviar ocorrência";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 252);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(233, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Gerar Nova Ocorrência";
+            this.label1.Text = "Digite a sua ocorrência com maior quantidade de detalhes que puder.";
             // 
             // buttonEnviar
             // 
-            this.buttonEnviar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.buttonEnviar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonEnviar.Image = global::Morada_da_paz_Forms.Properties.Resources.Custom_Icon_Design_Flatastic_10_Email_send;
-            this.buttonEnviar.Location = new System.Drawing.Point(52, 492);
+            this.buttonEnviar.BackColor = System.Drawing.Color.Green;
+            this.buttonEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEnviar.ForeColor = System.Drawing.Color.White;
+            this.buttonEnviar.Location = new System.Drawing.Point(6, 162);
             this.buttonEnviar.Name = "buttonEnviar";
             this.buttonEnviar.Size = new System.Drawing.Size(135, 41);
             this.buttonEnviar.TabIndex = 2;
-            this.buttonEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEnviar.Text = "Salvar";
             this.buttonEnviar.UseVisualStyleBackColor = false;
             this.buttonEnviar.Click += new System.EventHandler(this.buttonEnviar_Click);
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonCancelar.BackColor = System.Drawing.Color.Red;
             this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonCancelar.Image = global::Morada_da_paz_Forms.Properties.Resources.Hopstarter_Button_Button_Close;
-            this.buttonCancelar.Location = new System.Drawing.Point(261, 492);
+            this.buttonCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.ForeColor = System.Drawing.Color.White;
+            this.buttonCancelar.Location = new System.Drawing.Point(147, 162);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(124, 41);
+            this.buttonCancelar.Size = new System.Drawing.Size(135, 41);
             this.buttonCancelar.TabIndex = 3;
-            this.buttonCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
             // 
-            // checkBox1
+            // listViewMinhasOcorrencias
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(342, 454);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(115, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Ocorrência publica";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.listViewMinhasOcorrencias.AllowColumnReorder = true;
+            this.listViewMinhasOcorrencias.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Número,
+            this.Descrição,
+            this.NomeCompleto,
+            this.UnidadeRes,
+            this.Condição,
+            this.Status});
+            this.listViewMinhasOcorrencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewMinhasOcorrencias.FullRowSelect = true;
+            this.listViewMinhasOcorrencias.GridLines = true;
+            this.listViewMinhasOcorrencias.Location = new System.Drawing.Point(6, 19);
+            this.listViewMinhasOcorrencias.Name = "listViewMinhasOcorrencias";
+            this.listViewMinhasOcorrencias.Size = new System.Drawing.Size(970, 175);
+            this.listViewMinhasOcorrencias.TabIndex = 25;
+            this.listViewMinhasOcorrencias.UseCompatibleStateImageBehavior = false;
+            this.listViewMinhasOcorrencias.View = System.Windows.Forms.View.Details;
             // 
-            // label7
+            // Número
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(31, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(181, 18);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Multas Cadastradas";
+            this.Número.Text = "Número";
+            this.Número.Width = 72;
             // 
-            // listView1
+            // Descrição
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.FullRowSelect = true;
-            this.listView1.Location = new System.Drawing.Point(34, 51);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(864, 198);
-            this.listView1.TabIndex = 23;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.Descrição.Text = "Descrição";
+            this.Descrição.Width = 355;
             // 
-            // columnHeader1
+            // NomeCompleto
             // 
-            this.columnHeader1.Text = "Nome Completo";
-            this.columnHeader1.Width = 302;
+            this.NomeCompleto.DisplayIndex = 3;
+            this.NomeCompleto.Text = "Nome Completo";
+            this.NomeCompleto.Width = 249;
             // 
-            // columnHeader2
+            // UnidadeRes
             // 
-            this.columnHeader2.Text = "Email";
-            this.columnHeader2.Width = 261;
+            this.UnidadeRes.DisplayIndex = 4;
+            this.UnidadeRes.Text = "Unidade Residencial";
+            this.UnidadeRes.Width = 121;
             // 
-            // columnHeader3
+            // Condição
             // 
-            this.columnHeader3.Text = "U.R";
-            this.columnHeader3.Width = 72;
+            this.Condição.DisplayIndex = 5;
+            this.Condição.Text = "Condição";
+            this.Condição.Width = 82;
             // 
-            // columnHeader4
+            // Status
             // 
-            this.columnHeader4.Text = "Condição";
-            this.columnHeader4.Width = 224;
+            this.Status.DisplayIndex = 2;
+            this.Status.Text = "Status";
+            this.Status.Width = 84;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.listViewMinhasOcorrencias);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(16, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(990, 211);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ocorrências";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.buttonCancelar);
+            this.groupBox2.Controls.Add(this.buttonEnviar);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(16, 258);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(636, 220);
+            this.groupBox2.TabIndex = 28;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Ocorrências";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Location = new System.Drawing.Point(718, 258);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(237, 220);
+            this.panel1.TabIndex = 29;
             // 
             // NovaOcorrenciaWindow
             // 
             this.AcceptButton = this.buttonEnviar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.CancelButton = this.buttonCancelar;
             this.ClientSize = new System.Drawing.Size(1025, 549);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonEnviar);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "NovaOcorrenciaWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Gerar Nova Ocorrencia";
+            this.Text = "Ocorrência";
+            this.Load += new System.EventHandler(this.NovaOcorrenciaWindow_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -185,13 +215,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonEnviar;
         private System.Windows.Forms.Button buttonCancelar;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ListView listViewMinhasOcorrencias;
+        private System.Windows.Forms.ColumnHeader Número;
+        private System.Windows.Forms.ColumnHeader Descrição;
+        private System.Windows.Forms.ColumnHeader NomeCompleto;
+        private System.Windows.Forms.ColumnHeader UnidadeRes;
+        private System.Windows.Forms.ColumnHeader Condição;
+        private System.Windows.Forms.ColumnHeader Status;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

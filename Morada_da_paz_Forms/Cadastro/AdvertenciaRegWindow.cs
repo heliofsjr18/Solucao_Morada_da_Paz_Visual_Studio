@@ -18,6 +18,10 @@ namespace Morada_da_paz_Forms.Cadastro
         public AdvertenciaRegWindow()
         {
             InitializeComponent();
+            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id != 1)
+            {
+                this.Height = 301;
+            }
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -25,14 +29,24 @@ namespace Morada_da_paz_Forms.Cadastro
             try
             {
                 advertencia adv = new advertencia() { Descricao = richTextBoxAdvertencia.Text };
-                
-                MRDP.ServiceMorada_Da_PazClient serviceInstance = new ServiceMorada_Da_PazClient();
+
+                Service1 serviceInstance = new Service1();
                 serviceInstance.inserirAdvertencia(adv);
                 MessageBox.Show("Advertencia Cadastrada");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void AdvertenciaRegWindow_Load(object sender, EventArgs e)
+        {
+            Service1 serviceInstance = new Service1();
+            advertencia[] listaAdvertencia = serviceInstance.listarAdvertencias();
+            for (int i = 0; i < listaAdvertencia.Count(); i++)
+            {
+                ListViewItem linha = listView1.Items.Add(listaAdvertencia.ElementAt(i).Descricao);
             }
         }
     }

@@ -19,11 +19,10 @@ namespace Morada_da_paz_Forms.Cadastro
         public UserRegWindow()
         {
             InitializeComponent();
-            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id == 1)
+            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id != 1)
             {
-                this.Height = 574;
+                this.Height = 301;
             }
-
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -53,7 +52,7 @@ namespace Morada_da_paz_Forms.Cadastro
                 u.Id_unidade_residencial = und;
 
 
-                MRDP.ServiceMorada_Da_PazClient serviceinstance = new ServiceMorada_Da_PazClient();
+                Service1 serviceinstance = new Service1();
                 serviceinstance.inseirUsuario(u);
             }
             catch (Exception ex)
@@ -70,7 +69,7 @@ namespace Morada_da_paz_Forms.Cadastro
         {
 
 
-            MRDP.ServiceMorada_Da_PazClient serviceinstance = new ServiceMorada_Da_PazClient();
+            Service1 serviceinstance = new Service1();
             this.listaEspecial = serviceinstance.listarEspecializacao().ToList();
             this.ListaUnidade = serviceinstance.listarUnidades().ToList();
             for (int i = 0; i < listaEspecial.Count; i++)
@@ -85,22 +84,27 @@ namespace Morada_da_paz_Forms.Cadastro
 
         private void UserRegWindow_Load(object sender, EventArgs e)
         {
-            MRDP.ServiceMorada_Da_PazClient serviceInstance = new MRDP.ServiceMorada_Da_PazClient();
-            usuario[] listaUsuario = serviceInstance.listarUsuarios().ToArray();
-            for (int i = 0; i < listaUsuario.Count(); i++)
+            Service1 serviceInstance = new Service1();
+            usuario[] listaUsu = serviceInstance.listarUsuarios();
+            for (int i = 0; i < listaUsu.Count(); i++)
             {
-                unidade_residencial usuUR;
-                listaUsuario.ElementAt(i).Id_unidade_residencial.Descricao = "Busca";
-                listaUsuario.ElementAt(i).Id_unidade_residencial.Numero_residencia = "0";
-                listaUsuario.ElementAt(i).Id_especializacao_usuario.Descricao = "Busca";
-                especializacao_usuario usuES;
-                usuUR = new MRDP.ServiceMorada_Da_PazClient().pesquisaUnidade(listaUsuario.ElementAt(i).Id_unidade_residencial);
-                usuES = new MRDP.ServiceMorada_Da_PazClient().pesquisaEspecializacao(listaUsuario.ElementAt(i).Id_especializacao_usuario);
-                ListViewItem linha = listViewUsuarios.Items.Add(listaUsuario.ElementAt(i).Nome_completo);
-                linha.SubItems.Add(listaUsuario.ElementAt(i).Email);
+                unidade_residencial usuUR = new unidade_residencial();
+                listaUsu.ElementAt(i).Id_unidade_residencial.Descricao = "Busca";
+                listaUsu.ElementAt(i).Id_unidade_residencial.Numero_residencia = "0";
+                usuUR.Numero_residencia = serviceInstance.pesquisaUnidade(listaUsu.ElementAt(i).Id_unidade_residencial).Numero_residencia;
+                especializacao_usuario usuES = new especializacao_usuario();
+                listaUsu.ElementAt(i).Id_especializacao_usuario.Descricao = "Busca";
+                usuES.Descricao = serviceInstance.pesquisaEspecializacao(listaUsu.ElementAt(i).Id_especializacao_usuario).Descricao;
+                ListViewItem linha = listView1.Items.Add(listaUsu.ElementAt(i).Nome_completo);
+                linha.SubItems.Add(listaUsu.ElementAt(i).Email);
                 linha.SubItems.Add(usuUR.Numero_residencia);
                 linha.SubItems.Add(usuES.Descricao);
             }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

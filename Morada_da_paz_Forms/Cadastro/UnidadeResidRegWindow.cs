@@ -17,6 +17,10 @@ namespace Morada_da_paz_Forms.Cadastro
         public UnidadeResidRegWindow()
         {
             InitializeComponent();
+            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id != 1)
+            {
+                this.Height = 301;
+            }
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
@@ -32,7 +36,7 @@ namespace Morada_da_paz_Forms.Cadastro
         private void buttonSave_Click(object sender, EventArgs e)
         {
             unidade_residencial uR = new unidade_residencial() { Numero_residencia = textBox1.Text, Descricao = textBox2.Text };
-            MRDP.ServiceMorada_Da_PazClient serviceinstance = new ServiceMorada_Da_PazClient();
+            Service1 serviceinstance = new Service1();
 
 
             try
@@ -47,6 +51,27 @@ namespace Morada_da_paz_Forms.Cadastro
 
             MessageBox.Show("Unidade Residencial Cadastrada");
             this.Dispose();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UnidadeResidRegWindow_Load(object sender, EventArgs e)
+        {
+            Service1 serviceInstance = new Service1();
+            unidade_residencial[] listaunidade_residencial = serviceInstance.listarUnidades();
+            for (int i = 0; i < listaunidade_residencial.Count(); i++)
+            {
+                ListViewItem linha = listView1.Items.Add(listaunidade_residencial.ElementAt(i).Numero_residencia);
+                linha.SubItems.Add(listaunidade_residencial.ElementAt(i).Descricao);
+            }
         }
     }
 }

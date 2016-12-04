@@ -82,21 +82,22 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string querySql = "SELECT nome_completo, email, login, senha, id_unidade_residencial, id_especializacao_usuario FROM usuario WHERE id = @idpar";
+                string querySql = "SELECT nome_completo, email, login_, senha, id_unidade_residencial, id_especializacao FROM usuario WHERE id = @idpar";
 
                 SqlCommand comand = new SqlCommand(querySql, conexao);
                 comand.Parameters.AddWithValue("@idpar", u.Id);
                 usuario usuConsulta = new usuario();
 
                 SqlDataReader reader = comand.ExecuteReader();
+                if (reader.Read())
+                {                    
+                    usuConsulta.Nome_completo = reader.GetString(reader.GetOrdinal("nome_completo"));
+                    usuConsulta.Login = reader.GetString(reader.GetOrdinal("login_"));
+                    usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
+                    usuConsulta.Id_unidade_residencial.Id = reader.GetInt32(reader.GetOrdinal("id_unidade_residencial"));
+                    usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao"));
 
-                usuConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
-                usuConsulta.Nome_completo = reader.GetString(reader.GetOrdinal("nome_completo"));
-                usuConsulta.Email = reader.GetString(reader.GetOrdinal("email"));
-                usuConsulta.Login = reader.GetString(reader.GetOrdinal("login"));
-                usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
-                usuConsulta.Id_unidade_residencial.Id = reader.GetInt32(reader.GetOrdinal("id_unidade_residencial"));
-                usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao_usuario"));
+                }
 
                 return usuConsulta;
             }

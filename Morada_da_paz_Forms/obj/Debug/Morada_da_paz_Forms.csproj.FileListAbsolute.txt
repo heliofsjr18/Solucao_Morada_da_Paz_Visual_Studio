@@ -36,9 +36,4 @@ C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\D
 C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\ApplicationInsights.config
 C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\Morada_Da_Paz_Service.dll
 C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\Morada_Da_Paz_Service.pdb
-C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Forms\bin\Debug\ApplicationInsights.config
-C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Forms\bin\Debug\Morada_Da_Paz_Service.dll
-C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Biblioteca.dll
-C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Forms\bin\Debug\Morada_Da_Paz_Service.pdb
-C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Biblioteca.pdb
 C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Edicao.EditOcorrenciaWindow.resources

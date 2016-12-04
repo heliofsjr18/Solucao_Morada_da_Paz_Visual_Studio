@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="HI1jonMDkZK2KSlfne7gag5d02k=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="yag6NocrJ9yVJEHPzhqIk9tDuv8=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IServiceMorada_Da_Paz">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IServiceMorada_Da_Paz" contract="MRDP.IServiceMorada_Da_Paz" bindingType="basicHttpBinding" address="http://localhost:60993/ServiceMorada_Da_Paz.svc" bindingConfiguration="BasicHttpBinding_IServiceMorada_Da_Paz">
+    <endpoint name="BasicHttpBinding_IServiceMorada_Da_Paz" contract="ServiceReference1.IServiceMorada_Da_Paz" bindingType="basicHttpBinding" address="http://localhost:60993/ServiceMorada_Da_Paz.svc" bindingConfiguration="BasicHttpBinding_IServiceMorada_Da_Paz">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:60993/ServiceMorada_Da_Paz.svc</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_IServiceMorada_Da_Paz</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>MRDP.IServiceMorada_Da_Paz</serializedValue>
+          <serializedValue>ServiceReference1.IServiceMorada_Da_Paz</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

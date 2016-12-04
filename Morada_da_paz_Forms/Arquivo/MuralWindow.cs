@@ -1,6 +1,6 @@
 ﻿
 using Morada_da_paz_Forms.MRDP;
-using Morada_Da_Paz_Service;
+//using Morada_Da_Paz_Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +32,7 @@ namespace Morada_da_paz_Forms.Arquivo
 
                 //this.ocorrenciaLista = sv.listarOcorrencasPublicas();
                 
-                ocorrenciaLista = new ServiceMorada_Da_PazClient().listarOcorrencasPublicas().ToList();
+                ocorrenciaLista = new Service1().listarOcorrencasPublicas().ToList();
 
                 listViewMinhasOcorrencias.Items.Clear();
                 for (int index = 0; index < ocorrenciaLista.Count; index++)
@@ -63,6 +63,16 @@ namespace Morada_da_paz_Forms.Arquivo
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

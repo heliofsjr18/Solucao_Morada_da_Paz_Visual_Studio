@@ -14,7 +14,7 @@ namespace Morada_da_paz_Forms.Edicao
 {
     public partial class EditOcorrenciaWindow : Form
     {
-        ocorrencia oc;
+        //ocorrencia oc;
         List<unidade_residencial> ListaUnidade;
         List<multa> listaMulta;
         List<advertencia> listaAdvertencia;
@@ -84,10 +84,10 @@ namespace Morada_da_paz_Forms.Edicao
                     oc.Situacao = comboBoxStatus.Text;*/
 
                     
-                MRDP.ServiceMorada_Da_PazClient sv = new ServiceMorada_Da_PazClient();
+                MRDP.Service1 sv = new Service1();
 
 
-                sv.editarOcorrencia(oc);
+                //sv.editarOcorrencia(oc);
                     
                     
 
@@ -98,7 +98,7 @@ namespace Morada_da_paz_Forms.Edicao
                         {
                             int indexMulta = comboBoxMulta.SelectedIndex;
                             multa mu = listaMulta.ElementAt(indexMulta);
-                            sv.inserirMultaOcorrencia(mu, oc);
+                            //sv.inserirMultaOcorrencia(mu, oc);
                         }
                         else
                         {
@@ -121,7 +121,7 @@ namespace Morada_da_paz_Forms.Edicao
                         {
                             int indexAdvertencia = comboBoxAdvertencia.SelectedIndex;
                             advertencia ad = listaAdvertencia.ElementAt(indexAdvertencia);
-                            sv.inserirAdvertenciaOcorrencia(ad, oc);
+                            //sv.inserirAdvertenciaOcorrencia(ad, oc);
                         }
                         else
                         {
@@ -160,7 +160,7 @@ namespace Morada_da_paz_Forms.Edicao
             try
             {
                 
-                MRDP.ServiceMorada_Da_PazClient sv = new ServiceMorada_Da_PazClient();
+                MRDP.Service1 sv = new Service1();
                 this.ListaUnidade = sv.listarUnidades().ToList();
 
 
@@ -193,8 +193,8 @@ namespace Morada_da_paz_Forms.Edicao
         private void button1_Click(object sender, EventArgs e)
         {
             
-            MRDP.ServiceMorada_Da_PazClient sv = new ServiceMorada_Da_PazClient();
-            sv.excluiOcorrencia(this.oc);
+            MRDP.Service1 sv = new Service1();
+            //sv.excluiOcorrencia(this.oc);
             MessageBox.Show("Ocorrência Excluida!");
             this.Dispose();
         }

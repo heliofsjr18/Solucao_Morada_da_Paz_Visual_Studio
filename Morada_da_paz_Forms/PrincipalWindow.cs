@@ -40,7 +40,7 @@ namespace Morada_da_paz_Forms
         private string caminho;
 
         NovaOcorrenciaWindow now;
-        MRDP.ServiceMorada_Da_PazClient sv;
+        Service1 sv;
         List<ocorrencia> ocorrenciaLista;
 
         public PrincipalWindow(usuario login)
@@ -57,7 +57,7 @@ namespace Morada_da_paz_Forms
                 thread = new Thread(new ThreadStart(RunServidor));
                 thread.Start();
                 //this.carregaOcorrencias();                
-                this.labelCadastro.Location = new Point(281, 25);
+                this.labelCadastro.Location = new Point(705, 63);
                 this.labelCadastro.Visible = true;
                 this.labelConsulta.Visible = false;
             }
@@ -180,7 +180,7 @@ namespace Morada_da_paz_Forms
         {
             try
             {
-                this.sv = new ServiceMorada_Da_PazClient();
+                this.sv = new Service1();
 
                 if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
                 {
@@ -212,8 +212,11 @@ namespace Morada_da_paz_Forms
             textBoxNameUser.Text = usuarioAtivo.Nome_completo;
             usuarioAtivo.Id_unidade_residencial.Descricao = "Busca";
             usuarioAtivo.Id_unidade_residencial.Numero_residencia = "0";
-            unidade_residencial usuUR = new MRDP.ServiceMorada_Da_PazClient().pesquisaUnidade(usuarioAtivo.Id_unidade_residencial);
+            unidade_residencial usuUR = new Service1().pesquisaUnidade(usuarioAtivo.Id_unidade_residencial);
             textBoxUR.Text = usuUR.Numero_residencia;
+            ocorrencia[] usuOco = new Service1().listarOcorrenciasPorUsuario(usuarioAtivo);
+            textBox4.Text = usuOco.Count().ToString();
+            //textBox3.Text = usuOco.Count().ToString();
             this.carregaOcorrencias();
         }
 
@@ -335,7 +338,7 @@ namespace Morada_da_paz_Forms
         private void buttonGeraXml_Click(object sender, EventArgs e)
         {
             #region instancia do webservice e criação da lista de ocorrencia
-            MRDP.ServiceMorada_Da_PazClient sv = new ServiceMorada_Da_PazClient();
+            Service1 sv = new Service1();
             List<ocorrencia> ocorrenciaLista = this.ocorrenciaLista;//sv.listarOcorrencias();
             #endregion
             #region loop para preenchimento do XML
@@ -592,7 +595,23 @@ namespace Morada_da_paz_Forms
             EditOcorrenciaWindow sansaoWindow = new EditOcorrenciaWindow();
             sansaoWindow.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            UnidadeResidRegWindow window = new UnidadeResidRegWindow();
+            window.ShowDialog();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            EditOcorrenciaWindow window = new EditOcorrenciaWindow();
+            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id != 1)
+            {
+                MessageBox.Show(this,"Você não tem permissão para ver essa tela", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            window.ShowDialog();
+        }
     }
 
 }
-

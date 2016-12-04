@@ -1,6 +1,7 @@
 ﻿using Morada_da_paz_Biblioteca.basicas;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -22,7 +23,7 @@ namespace Morada_Da_Paz_Service
 
         // TODO: Add your service operations here
 
-        // ------------- Service Usuario ----------
+        // ------------- Service Usuario ----------                
         [OperationContract]
         void inseirUsuario(usuario u);
 

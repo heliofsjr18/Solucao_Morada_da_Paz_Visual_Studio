@@ -54,7 +54,7 @@ namespace Morada_da_paz_Forms
             try
             {
                 
-                MRDP.ServiceMorada_Da_PazClient serviceInstance = new ServiceMorada_Da_PazClient();
+                Service1 serviceInstance = new Service1();                
                 this.resultadoU = serviceInstance.pesquisaUsuarioLogin(this.login);
             }
             catch (Exception ex)
