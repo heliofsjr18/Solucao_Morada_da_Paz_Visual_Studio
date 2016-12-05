@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Morada_da_paz_Forms.wcf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,8 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Morada_da_paz_WebService;
-using Morada_da_paz_Biblioteca.basicas;
+//using Morada_da_paz_Biblioteca.basicas;
 
 namespace Morada_da_paz_Forms.Cadastro
 {
@@ -18,6 +18,10 @@ namespace Morada_da_paz_Forms.Cadastro
         public AdvertenciaRegWindow()
         {
             InitializeComponent();
+            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id != 1)
+            {
+                this.Height = 301;
+            }
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -25,13 +29,24 @@ namespace Morada_da_paz_Forms.Cadastro
             try
             {
                 advertencia adv = new advertencia() { Descricao = richTextBoxAdvertencia.Text };
-                ServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
+                Service1Client serviceInstance = new Service1Client();
+                
                 serviceInstance.inserirAdvertencia(adv);
                 MessageBox.Show("Advertencia Cadastrada");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void AdvertenciaRegWindow_Load(object sender, EventArgs e)
+        {
+            Service1Client serviceInstance = new Service1Client();
+            advertencia[] listaAdvertencia = serviceInstance.listarAdvertencias();
+            for (int i = 0; i < listaAdvertencia.Count(); i++)
+            {
+                ListViewItem linha = listView1.Items.Add(listaAdvertencia.ElementAt(i).Descricao);
             }
         }
     }

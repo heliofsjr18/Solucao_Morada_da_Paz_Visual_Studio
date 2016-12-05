@@ -12,3 +12,23 @@ C:\Users\aluno\Desktop\MPD\trunk\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_pa
 C:\Users\aluno\Desktop\MPD\trunk\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.csproj.GenerateResource.Cache
 C:\Users\aluno\Desktop\MPD\trunk\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.dll
 C:\Users\aluno\Desktop\MPD\trunk\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.pdb
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Biblioteca\bin\Debug\Morada_da_paz_Biblioteca.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Biblioteca\bin\Debug\Morada_da_paz_Biblioteca.pdb
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.conexaodb.dadosBanco.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.csproj.GenerateResource.Cache
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.pdb
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Biblioteca\bin\Debug\Morada_da_paz_Biblioteca.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Biblioteca\bin\Debug\Morada_da_paz_Biblioteca.pdb
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.conexaodb.dadosBanco.resources
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.csproj.GenerateResource.Cache
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.dll
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.pdb
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Biblioteca\bin\Debug\Morada_da_paz_Biblioteca.dll
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Biblioteca\bin\Debug\Morada_da_paz_Biblioteca.pdb
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.conexaodb.dadosBanco.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.csproj.GenerateResource.Cache
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.dll
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Biblioteca\obj\Debug\Morada_da_paz_Biblioteca.pdb

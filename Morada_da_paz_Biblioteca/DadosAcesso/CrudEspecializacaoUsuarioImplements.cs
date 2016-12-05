@@ -26,6 +26,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 comand.Parameters.AddWithValue("@descricao", eu.Descricao);
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -45,6 +46,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 comand.Parameters.AddWithValue("@descricao", eu.Descricao);
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -65,9 +67,12 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                 SqlDataReader reader = comand.ExecuteReader();
 
-                euConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
-                euConsulta.Descricao = reader.GetString(reader.GetOrdinal("descricao"));
-
+                if (reader.Read())
+                {
+                    euConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
+                    euConsulta.Descricao = reader.GetString(reader.GetOrdinal("descricao"));
+                }
+                desconectar(conexao);
                 return euConsulta;
             }
             catch (Exception ex)
@@ -88,6 +93,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -117,7 +123,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                     lista.Add(euConsulta);
                 }
-
+                desconectar(conexao);
                 return lista;
             }
             catch (Exception ex)

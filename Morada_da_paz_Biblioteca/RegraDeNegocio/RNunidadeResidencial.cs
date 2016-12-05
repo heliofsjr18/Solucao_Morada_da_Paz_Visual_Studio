@@ -14,17 +14,17 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         {
             if (ur == null)
             {
-                throw new Exception("Objeto Vasio!");
+                throw new Exception("Objeto Vazio!");
             }
 
             if (ur.Descricao.Equals(""))
             {
-                throw new Exception("Descrição Vasia!");
+                throw new Exception("Descrição Vazia!");
             }
 
             if (ur.Numero_residencia.Equals(""))
             {
-                throw new Exception("Nu´mero Residencial Vasio!");
+                throw new Exception("Nu´mero Residencial Vazio!");
             }
         }
 
@@ -55,7 +55,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         public unidade_residencial chamarConsulta(unidade_residencial ur)
         {
             CrudUnidadeResidencial cur = new CrudUnidadeResidencialImplements();
-            this.verificaPreenchimento(ur);
+            //this.verificaPreenchimento(ur);
 
             return cur.consultar(ur);
         }

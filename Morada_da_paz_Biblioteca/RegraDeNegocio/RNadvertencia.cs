@@ -14,11 +14,11 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         private void verificaPreenchimento(advertencia a) {
             if (a == null)
             {
-                throw new Exception("Objeto Vasio!");
+                throw new Exception("Objeto Vazio!");
             }
             if (a.Descricao.Equals("")) 
             {
-                throw new Exception("Descrição Vasia!");
+                throw new Exception("Descrição Vazia!");
             }
         }
 

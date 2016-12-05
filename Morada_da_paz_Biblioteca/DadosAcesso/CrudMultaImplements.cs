@@ -27,6 +27,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 comand.Parameters.AddWithValue("@preco", m.Preco);
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -47,6 +48,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 comand.Parameters.AddWithValue("@preco", m.Preco);               
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -70,7 +72,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 multConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
                 multConsulta.Descricao = reader.GetString(reader.GetOrdinal("descricao"));
                 multConsulta.Preco = reader.GetDouble(reader.GetOrdinal("preco"));
-
+                desconectar(conexao);
                 return multConsulta;
             }
             catch (Exception ex)
@@ -91,6 +93,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -122,7 +125,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                     lista.Add(multConsulta);
                 }
-
+                desconectar(conexao);
                 return lista;
             }
             catch (Exception ex)

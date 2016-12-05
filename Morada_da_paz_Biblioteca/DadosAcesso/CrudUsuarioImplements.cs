@@ -32,6 +32,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 comand.Parameters.AddWithValue("@id_especializacao_usuario", u.Id_especializacao_usuario.Id);
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -53,6 +54,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 comand.Parameters.AddWithValue("@id_especializacao_usuario", u.Id_especializacao_usuario.Id);
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -71,6 +73,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -82,22 +85,23 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string querySql = "SELECT nome_completo, email, login, senha, id_unidade_residencial, id_especializacao_usuario FROM usuario WHERE id = @idpar";
+                string querySql = "SELECT nome_completo, email, login_, senha, id_unidade_residencial, id_especializacao FROM usuario WHERE id = @idpar";
 
                 SqlCommand comand = new SqlCommand(querySql, conexao);
                 comand.Parameters.AddWithValue("@idpar", u.Id);
                 usuario usuConsulta = new usuario();
 
                 SqlDataReader reader = comand.ExecuteReader();
+                if (reader.Read())
+                {                    
+                    usuConsulta.Nome_completo = reader.GetString(reader.GetOrdinal("nome_completo"));
+                    usuConsulta.Login = reader.GetString(reader.GetOrdinal("login_"));
+                    usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
+                    usuConsulta.Id_unidade_residencial.Id = reader.GetInt32(reader.GetOrdinal("id_unidade_residencial"));
+                    usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao"));
 
-                usuConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
-                usuConsulta.Nome_completo = reader.GetString(reader.GetOrdinal("nome_completo"));
-                usuConsulta.Email = reader.GetString(reader.GetOrdinal("email"));
-                usuConsulta.Login = reader.GetString(reader.GetOrdinal("login"));
-                usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
-                usuConsulta.Id_unidade_residencial.Id = reader.GetInt32(reader.GetOrdinal("id_unidade_residencial"));
-                usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao_usuario"));
-
+                }
+                desconectar(conexao);
                 return usuConsulta;
             }
             catch (Exception ex)
@@ -110,28 +114,31 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string querySql = "SELECT id, nome_completo, email, login, senha, id_unidade_residencial, id_especializacao_usuario FROM usuario";
+                string querySql = "SELECT id, nome_completo, email, login_, senha, id_unidade_residencial, id_especializacao FROM usuario";
 
                 SqlCommand comand = new SqlCommand(querySql, conexao);
 
                 SqlDataReader reader = comand.ExecuteReader();
 
                 List<usuario> lista = new List<usuario>();
-                while (reader.NextResult())
+                while (reader.Read())
                 {
                     usuario usuConsulta = new usuario();
 
                     usuConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
                     usuConsulta.Nome_completo = reader.GetString(reader.GetOrdinal("nome_completo"));
-                    usuConsulta.Email = reader.GetString(reader.GetOrdinal("email"));
-                    usuConsulta.Login = reader.GetString(reader.GetOrdinal("login"));
+                    if (reader.GetValue(reader.GetOrdinal("email")) == null)
+                        usuConsulta.Email = reader.GetString(reader.GetOrdinal("email"));
+                    else
+                        usuConsulta.Email = "Nenhum";
+                    usuConsulta.Login = reader.GetString(reader.GetOrdinal("login_"));
                     usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
                     usuConsulta.Id_unidade_residencial.Id = reader.GetInt32(reader.GetOrdinal("id_unidade_residencial"));
-                    usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao_usuario"));
+                    usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao"));
 
                     lista.Add(usuConsulta);
                 }
-
+                desconectar(conexao);
                 return lista;
             }
             catch (Exception ex)
@@ -145,7 +152,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection conexao = conectar();
-                string querySql = "SELECT id, login_, senha, id_especializacao, nome_completo  FROM usuario WHERE login_ = @login";
+                string querySql = "SELECT id, login_, senha, id_especializacao, nome_completo, id_unidade_residencial, id_especializacao FROM usuario WHERE login_ = @login";
 
                 SqlCommand comand = new SqlCommand(querySql, conexao);
                 comand.Parameters.AddWithValue("@login", u.Login);
@@ -160,8 +167,10 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                     usuConsulta.Senha = reader.GetString(reader.GetOrdinal("senha"));
                     usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao"));
                     usuConsulta.Nome_completo = reader.GetString(reader.GetOrdinal("nome_completo"));
+                    usuConsulta.Id_especializacao_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_especializacao"));
+                    usuConsulta.Id_unidade_residencial.Id = reader.GetInt32(reader.GetOrdinal("id_unidade_residencial"));
                 }
-
+                desconectar(conexao);
                 return usuConsulta;
             }
             catch (Exception ex)

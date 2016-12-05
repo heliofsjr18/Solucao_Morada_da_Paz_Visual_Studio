@@ -26,6 +26,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 comand.Parameters.AddWithValue("@descricao", a.Descricao);
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -45,6 +46,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 comand.Parameters.AddWithValue("@descricao", a.Descricao);
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -67,7 +69,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                 advertConsulta.Id = reader.GetInt32(reader.GetOrdinal("id"));
                 advertConsulta.Descricao = reader.GetString(reader.GetOrdinal("descricao"));
-
+                desconectar(conexao);
                 return advertConsulta;
             }
             catch (Exception ex)
@@ -88,6 +90,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                 comand.ExecuteNonQuery();
                 comand.Dispose();
+                desconectar(conexao);
             }
             catch (Exception ex)
             {
@@ -117,7 +120,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                     lista.Add(advertConsulta);
                 }
-
+                desconectar(conexao);
                 return lista;
             }
             catch (Exception ex)

@@ -12,19 +12,19 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
     {
         private void verificaPreenchimento(multa m){
             if (m == null) {
-                throw new Exception("Objeto Vasio!");
+                throw new Exception("Objeto Vazio!");
             }
 
             if(m.Descricao.Equals("") ){
-                throw new Exception("Descrição Vasia");
+                throw new Exception("Descrição Vazia");
             }
 
             if(m.Preco == 0){
-                throw new Exception("Preço vasio!");
+                throw new Exception("Preço vazio!");
             }
             if (m.Preco.Equals(""))
             {
-                throw new Exception("Preço vasio!");
+                throw new Exception("Preço vazio!");
             }
         }
 

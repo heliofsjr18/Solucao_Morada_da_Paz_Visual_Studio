@@ -10,5 +10,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
     public interface CrudAdvertencia_Ocorrencia
     {
         void inserir(advertencia a,  ocorrencia o);
+
+        List<advertencia> lista(ocorrencia o);
     }
 }
