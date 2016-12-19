@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Morada_da_paz_Forms.wcf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,10 +7,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Services.Protocols;
 using System.Windows.Forms;
 
-using Morada_da_paz_WebService;
-using Morada_da_paz_Biblioteca.basicas;
+
 
 namespace Morada_da_paz_Forms
 {
@@ -54,7 +55,8 @@ namespace Morada_da_paz_Forms
             //usuario resultadoU = new usuario();
             try
             {
-                IServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
+                
+                Service1Client serviceInstance = new Service1Client();                
                 this.resultadoU = serviceInstance.pesquisaUsuarioLogin(this.login);
             }
             catch (Exception ex)

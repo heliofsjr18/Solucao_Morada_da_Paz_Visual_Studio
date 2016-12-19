@@ -3,6 +3,7 @@ using Morada_da_paz_Biblioteca.DadosAcesso;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,12 +11,12 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
 {
     public class RNocorrencia
     {
-        private void verificaPreenchimento(ocorrencia o) {
+        public void verificaPreenchimento(ocorrencia o) {
             if (o == null) {
-                throw new Exception("Objeto vasio!");
+                throw new Exception("Objeto vazio!");
             }
             if (o.Descricao.Equals("")) {
-                throw new Exception("Descrição Vasia!");
+                throw new Exception("Descrição Vazia!");
             }
             
             if(o.Id_usuario == null){
@@ -27,7 +28,10 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         public void chamarInseriro(ocorrencia o)
         {
             CrudOcorrencia co = new CrudOcorrenciaImplements();
-            this.verificaPreenchimento(o);
+            
+                this.verificaPreenchimento(o);
+            
+            
 
             co.inserir(o);
         }
@@ -42,7 +46,7 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         public void chamarDeletar(ocorrencia o)
         {
             CrudOcorrencia co = new CrudOcorrenciaImplements();
-            this.verificaPreenchimento(o);
+            //this.verificaPreenchimento(o);
 
             co.excluir(o);
         }
@@ -71,6 +75,12 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         {
             CrudOcorrencia co = new CrudOcorrenciaImplements();
             return co.ListarPublicas();
+        }
+
+        public void chamarAtribuirUnidade(ocorrencia oco)
+        {
+            CrudOcorrencia co = new CrudOcorrenciaImplements();
+            co.atribuirUnidade(oco);
         }
     }
 }

@@ -14,12 +14,12 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
         {
             if (m == null)
             {
-                throw new Exception("Objeto Vasio!");
+                throw new Exception("Objeto Vazio!");
             }
 
             if (m.Descricao == null)
             {
-                throw new Exception("Descrição Vasia");
+                throw new Exception("Descrição Vazia");
             }
 
         }
@@ -47,6 +47,13 @@ namespace Morada_da_paz_Biblioteca.RegraDeNegocio
             this.verificaPreenchimentoMulta(m);
             this.verificaPreenchimentoOcorrencia(o);
             cmo.inserir(m, o);
+        }
+
+        public List<multa> chamaLista(ocorrencia o)
+        {
+            CrudMulta_Ocorrencia cmo = new CrudMulta_OcorrenciaImplements();
+            this.verificaPreenchimentoOcorrencia(o);
+            return cmo.lista(o);
         }
     }
 }

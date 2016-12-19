@@ -10,8 +10,7 @@ using System.Windows.Forms;
 
 using Morada_da_paz_Forms.Cadastro;
 using Morada_da_paz_Forms.Arquivo;
-using Morada_da_paz_Biblioteca.basicas;
-using Morada_da_paz_WebService;
+
 using System.IO;
 using System.Xml;
 using Morada_da_paz_Forms.Edicao;
@@ -19,6 +18,8 @@ using System.Diagnostics;
 using System.Net.Sockets;
 using System.Threading;
 using System.Net;
+using System.Web.Services.Protocols;
+using Morada_da_paz_Forms.wcf;
 
 namespace Morada_da_paz_Forms
 {
@@ -36,16 +37,17 @@ namespace Morada_da_paz_Forms
 
         TcpListener tcpListener;
         #endregion
-        public static usuario usuarioAtivo = new usuario();
+        public static usuario usuarioAtivo;
         private string caminho;
 
-        NovaOcorrenciaWindow now = new NovaOcorrenciaWindow();
-        ServiceMoradaDaPaz sv;
+        NovaOcorrenciaWindow now;
+        Service1Client sv;
         List<ocorrencia> ocorrenciaLista;
 
         public PrincipalWindow(usuario login)
         {
             usuarioAtivo = login;
+            now = new NovaOcorrenciaWindow(login);
             InitializeComponent();
             caminho = @"" + Application.StartupPath + "\\ocorrencias" + usuarioAtivo.Nome_completo + ".xml";
             this.verificaUsuario(login);
@@ -55,12 +57,17 @@ namespace Morada_da_paz_Forms
             {
                 thread = new Thread(new ThreadStart(RunServidor));
                 thread.Start();
-                this.carregaOcorrencias();
+                //this.carregaOcorrencias();                
+                this.labelCadastro.Location = new Point(705, 63);
+                this.labelCadastro.Visible = true;
+                this.labelConsulta.Visible = false;
             }
             else
             {
                 thread = new Thread(new ThreadStart(runCliente));
                 thread.Start();
+                this.labelCadastro.Visible = false;
+                this.labelConsulta.Visible = true;
             }
             mudarUsuárioToolStripMenuItem.Visible = false;
 
@@ -85,19 +92,34 @@ namespace Morada_da_paz_Forms
 
         private void PrincipalWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+
 
             if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
 
                 if (tcpListener != null)
-                {                    
-                        tcpListener.Stop();
+                {
+                    tcpListener.Stop();
                 }
-                
+
+                /*if(thread != null)
+                {
+                    thread.Abort();
+                }*/
+                //
+                Application.Exit();
+                Environment.Exit(0);
+
+            }
+            else
+            {
+
+                Application.Exit();
             }
 
-            Environment.Exit(0);
+
+
+
 
         }
 
@@ -137,7 +159,7 @@ namespace Morada_da_paz_Forms
                 //thread = new Thread(new ThreadStart(runCliente));
                 //thread.Abort();     
             }
-            NovaOcorrenciaWindow window = new NovaOcorrenciaWindow();
+            NovaOcorrenciaWindow window = new NovaOcorrenciaWindow(usuarioAtivo);
             window.ShowDialog();
         }
 
@@ -161,24 +183,24 @@ namespace Morada_da_paz_Forms
         {
             try
             {
-                this.sv = new ServiceMoradaDaPaz();
+                this.sv = new Service1Client();
 
                 if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
                 {
-                    this.ocorrenciaLista = sv.listarOcorrencias();
+                    this.ocorrenciaLista = sv.listarOcorrencias().ToList();
                 }
                 else
                 {
-                    this.ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo);
+                    this.ocorrenciaLista = sv.listarOcorrenciasPorUsuario(usuarioAtivo).ToList();
                 }
 
-                listViewMinhasOcorrencias.Items.Clear();
+                //listViewMinhasOcorrencias.Items.Clear();
                 for (int index = 0; index < ocorrenciaLista.Count; index++)
                 {
 
-                    ListViewItem linha = listViewMinhasOcorrencias.Items.Add(ocorrenciaLista.ElementAt(index).Numero_ocorrencia);
-                    linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Descricao);
-                    linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Situacao);
+                    //ListViewItem linha = listViewMinhasOcorrencias.Items.Add(ocorrenciaLista.ElementAt(index).Numero_ocorrencia);
+                    //linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Descricao);
+                    //linha.SubItems.Add(ocorrenciaLista.ElementAt(index).Situacao);
                 }
             }
             catch (Exception ex)
@@ -190,7 +212,20 @@ namespace Morada_da_paz_Forms
 
         private void PrincipalWindow_Load(object sender, EventArgs e)
         {
+            if (usuarioAtivo.Id > 1)
+            {
+                button6.Enabled = false;
+            }
+            textBoxNameUser.Text = usuarioAtivo.Nome_completo;
+            usuarioAtivo.Id_unidade_residencial.Descricao = "Busca";
+            usuarioAtivo.Id_unidade_residencial.Numero_residencia = "0";
+            unidade_residencial usuUR = new Service1Client().pesquisaUnidade(usuarioAtivo.Id_unidade_residencial);
+            textBoxUR.Text = usuUR.Numero_residencia;
+            ocorrencia[] usuOco = new Service1Client().listarOcorrenciasPorUsuario(usuarioAtivo);
+            textBox4.Text = usuOco.Count().ToString();
+            //textBox3.Text = usuOco.Count().ToString();
             this.carregaOcorrencias();
+
         }
 
         private void buttonAtulizar_Click(object sender, EventArgs e)
@@ -251,24 +286,44 @@ namespace Morada_da_paz_Forms
 
                 #region definição dos elementos do xml
                 XmlNode ocorrencia = doc.CreateElement("ocorrencia");
+                XmlNode id = doc.CreateElement("id");
                 XmlNode numero = doc.CreateElement("numero");
                 XmlNode descricao = doc.CreateElement("descricao");
+                XmlNode usuario = doc.CreateElement("usuario");
+                XmlNode id_usuario = doc.CreateElement("idUsuario");
                 XmlNode status = doc.CreateElement("status");
+                XmlNode publico = doc.CreateElement("publico");
+                XmlNode undResidencial = doc.CreateElement("unidadeResidencial");
+                XmlNode id_und = doc.CreateElement("id_und");
+
+
                 #endregion
-
-
 
 
                 #region colocar valores nos elementos xml
+                id.InnerText = "" + o.Id;
                 numero.InnerText = o.Numero_ocorrencia;
                 descricao.InnerText = o.Descricao;
+                id_usuario.InnerText = "" + o.Id_usuario.Id;
                 status.InnerText = o.Situacao;
+                publico.InnerText = "" + o.TipoPublico;
+                id_und.InnerText = "" + o.Id_unidade_residencial.Id;
                 #endregion
 
                 #region definido hierarquia
+                ocorrencia.AppendChild(id);
                 ocorrencia.AppendChild(numero);
                 ocorrencia.AppendChild(descricao);
+
+                usuario.AppendChild(id_usuario);
+
+                ocorrencia.AppendChild(usuario);
                 ocorrencia.AppendChild(status);
+                ocorrencia.AppendChild(publico);
+
+                undResidencial.AppendChild(id_und);
+
+                ocorrencia.AppendChild(undResidencial);
                 #endregion
 
 
@@ -291,7 +346,7 @@ namespace Morada_da_paz_Forms
         private void buttonGeraXml_Click(object sender, EventArgs e)
         {
             #region instancia do webservice e criação da lista de ocorrencia
-            ServiceMoradaDaPaz sv = new ServiceMoradaDaPaz();
+            Service1Client sv = new Service1Client();
             List<ocorrencia> ocorrenciaLista = this.ocorrenciaLista;//sv.listarOcorrencias();
             #endregion
             #region loop para preenchimento do XML
@@ -311,10 +366,10 @@ namespace Morada_da_paz_Forms
 
             if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
-                int indexListView = listViewMinhasOcorrencias.FocusedItem.Index;
-                ocorrencia oc = this.ocorrenciaLista.ElementAt(indexListView);
-                EditOcorrenciaWindow eo = new EditOcorrenciaWindow(oc);
-                eo.ShowDialog();
+                //int indexListView = listViewMinhasOcorrencias.FocusedItem.Index;
+                //ocorrencia oc = this.ocorrenciaLista.ElementAt(indexListView);
+                //EditOcorrenciaWindow eo = new EditOcorrenciaWindow(oc);
+                //eo.ShowDialog();
             }
         }
 
@@ -336,7 +391,27 @@ namespace Morada_da_paz_Forms
             if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
             {
                 Invoke(new MethodInvoker(
-                         delegate { MessageBox.Show(this, "" + ob, "MRDP -> ADM"); }
+                         delegate { MessageBox.Show(this, "" + ob, "MRDP -> ADM");
+                             if (usuarioAtivo.Id_especializacao_usuario.Id == 1)
+                             {
+                                 try
+                                 {
+                                     if (binaryWriter != null)
+                                     {
+                                         binaryWriter.Write("Ocorrencia disponível para o síndico!");
+                                     }
+
+                                 }
+                                 catch (SocketException socketEx)
+                                 {
+                                     MessageBox.Show(socketEx.Message, "Erro1");
+                                 }
+                                 catch (Exception socketEx)
+                                 {
+                                     MessageBox.Show(socketEx.Message, "Erro2");
+                                 }
+                             }
+                         }
                                          ));
             }
 
@@ -382,6 +457,7 @@ namespace Morada_da_paz_Forms
 
                     } while (socket.Connected);
                 }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
@@ -451,8 +527,9 @@ namespace Morada_da_paz_Forms
                 networkStream.Close();
                 tcpClient.Close();
             }
-            catch (SocketException ex) {
-                MessageBox.Show("No momento o síndico não está logado, sua Ocorrência pode demorar a ser visualizada!", "Síndico indisponivel!");
+            catch (SocketException ex)
+            {
+                MessageBox.Show("No momento o síndico não está logado, sua Ocorrência pode demorar a ser visualizada!", "Síndico indisponivel!..." + ex.Message);
             }
             catch (Exception ex)
             {
@@ -461,7 +538,133 @@ namespace Morada_da_paz_Forms
             }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MuralWindow muralWindow = new MuralWindow();
+            muralWindow.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserRegWindow userWindow = new UserRegWindow();
+            userWindow.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AdvertenciaRegWindow advertenciaWindow = new AdvertenciaRegWindow();
+            advertenciaWindow.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MultaRegWindow multaWindow = new MultaRegWindow();
+            multaWindow.ShowDialog();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NovaOcorrenciaWindow ocorrenciaWindow = new NovaOcorrenciaWindow(PrincipalWindow.usuarioAtivo);
+            ocorrenciaWindow.ShowDialog();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if(usuarioAtivo.Id == 1)
+            {
+                try
+                {
+                    if (binaryWriter != null)
+                    {
+                        binaryWriter.Write("Ocorrencia disponível para o síndico!");
+                    }
+
+                }
+                catch (SocketException socketEx)
+                {
+                    MessageBox.Show(socketEx.Message, "Erro1");
+                }
+                catch (Exception socketEx)
+                {
+                    MessageBox.Show(socketEx.Message, "Erro2");
+                }
+            }
+            
+            EditOcorrenciaWindow sansaoWindow = new EditOcorrenciaWindow();
+            sansaoWindow.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            UnidadeResidRegWindow window = new UnidadeResidRegWindow();
+            window.ShowDialog();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            EditOcorrenciaWindow window = new EditOcorrenciaWindow();
+            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id != 1)
+            {
+                MessageBox.Show(this,"Você não tem permissão para ver essa tela", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            window.ShowDialog();
+        }
+
+        private void textBoxNameUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
-

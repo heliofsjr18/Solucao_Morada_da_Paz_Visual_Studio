@@ -18,7 +18,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             {
                 SqlConnection c = conectar();
                 string query = "UPDATE ocorrencia set situacao = @situacao, descricao = @descricao, id_usuario = @id_usuario, id_unidade_residencial = @id_unidade_residencial , tipoPublico = @tipoPublico WHERE id = @id";
-                SqlCommand comand = new SqlCommand(query,c);
+                SqlCommand comand = new SqlCommand(query, c);
                 comand.Parameters.AddWithValue("@situacao", o.Situacao);
                 comand.Parameters.AddWithValue("@descricao", o.Descricao);
                 comand.Parameters.AddWithValue("@id_usuario", o.Id_usuario.Id);
@@ -32,7 +32,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             {
                 throw new Exception(ex.Message);
             }
-            
+
         }
 
         public void excluir(ocorrencia o)
@@ -40,9 +40,9 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection c = conectar();
-                string query = "DELETE FROM ocorrencia WHERE id = @id";
+                string query = "DELETE FROM ocorrencia WHERE numero_ocorrencia = @numero";
                 SqlCommand comand = new SqlCommand(query, c);
-                comand.Parameters.AddWithValue("@id", o.Id);
+                comand.Parameters.AddWithValue("@numero", o.Numero_ocorrencia);
                 comand.ExecuteNonQuery();
                 comand.Dispose();
             }
@@ -62,7 +62,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
 
                 SqlCommand comand = new SqlCommand(query, c);
                 comand.Parameters.AddWithValue("@situacao", o.Situacao);
-                comand.Parameters.AddWithValue("@descricao",o.Descricao);
+                comand.Parameters.AddWithValue("@descricao", o.Descricao);
                 comand.Parameters.AddWithValue("@numero_ocorrencia", o.Numero_ocorrencia);
                 comand.Parameters.AddWithValue("@id_usuario", o.Id_usuario.Id);
                 //comand.Parameters.AddWithValue("@id_unidade_residencial", o.Id_unidade_residencial.Id);
@@ -81,7 +81,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection c = conectar();
-                string query = "SELECT id, situacao, numero_ocorrencia, descricao, id_usuario FROM ocorrencia";                
+                string query = "SELECT id, situacao, numero_ocorrencia, descricao, id_usuario FROM ocorrencia";
 
                 SqlCommand comand = new SqlCommand(query, c);
                 SqlDataReader reader = comand.ExecuteReader();
@@ -102,6 +102,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                     oc.Add(oco);
 
                 }
+                desconectar(c);
                 return oc;
             }
             catch (Exception ex)
@@ -115,23 +116,28 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
             try
             {
                 SqlConnection c = conectar();
-                string query = "SELECT id, situacao, numero_ocorrencia, tipoPublico ,descricao, id_usuario, id_unidade_residencial";
-                query += "FROM ocorrencia WHERE id = @id";
+                string query = "SELECT id, situacao, numero_ocorrencia, tipoPublico ,descricao, id_usuario, id_unidade_residencial FROM ocorrencia WHERE id = @id";
 
                 SqlCommand comand = new SqlCommand(query, c);
+                comand.Parameters.AddWithValue("@id", o.Id);
                 SqlDataReader reader = comand.ExecuteReader();
 
                 ocorrencia oco = new ocorrencia();
                 oco.Id = reader.GetInt32(reader.GetOrdinal("id"));
+                oco.Situacao = reader.GetString(reader.GetOrdinal("situacao"));
+                oco.Numero_ocorrencia = reader.GetString(reader.GetOrdinal("numero_ocorrencia"));
+                oco.Descricao = reader.GetString(reader.GetOrdinal("descricao"));
+                oco.Id_usuario.Id = reader.GetInt32(reader.GetOrdinal("id_usuario"));
+                oco.Id_unidade_residencial.Id = reader.GetInt32(reader.GetOrdinal("id_unidade_residencial"));
 
-
+                desconectar(c);
                 return oco;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-          
+
         }
 
         public List<ocorrencia> ListarPorUsuario(usuario u)
@@ -163,6 +169,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                     oc.Add(oco);
 
                 }
+                desconectar(c);
                 return oc;
 
 
@@ -181,7 +188,7 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                 string query = "SELECT id, situacao, numero_ocorrencia, descricao, id_usuario, tipoPublico FROM ocorrencia WHERE tipoPublico = 1";
 
                 SqlCommand comand = new SqlCommand(query, c);
-                
+
 
                 SqlDataReader reader = comand.ExecuteReader();
 
@@ -200,11 +207,30 @@ namespace Morada_da_paz_Biblioteca.DadosAcesso
                     oco.TipoPublico = reader.GetInt32(reader.GetOrdinal("tipoPublico"));
 
                     oc.Add(oco);
-
                 }
+                desconectar(c);
                 return oc;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
-
+        public void atribuirUnidade(ocorrencia oco)
+        {
+            try
+            {
+                SqlConnection c = conectar();
+                string query = "UPDATE ocorrencia set situacao = @situacao,  id_unidade_residencial = @id_unidade_residencial, tipoPublico = @tipoPublico WHERE numero = @numero";
+                SqlCommand comand = new SqlCommand(query, c);
+                comand.Parameters.AddWithValue("@situacao", oco.Situacao);
+                comand.Parameters.AddWithValue("@id_unidade_residencial", oco.Id_unidade_residencial.Id);
+                comand.Parameters.AddWithValue("@numero", oco.Numero_ocorrencia);
+                comand.Parameters.AddWithValue("@tipoPublico", oco.TipoPublico);
+                comand.ExecuteNonQuery();
+                comand.Dispose();
+                desconectar(c);
             }
             catch (Exception ex)
             {

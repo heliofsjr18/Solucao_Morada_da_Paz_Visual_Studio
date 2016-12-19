@@ -14,3 +14,48 @@ C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio
 C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Arquivo.NovaOcorrenciaWindow.resources
 C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Arquivo.MuralWindow.resources
 C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.LoginWindow.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Forms.exe.config
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.exe
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.pdb
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Forms.exe
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Forms.pdb
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Biblioteca.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Biblioteca.pdb
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.csprojResolveAssemblyReference.cache
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Arquivo.MuralWindow.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Arquivo.NovaOcorrenciaWindow.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Cadastro.AdvertenciaRegWindow.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Cadastro.MultaRegWindow.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Cadastro.UnidadeResidRegWindow.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Cadastro.UserRegWindow.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Edicao.EditOcorrenciaWindow.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.LoginWindow.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.PrincipalWindow.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Properties.Resources.resources
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.csproj.GenerateResource.Cache
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\ApplicationInsights.config
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\Morada_Da_Paz_Service.dll
+C:\Users\Dayvson\Desktop\Projeto MRDP_02-12-2016\trunk\Morada_da_paz_Forms\bin\Debug\Morada_Da_Paz_Service.pdb
+C:\Users\helio\Desktop\GitHubCollegeProjects\Solucao_Morada_da_Paz_Visual_Studio\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Edicao.EditOcorrenciaWindow.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Forms.exe.config
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.exe
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.pdb
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Forms.exe
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Forms.pdb
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.csprojResolveAssemblyReference.cache
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Arquivo.MuralWindow.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Arquivo.NovaOcorrenciaWindow.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Cadastro.AdvertenciaRegWindow.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Cadastro.MultaRegWindow.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Cadastro.UnidadeResidRegWindow.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Cadastro.UserRegWindow.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Edicao.EditOcorrenciaWindow.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.LoginWindow.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.PrincipalWindow.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.Properties.Resources.resources
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\obj\Debug\Morada_da_paz_Forms.csproj.GenerateResource.Cache
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\bin\Debug\ApplicationInsights.config
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\bin\Debug\Mrdp.dll
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Biblioteca.dll
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\bin\Debug\Mrdp.pdb
+C:\Users\Dayvson\Desktop\dsad\Solucao_Morada_da_Paz_Visual_Studio-TesteMudan-as\Morada_da_paz_Forms\bin\Debug\Morada_da_paz_Biblioteca.pdb

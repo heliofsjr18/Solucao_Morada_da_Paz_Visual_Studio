@@ -7,9 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using Morada_da_paz_Biblioteca.basicas;
-using Morada_da_paz_WebService;
+using System.Web.Services.Protocols;
+using Morada_da_paz_Forms.wcf;
+using System.ServiceModel;
+using Mrdp;
 
 namespace Morada_da_paz_Forms.Cadastro
 {
@@ -20,6 +21,10 @@ namespace Morada_da_paz_Forms.Cadastro
         public UserRegWindow()
         {
             InitializeComponent();
+            if (PrincipalWindow.usuarioAtivo.Id_especializacao_usuario.Id != 1)
+            {
+                this.Height = 301;
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -30,22 +35,26 @@ namespace Morada_da_paz_Forms.Cadastro
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-            usuario u = new usuario() { Nome_completo = textBoxNomeCompleto.Text,
-                                        Email = textBoxEmail.Text,
-                                        Login = textBoxLogin.Text,
-                                        Senha = textBoxSenha.Text};
-
-            int indexEU = comboBoxEspecializacao.SelectedIndex;
-            especializacao_usuario esp = listaEspecial.ElementAt(indexEU);
-            int indexUR = comboBoxUnidadeResidencial.SelectedIndex;
-            unidade_residencial und = ListaUnidade.ElementAt(indexUR);
-
-            u.Id_especializacao_usuario = esp;
-            u.Id_unidade_residencial = und;
-
-            ServiceMoradaDaPaz serviceinstance = new ServiceMoradaDaPaz();
             try
             {
+                usuario u = new usuario()
+                {
+                    Nome_completo = textBoxNomeCompleto.Text,
+                    Email = textBoxEmail.Text,
+                    Login = textBoxLogin.Text,
+                    Senha = textBoxSenha.Text
+                };
+
+                int indexEU = comboBoxEspecializacao.SelectedIndex;
+                especializacao_usuario esp = listaEspecial.ElementAt(indexEU);
+                int indexUR = comboBoxUnidadeResidencial.SelectedIndex;
+                unidade_residencial und = ListaUnidade.ElementAt(indexUR);
+
+                u.Id_especializacao_usuario = esp;
+                u.Id_unidade_residencial = und;
+
+
+                Service1Client serviceinstance = new Service1Client();
                 serviceinstance.inseirUsuario(u);
             }
             catch (Exception ex)
@@ -60,9 +69,11 @@ namespace Morada_da_paz_Forms.Cadastro
 
         private void UserRegWindow_Shown(object sender, EventArgs e)
         {
-            ServiceMoradaDaPaz serviceInstance = new ServiceMoradaDaPaz();
-            this.listaEspecial = serviceInstance.listarEspecializacao();
-            this.ListaUnidade = serviceInstance.listarUnidades();
+
+
+            Service1Client serviceinstance = new Service1Client();
+            this.listaEspecial = serviceinstance.listarEspecializacao().ToList();
+            this.ListaUnidade = serviceinstance.listarUnidades().ToList();
             for (int i = 0; i < listaEspecial.Count; i++)
             {
                 comboBoxEspecializacao.Items.Add(listaEspecial.ElementAt(i).Descricao);
@@ -74,6 +85,26 @@ namespace Morada_da_paz_Forms.Cadastro
         }
 
         private void UserRegWindow_Load(object sender, EventArgs e)
+        {
+            Service1Client serviceInstance = new Service1Client();
+            usuario[] listaUsu = serviceInstance.listarUsuarios();
+            for (int i = 0; i < listaUsu.Count(); i++)
+            {
+                unidade_residencial usuUR = new unidade_residencial();
+                listaUsu.ElementAt(i).Id_unidade_residencial.Descricao = "Busca";
+                listaUsu.ElementAt(i).Id_unidade_residencial.Numero_residencia = "0";
+                usuUR.Numero_residencia = serviceInstance.pesquisaUnidade(listaUsu.ElementAt(i).Id_unidade_residencial).Numero_residencia;
+                especializacao_usuario usuES = new especializacao_usuario();
+                listaUsu.ElementAt(i).Id_especializacao_usuario.Descricao = "Busca";
+                usuES.Descricao = serviceInstance.pesquisaEspecializacao(listaUsu.ElementAt(i).Id_especializacao_usuario).Descricao;
+                ListViewItem linha = listView1.Items.Add(listaUsu.ElementAt(i).Nome_completo);
+                linha.SubItems.Add(listaUsu.ElementAt(i).Email);
+                linha.SubItems.Add(usuUR.Numero_residencia);
+                linha.SubItems.Add(usuES.Descricao);
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
